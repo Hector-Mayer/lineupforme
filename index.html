@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LineUpForMe — Graspop 2026</title>
-<meta name="description" content="Build your personal Graspop 2026 festival schedule in 2 minutes. Based on your music taste. 130+ bands, 5 stages.">
+<title>LineUpForMe — Alcatraz Open Air 2026</title>
+<meta name="description" content="Build your personal Alcatraz Open Air 2026 festival schedule in 2 minutes. Based on your music taste. 120+ bands, 4 stages.">
 <!-- Open Graph -->
-<meta property="og:title" content="LineUpForMe — Graspop 2026">
-<meta property="og:description" content="Build your personal Graspop 2026 festival schedule in 2 minutes. Based on your music taste.">
-<meta property="og:url" content="https://lineupforme.net">
+<meta property="og:title" content="LineUpForMe — Alcatraz Open Air 2026">
+<meta property="og:description" content="Build your personal Alcatraz Open Air 2026 festival schedule in 2 minutes. Based on your music taste.">
+<meta property="og:url" content="https://lineupforme.net/alcatraz">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://lineupforme.net/preview.png">
+<meta property="og:image" content="https://lineupforme.net/preview-alcatraz.png">
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LineUpForMe — Graspop 2026">
-<meta name="twitter:description" content="Build your personal Graspop 2026 festival schedule in 2 minutes.">
-<meta name="twitter:image" content="https://lineupforme.net/preview.png">
+<meta name="twitter:title" content="LineUpForMe — Alcatraz Open Air 2026">
+<meta name="twitter:description" content="Build your personal Alcatraz Open Air 2026 festival schedule in 2 minutes.">
+<meta name="twitter:image" content="https://lineupforme.net/preview-alcatraz.png">
 <!-- Theme -->
 <meta name="theme-color" content="#0a0a0a">
-<link rel="canonical" href="https://lineupforme.net">
+<link rel="canonical" href="https://lineupforme.net/alcatraz">
 <style>/* Self-hosted fonts — no Google Fonts dependency */
 
 /* Bebas Neue 400 */
@@ -70,7 +70,7 @@
 :root{
   --bg:#0a0a0a;--bg2:#111;--bg3:#1a1a1a;
   --border:rgba(255,255,255,0.08);--border-hover:rgba(255,255,255,0.2);
-  --text:#f0ede8;--muted:#999;--accent:#e8c94a;--accent2:#e05a2b;--green:#4caf7d;
+  --text:#f0ede8;--muted:#999;--accent:#f2792b;--accent2:#e05a2b;--green:#4caf7d;
   --radius:8px;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -93,7 +93,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .genre-row{display:flex;align-items:center;gap:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);padding:10px 15px;cursor:grab;transition:border-color .15s,background .15s;user-select:none;}
 .genre-row:hover{border-color:var(--border-hover);}
 .genre-row.dragging{opacity:.3;}
-.genre-row.drag-over{border-color:var(--accent);background:rgba(232,201,74,.05);}
+.genre-row.drag-over{border-color:var(--accent);background:rgba(242,121,43,.05);}
 .genre-rank{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted);min-width:22px;}
 .genre-info{flex:1;}
 .genre-name{font-size:14px;font-weight:500;}
@@ -125,7 +125,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
   font-family:'DM Sans',sans-serif;
 }
 .t-card:active{opacity:.8;}
-.t-card.picked{border-color:var(--accent);background:rgba(232,201,74,.1);}
+.t-card.picked{border-color:var(--accent);background:rgba(242,121,43,.1);}
 .t-card.faded{opacity:.25;pointer-events:none;}
 .t-card-name{font-size:15px;font-weight:500;margin-bottom:.3rem;color:var(--text);}
 .t-card-desc{font-size:12px;color:var(--muted);line-height:1.45;margin-bottom:.4rem;}
@@ -154,7 +154,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
   appearance:none;
   font-family:'DM Sans',sans-serif;
 }
-.choice-card:hover,.choice-card:active{border-color:var(--accent);background:rgba(232,201,74,.06);}
+.choice-card:hover,.choice-card:active{border-color:var(--accent);background:rgba(242,121,43,.06);}
 .choice-card-title{font-size:16px;font-weight:500;color:var(--text)!important;margin-bottom:.3rem;}
 .choice-card-desc{font-size:13px;color:var(--text)!important;opacity:.7;line-height:1.5;}
 
@@ -170,7 +170,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
   padding: 2px;
   border-radius: 12px;
   height: 100%;
-  background: conic-gradient(from var(--angle, 0deg), #e8c94a 0deg, transparent 90deg, transparent 270deg, #e8c94a 360deg);
+  background: conic-gradient(from var(--angle, 0deg), #f2792b 0deg, transparent 90deg, transparent 270deg, #f2792b 360deg);
   animation: spin-border 3s linear infinite;
 }
 .band-card-wrap.lined-up .band-card {
@@ -187,7 +187,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 }
 .lined-up-label {
   font-size: 10px;
-  color: #e8c94a;
+  color: #f2792b;
   font-family: monospace;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -197,7 +197,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .day-tabs{display:flex;gap:7px;margin-bottom:1.25rem;flex-wrap:wrap;}
 .day-tab{padding:7px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg2);color:var(--muted);font-size:13px;cursor:pointer;transition:border-color .15s,color .15s;}
 .day-tab:hover{border-color:var(--border-hover);color:var(--text);}
-.day-tab.active{border-color:var(--accent);color:var(--accent);background:rgba(232,201,74,.06);}
+.day-tab.active{border-color:var(--accent);color:var(--accent);background:rgba(242,121,43,.06);}
 .band-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px;grid-auto-rows:1fr;}
 .band-card{
   display:block;
@@ -243,7 +243,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .sched-day-tabs{display:flex;gap:7px;margin-bottom:1.5rem;flex-wrap:wrap;}
 .sched-day-tab{padding:7px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg2);color:var(--muted);font-size:13px;cursor:pointer;transition:border-color .15s,color .15s;}
 .sched-day-tab:hover{border-color:var(--border-hover);color:var(--text);}
-.sched-day-tab.active{border-color:var(--accent);color:var(--accent);background:rgba(232,201,74,.06);}
+.sched-day-tab.active{border-color:var(--accent);color:var(--accent);background:rgba(242,121,43,.06);}
 
 .sched-list{display:flex;flex-direction:column;gap:8px;}
 .sched-slot{border-radius:var(--radius);overflow:hidden;}
@@ -259,11 +259,11 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .sched-band-stage{font-size:11px;color:var(--muted);margin-top:1px;font-family:'DM Mono',monospace;}
 .sched-band-genre{font-size:11px;color:var(--accent);margin-top:3px;}
 .sched-must-badge{display:inline-block;font-size:10px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:3px;background:rgba(224,90,43,.2);color:var(--accent2);margin-left:8px;vertical-align:middle;}
-.sched-rank-badge{display:inline-block;font-size:10px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:3px;background:rgba(232,201,74,.12);color:var(--accent);margin-left:6px;vertical-align:middle;}
+.sched-rank-badge{display:inline-block;font-size:10px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:3px;background:rgba(242,121,43,.12);color:var(--accent);margin-left:6px;vertical-align:middle;}
 
 /* Overlap slot */
-.sched-overlap{background:var(--bg2);border:1px solid rgba(232,201,74,.3);}
-.sched-overlap-header{padding:8px 14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid rgba(232,201,74,.15);display:flex;align-items:center;gap:8px;}
+.sched-overlap{background:var(--bg2);border:1px solid rgba(242,121,43,.3);}
+.sched-overlap-header{padding:8px 14px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid rgba(242,121,43,.15);display:flex;align-items:center;gap:8px;}
 .overlap-icon{width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block;}
 .sched-overlap-bands{display:flex;gap:0;}
 .sched-overlap-option{flex:1;padding:12px 15px;border-right:1px solid var(--border);}
@@ -285,31 +285,32 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .empty-state{color:var(--muted);font-size:14px;padding:2rem 0;}
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="logo">LineUp<span style="color:#e05a2b;">For</span>Me</div>
-  <div class="logo-sub">Graspop Metal Meeting 2026</div>
+  <div class="logo-sub">Alcatraz Open Air 2026</div>
 </header>
 
 <nav class="steps-nav">
-  <div class="step-tab active" id="tab0" onclick="goToStep(0)" id="tab0" onclick="goToStep(0)">Welcome</div>
-  <div class="step-tab locked" id="tab1" onclick="goToStep(1)" id="tab1" onclick="goToStep(1)">01 — Genres</div>
-  <div class="step-tab locked" id="tab2" onclick="goToStep(2)" id="tab2" onclick="goToStep(2)">02 — Must-see <span style="font-size:10px;opacity:.6;">(optional)</span></div>
-  <div class="step-tab locked" id="tab3" onclick="goToStep(3)" id="tab3" onclick="goToStep(3)">03 — Schedule</div>
+  <div class="step-tab active" id="tab0" onclick="goToStep(0)">Welcome</div>
+  <div class="step-tab locked" id="tab1" onclick="goToStep(1)">01 — Genres</div>
+  <div class="step-tab locked" id="tab2" onclick="goToStep(2)">02 — Must-see <span style="font-size:10px;opacity:.6;">(optional)</span></div>
+  <div class="step-tab locked" id="tab3" onclick="goToStep(3)">03 — Schedule</div>
 </nav>
 
 <div class="screen active" id="screen0">
-  <div class="screen-title">Your Graspop.<br>Your schedule.</div>
+  <div class="screen-title">Your Alcatraz.<br>Your schedule.</div>
   <p class="screen-desc" style="max-width:480px;font-size:15px;line-height:1.8;color:var(--text);margin-bottom:2rem;">
-    Graspop 2026 features over 130 bands across 5 stages. <br>
+    Alcatraz Open Air 2026 features 120+ bands across 4 stages, 6–9 August in Kortrijk. <br>
     In 3 steps, we build a personalised schedule just for you.
   </p>
   <div style="display:flex;flex-direction:column;gap:12px;max-width:400px;margin-bottom:2.5rem;">
     <div style="display:flex;gap:14px;align-items:flex-start;">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--accent);min-width:28px;">01</span>
       <div>
-        <div style="font-weight:500;">Rank your genres</div>
+        <div style="font-weight:500;">Rank your favourite metal genres</div>
         <div style="font-size:13px;color:var(--muted);">9 quick choices — which genre speaks to you most?</div>
       </div>
     </div>
@@ -342,8 +343,8 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 </div>
 
 <div class="screen" id="screen1">
-  <div class="screen-title">What's your sound?</div>
-  <p class="screen-desc">Select your favourite genres — which genre speaks to you most?</p>
+  <div class="screen-title">What's your metal sound?</div>
+  <p class="screen-desc">Select your favourite metal genres — which speaks to you most?</p>
   <div class="t-wrap" id="tournamentWrap"></div>
 </div>
 
@@ -355,18 +356,18 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
   <div class="screen-title">Your schedule</div>
   <p class="screen-desc">Overlapping acts are shown side by side — you choose on the spot.</p>
   <div class="sched-day-tabs" id="schedDayTabs">
-    <div class="sched-day-tab active" id="schedTab0" onclick="showSchedDay(0)">Thu 18/06</div>
-    <div class="sched-day-tab" id="schedTab1" onclick="showSchedDay(1)">Fri 19/06</div>
-    <div class="sched-day-tab" id="schedTab2" onclick="showSchedDay(2)">Sat 20/06</div>
-    <div class="sched-day-tab" id="schedTab3" onclick="showSchedDay(3)">Sun 21/06</div>
+    <div class="sched-day-tab active" id="schedTab0" onclick="showSchedDay(0)">Thu 06/08</div>
+    <div class="sched-day-tab" id="schedTab1" onclick="showSchedDay(1)">Fri 07/08</div>
+    <div class="sched-day-tab" id="schedTab2" onclick="showSchedDay(2)">Sat 08/08</div>
+    <div class="sched-day-tab" id="schedTab3" onclick="showSchedDay(3)">Sun 09/08</div>
   </div>
   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:1rem;font-size:11px;color:#999;">
-    <span style="color:#e8c94a;">★★★★★</span><span>Top 5</span>
-    <span style="color:#e8c94a;">★★★★☆</span><span>Love it</span>
-    <span style="color:#e8c94a;">★★★☆☆</span><span>Like it</span>
-    <span style="color:#e8c94a;">★★☆☆☆</span><span>OK</span>
-    <span style="color:#e8c94a;">★☆☆☆☆</span><span>Less</span>
-    <span style="color:#e8c94a;">☆☆☆☆☆</span><span>Low priority</span>
+    <span style="color:#f2792b;">★★★★★</span><span>Top 5</span>
+    <span style="color:#f2792b;">★★★★☆</span><span>Love it</span>
+    <span style="color:#f2792b;">★★★☆☆</span><span>Like it</span>
+    <span style="color:#f2792b;">★★☆☆☆</span><span>OK</span>
+    <span style="color:#f2792b;">★☆☆☆☆</span><span>Less</span>
+    <span style="color:#f2792b;">☆☆☆☆☆</span><span>Low priority</span>
   </div>
   <div id="schedOutput"></div>
   <div class="btn-row" style="margin-top:1.25rem;">
@@ -380,121 +381,1345 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 </div>
 
 <div style="padding:1rem 2rem;border-top:1px solid rgba(255,255,255,0.05);font-size:11px;color:#444;text-align:center;line-height:1.6;">
-  This app runs entirely in your browser. No personal data is collected or stored by us. Your schedule is saved locally on your device only.
+  This app runs entirely in your browser. No personal data is collected or stored by us. Your schedule is saved locally on your device only.<br>
+  Line-up times are community-sourced and may not be 100% final — always double-check against the official Alcatraz timetable before the festival.
 </div>
 
+</body>
+
 <script>
+/* ============================================================
+   LineUpForMe — Alcatraz Open Air 2026
+   Clean, readable engine (v2 — no obfuscation, by design).
+   ============================================================ */
 
-var a0_0x5cac30=a0_0x40e5;(function(_0x161ae6,_0xc5760f){var _0x15e47c=a0_0x40e5,_0x4f70cc=_0x161ae6();while(!![]){try{var _0x535a37=parseInt(_0x15e47c(0x1e5))/0x1+parseInt(_0x15e47c(0x2d8))/0x2*(parseInt(_0x15e47c(0x326))/0x3)+parseInt(_0x15e47c(0x24a))/0x4+parseInt(_0x15e47c(0x372))/0x5+parseInt(_0x15e47c(0x241))/0x6*(parseInt(_0x15e47c(0x379))/0x7)+parseInt(_0x15e47c(0x227))/0x8*(parseInt(_0x15e47c(0x1c9))/0x9)+-parseInt(_0x15e47c(0x24b))/0xa;if(_0x535a37===_0xc5760f)break;else _0x4f70cc['push'](_0x4f70cc['shift']());}catch(_0x47ff3a){_0x4f70cc['push'](_0x4f70cc['shift']());}}}(a0_0x2066,0xdda9a));const GENRES=[{'name':'Black\x20metal','desc':a0_0x5cac30(0x297),'ex':a0_0x5cac30(0x355)},{'name':'Death\x20metal','desc':a0_0x5cac30(0x376),'ex':a0_0x5cac30(0x147)},{'name':a0_0x5cac30(0x170),'desc':a0_0x5cac30(0x2b0),'ex':a0_0x5cac30(0x130)},{'name':'Heavy\x20metal','desc':a0_0x5cac30(0x13a),'ex':'Black\x20Sabbath\x20·\x20Judas\x20Priest\x20·\x20Accept\x20·\x20Iron\x20Maiden'},{'name':a0_0x5cac30(0x362),'desc':a0_0x5cac30(0x1bd),'ex':a0_0x5cac30(0x35f)},{'name':a0_0x5cac30(0x17b),'desc':a0_0x5cac30(0x272),'ex':'Candlemass\x20·\x20My\x20Dying\x20Bride\x20·\x20YOB'},{'name':a0_0x5cac30(0x17e),'desc':a0_0x5cac30(0x214),'ex':a0_0x5cac30(0x351)},{'name':a0_0x5cac30(0x1e7),'desc':a0_0x5cac30(0x15f),'ex':a0_0x5cac30(0x357)},{'name':a0_0x5cac30(0xf2),'desc':a0_0x5cac30(0x20a),'ex':a0_0x5cac30(0x317)},{'name':a0_0x5cac30(0x22c),'desc':a0_0x5cac30(0x19d),'ex':a0_0x5cac30(0x125)},{'name':a0_0x5cac30(0x32f),'desc':a0_0x5cac30(0x139),'ex':'Killswitch\x20Engage\x20·\x20Architects\x20·\x20Trivium'},{'name':a0_0x5cac30(0x2d3),'desc':a0_0x5cac30(0x17f),'ex':a0_0x5cac30(0x256)},{'name':a0_0x5cac30(0xfe),'desc':a0_0x5cac30(0x223),'ex':a0_0x5cac30(0x314)},{'name':'Symphonic\x20metal','desc':'Orchestral\x20grandeur\x20meets\x20metal.\x20Theatrical.','ex':a0_0x5cac30(0xf3)},{'name':a0_0x5cac30(0xfd),'desc':a0_0x5cac30(0x264),'ex':a0_0x5cac30(0x311)},{'name':a0_0x5cac30(0x262),'desc':'Dark\x20and\x20atmospheric\x20with\x20melancholic\x20themes.','ex':'Type\x20O\x20Negative\x20·\x20HIM\x20·\x20Lacuna\x20Coil'},{'name':a0_0x5cac30(0x34a),'desc':a0_0x5cac30(0x308),'ex':'Nine\x20Inch\x20Nails\x20·\x20Ministry\x20·\x20Combichrist'},{'name':a0_0x5cac30(0x1f4),'desc':a0_0x5cac30(0x255),'ex':a0_0x5cac30(0x232)}],BAND_GENRE={'Ego\x20Kill\x20Talent':[0x9,a0_0x5cac30(0x216)],'Danko\x20Jones':[0x3,a0_0x5cac30(0x373)],'Accept':[0x3,'Heavy\x20Metal'],'A\x20Day\x20to\x20Remember':[0xa,a0_0x5cac30(0x32f)],'Within\x20Temptation':[0xd,a0_0x5cac30(0x2d6)],'The\x20Offspring':[0xc,a0_0x5cac30(0x245)],'Mantah':[0xa,a0_0x5cac30(0x32f)],'Static-X':[0x10,a0_0x5cac30(0x108)],'Combichrist':[0x10,a0_0x5cac30(0x108)],'Wind\x20Rose':[0xe,'Folk\x20Metal'],'Tom\x20Morello':[0x3,'Hard\x20Rock'],'Megadeth':[0x2,a0_0x5cac30(0x331)],'Limp\x20Bizkit':[0x9,a0_0x5cac30(0x2c1)],'Distant':[0xb,a0_0x5cac30(0x2d3)],'Snot':[0x9,'Nu-Metal'],'Dying\x20Wish':[0xa,a0_0x5cac30(0x32f)],'Gatecreeper':[0x1,a0_0x5cac30(0x28d)],'Wolves\x20In\x20The\x20Throne\x20Room':[0x0,'Black\x20Metal'],'Septicflesh':[0x1,a0_0x5cac30(0x28d)],'Cult\x20of\x20Luna':[0x6,'Post\x20Metal'],'Anthrax':[0x2,a0_0x5cac30(0x331)],'Slay\x20Squad':[0xc,a0_0x5cac30(0x340)],'BLACKGOLD':[0x3,a0_0x5cac30(0x373)],'Thrown':[0xa,a0_0x5cac30(0x32f)],'Grade\x202':[0xc,a0_0x5cac30(0x245)],'John\x20Coffey':[0xc,a0_0x5cac30(0x116)],'Pennywise':[0xc,'Punk\x20Rock'],'The\x20Dillinger\x20Escape\x20Plan':[0xc,a0_0x5cac30(0x116)],'Magnolia\x20Park':[0xa,a0_0x5cac30(0x32f)],'Ankor':[0xa,a0_0x5cac30(0x32f)],'The\x20Funeral\x20Portrait':[0xf,a0_0x5cac30(0x17c)],'Sleep\x20Theory':[0x9,'Alternative\x20Metal'],'Lakeview':[0xa,a0_0x5cac30(0x32f)],'Bloodywood':[0x9,a0_0x5cac30(0x2c1)],'President':[0xa,a0_0x5cac30(0x32f)],'Quicksand':[0xc,a0_0x5cac30(0x116)],'Triggerfinger':[0x3,a0_0x5cac30(0x373)],'Cavalera\x20\x22Chaos\x20A.D.\x22':[0x8,a0_0x5cac30(0x1ff)],'Sex\x20Pistols\x20feat.\x20Frank\x20Carter':[0xc,'Punk\x20Rock'],'Alter\x20Bridge':[0x3,a0_0x5cac30(0x373)],'Volbeat':[0x3,a0_0x5cac30(0x305)],'Infected\x20Rain':[0x8,a0_0x5cac30(0x1ff)],'Drowning\x20Pool':[0x9,a0_0x5cac30(0x2c1)],'Mammoth':[0x3,a0_0x5cac30(0x305)],'Trivium':[0xa,a0_0x5cac30(0x32f)],'Breaking\x20Benjamin':[0x9,'Alternative\x20Metal'],'Knocked\x20Loose':[0xc,'Hardcore'],'Hulder':[0x0,a0_0x5cac30(0x200)],'Bark':[0x6,a0_0x5cac30(0x275)],'Asomvel':[0x3,'Heavy\x20Metal'],'Suicidal\x20Angels':[0x2,'Thrash\x20Metal'],'Old\x20Man\x27s\x20Child':[0x0,a0_0x5cac30(0x200)],'Possessed':[0x1,a0_0x5cac30(0x28d)],'Death\x20To\x20All':[0x1,a0_0x5cac30(0x28d)],'Cradle\x20Of\x20Filth':[0x0,'Black\x20Metal'],'Thornhill':[0xa,a0_0x5cac30(0x32f)],'letlive.':[0xc,a0_0x5cac30(0x116)],'Guilt\x20Trip':[0xc,'Hardcore'],'Drain':[0xc,a0_0x5cac30(0x340)],'We\x20Came\x20As\x20Romans':[0xa,'Metalcore'],'Kublai\x20Khan\x20TX':[0xa,a0_0x5cac30(0x32f)],'Lionheart':[0xc,a0_0x5cac30(0x340)],'Vower':[0x6,'Sludge\x20Metal'],'TX2':[0xa,'Metalcore'],'Oranssi\x20Pazuzu':[0x0,a0_0x5cac30(0x200)],'Harakiri\x20for\x20the\x20Sky':[0x6,'Post\x20Metal'],'Elder':[0x11,a0_0x5cac30(0x218)],'Kadavar':[0x3,a0_0x5cac30(0x373)],'Leprous':[0x11,a0_0x5cac30(0x252)],'Fleddy\x20Melculy':[0xc,a0_0x5cac30(0x245)],'Malevolence':[0xc,'Hardcore'],'Hollywood\x20Undead':[0x9,'Nu-Metal'],'Ice\x20Nine\x20Kills':[0xa,'Metalcore'],'Architects':[0xa,a0_0x5cac30(0x32f)],'Bring\x20Me\x20The\x20Horizon':[0xa,'Metalcore'],'The\x20Pretty\x20Wild':[0x3,a0_0x5cac30(0x373)],'P.O.D.':[0x9,a0_0x5cac30(0x2c1)],'Sepultura':[0x8,'Groove\x20Metal'],'Three\x20Days\x20Grace':[0x9,'Alternative\x20Metal'],'BABYMETAL':[0x9,a0_0x5cac30(0x216)],'Bad\x20Omens':[0xa,'Metalcore'],'Embryonic\x20Autopsy':[0x1,a0_0x5cac30(0x28d)],'Sinsaenum':[0x1,'Death\x20Metal'],'Uada':[0x0,a0_0x5cac30(0x200)],'Terrorizer':[0x1,a0_0x5cac30(0x28d)],'Lacuna\x20Coil':[0xf,a0_0x5cac30(0x253)],'Corrosion\x20Of\x20Conformity':[0x8,a0_0x5cac30(0x1ff)],'Moonspell':[0xf,a0_0x5cac30(0x253)],'Six\x20Feet\x20Under':[0x1,a0_0x5cac30(0x28d)],'Vicious\x20Rumors':[0x3,a0_0x5cac30(0x305)],'Feuerschwanz':[0xe,'Folk\x20Metal'],'Primal\x20Fear':[0x4,a0_0x5cac30(0x21c)],'Orden\x20Ogan':[0x4,a0_0x5cac30(0x21c)],'Sonata\x20Arctica':[0x4,a0_0x5cac30(0x21c)],'Queensrÿche':[0x11,'Progressive\x20Metal'],'Avatar':[0x3,'Heavy\x20Metal'],'Mouth\x20Culture':[0xc,a0_0x5cac30(0x340)],'Faetooth':[0x5,a0_0x5cac30(0x270)],'Rivers\x20of\x20Nihil':[0x11,a0_0x5cac30(0x252)],'Loathe':[0xa,a0_0x5cac30(0x32f)],'Catch\x20Your\x20Breath':[0xa,a0_0x5cac30(0x32f)],'Uncle\x20Acid\x20&\x20the\x20Deadbeats':[0x7,a0_0x5cac30(0x1af)],'Tesseract':[0x11,a0_0x5cac30(0x252)],'Battle\x20Beast':[0x4,'Power\x20Metal'],'Life\x20of\x20Agony':[0x9,a0_0x5cac30(0x216)],'Extreme':[0x3,a0_0x5cac30(0x373)],'Black\x20Label\x20Society':[0x3,a0_0x5cac30(0x305)],'Electric\x20Callboy':[0xa,a0_0x5cac30(0x32f)],'Sabaton':[0x4,a0_0x5cac30(0x21c)],'Evergrey':[0x11,a0_0x5cac30(0x252)],'Europe':[0x3,a0_0x5cac30(0x373)],'Foreigner':[0x3,a0_0x5cac30(0x373)],'Alice\x20Cooper':[0x3,a0_0x5cac30(0x373)],'Def\x20Leppard':[0x3,a0_0x5cac30(0x373)],'Killus':[0xa,a0_0x5cac30(0x32f)],'Gaerea':[0x0,'Black\x20Metal'],'Decapitated':[0x1,a0_0x5cac30(0x28d)],'Vltimas':[0x1,a0_0x5cac30(0x28d)],'Kanonenfieber':[0x0,'Black\x20Metal'],'The\x20Gathering':[0xf,a0_0x5cac30(0x253)],'Venom':[0x0,'Black\x20Metal'],'Mastodon':[0x11,a0_0x5cac30(0xf4)],'Kuazar':[0x2,a0_0x5cac30(0x331)],'King\x20810':[0xc,a0_0x5cac30(0x340)],'Wargasm':[0x9,a0_0x5cac30(0x2c1)],'Set\x20It\x20Off':[0xa,a0_0x5cac30(0x32f)],'Lagwagon':[0xc,'Punk\x20Rock'],'Bury\x20Tomorrow':[0xa,a0_0x5cac30(0x32f)],'The\x20Plot\x20In\x20You':[0xc,a0_0x5cac30(0x116)],'Return\x20To\x20Dust':[0x5,'Doom\x20Metal'],'Zetra':[0x6,a0_0x5cac30(0x12c)],'Rain\x20City\x20Drive':[0x9,a0_0x5cac30(0x216)],'Future\x20Palace':[0xa,'Metalcore'],'Periphery':[0x11,'Progressive\x20Metal'],'Sólstafir':[0x6,'Post\x20Metal'],'Carpenter\x20Brut':[0x10,a0_0x5cac30(0x180)]};function toMin(_0x176d4d){var _0x1aba08=a0_0x5cac30;const [_0x457f9d,_0x273e68]=_0x176d4d[_0x1aba08(0x1cc)]('.')[_0x1aba08(0x2de)](Number);return _0x457f9d<0x6?(_0x457f9d+0x18)*0x3c+_0x273e68:_0x457f9d*0x3c+_0x273e68;}const LINEUP=[[{'name':a0_0x5cac30(0x114),'stage':a0_0x5cac30(0x174),'s':'12.45','e':a0_0x5cac30(0x33b)},{'name':a0_0x5cac30(0x1b9),'stage':'South\x20Stage','s':a0_0x5cac30(0x25c),'e':a0_0x5cac30(0x171)},{'name':a0_0x5cac30(0x15b),'stage':a0_0x5cac30(0x174),'s':'16.35','e':a0_0x5cac30(0x224)},{'name':a0_0x5cac30(0x260),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x337),'e':a0_0x5cac30(0x364)},{'name':a0_0x5cac30(0x1ef),'stage':'South\x20Stage','s':a0_0x5cac30(0x28a),'e':a0_0x5cac30(0x266)},{'name':a0_0x5cac30(0x163),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x257),'e':'01.30'},{'name':a0_0x5cac30(0x22b),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x197),'e':'12.40'},{'name':a0_0x5cac30(0x135),'stage':a0_0x5cac30(0x14a),'s':'13.35','e':a0_0x5cac30(0x315)},{'name':a0_0x5cac30(0x1cb),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x360),'e':a0_0x5cac30(0x18b)},{'name':a0_0x5cac30(0x16e),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x153),'e':a0_0x5cac30(0x157)},{'name':a0_0x5cac30(0x233),'stage':'North\x20Stage','s':'19.45','e':'21.00'},{'name':a0_0x5cac30(0x36e),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x1fd),'e':'23.50'},{'name':'Distant','stage':'Marquee','s':a0_0x5cac30(0x197),'e':'12.40'},{'name':'Snot','stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0xfb),'e':a0_0x5cac30(0x212)},{'name':a0_0x5cac30(0x229),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x2bd),'e':'15.25'},{'name':a0_0x5cac30(0x19b),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x20f),'e':a0_0x5cac30(0x2ae)},{'name':'Wolves\x20In\x20The\x20Throne\x20Room','stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x153),'e':a0_0x5cac30(0x118)},{'name':a0_0x5cac30(0x2ee),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x26d),'e':'20.00'},{'name':a0_0x5cac30(0x21f),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x370),'e':a0_0x5cac30(0x2dd)},{'name':a0_0x5cac30(0x103),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x266),'e':a0_0x5cac30(0x287)},{'name':a0_0x5cac30(0x1ad),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x142),'e':a0_0x5cac30(0xf7)},{'name':a0_0x5cac30(0x1de),'stage':a0_0x5cac30(0x1a1),'s':'14.00','e':a0_0x5cac30(0x2b2)},{'name':'Thrown','stage':a0_0x5cac30(0x1a1),'s':'15.40','e':a0_0x5cac30(0x18b)},{'name':'Grade\x202','stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x224),'e':a0_0x5cac30(0x34c)},{'name':a0_0x5cac30(0x1e0),'stage':a0_0x5cac30(0x1a1),'s':'19.10','e':'20.00'},{'name':a0_0x5cac30(0x1b7),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x261),'e':'21.50'},{'name':a0_0x5cac30(0x23b),'stage':a0_0x5cac30(0x1a1),'s':'23.00','e':a0_0x5cac30(0x257)},{'name':'Magnolia\x20Park','stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x197),'e':'12.40'},{'name':a0_0x5cac30(0x2c6),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0xf7),'e':a0_0x5cac30(0x212)},{'name':a0_0x5cac30(0x10a),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x18e),'e':a0_0x5cac30(0x360)},{'name':a0_0x5cac30(0x22d),'stage':a0_0x5cac30(0x143),'s':'16.30','e':a0_0x5cac30(0x2bf)},{'name':'Lakeview','stage':a0_0x5cac30(0x143),'s':'18.15','e':a0_0x5cac30(0x19e)},{'name':a0_0x5cac30(0x1d6),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x177),'e':a0_0x5cac30(0x112)},{'name':a0_0x5cac30(0x1df),'stage':'Metal\x20Dome','s':a0_0x5cac30(0x198),'e':a0_0x5cac30(0x16f)}],[{'name':a0_0x5cac30(0x100),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x2f2),'e':a0_0x5cac30(0x1b6)},{'name':'Triggerfinger','stage':'South\x20Stage','s':a0_0x5cac30(0x2b2),'e':a0_0x5cac30(0x360)},{'name':a0_0x5cac30(0x24c),'stage':'South\x20Stage','s':'16.45','e':a0_0x5cac30(0x153)},{'name':'Sex\x20Pistols\x20feat.\x20Frank\x20Carter','stage':a0_0x5cac30(0x174),'s':'18.45','e':a0_0x5cac30(0x10d)},{'name':a0_0x5cac30(0x149),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x28a),'e':'22.25'},{'name':a0_0x5cac30(0x31b),'stage':'South\x20Stage','s':'00.00','e':a0_0x5cac30(0x203)},{'name':a0_0x5cac30(0x183),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x197),'e':a0_0x5cac30(0x1db)},{'name':a0_0x5cac30(0x1f5),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x29d),'e':a0_0x5cac30(0x25c)},{'name':a0_0x5cac30(0x277),'stage':'North\x20Stage','s':a0_0x5cac30(0x1d2),'e':'16.35'},{'name':'Trivium','stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x1f8),'e':a0_0x5cac30(0x265)},{'name':a0_0x5cac30(0x320),'stage':a0_0x5cac30(0x14a),'s':'19.55','e':'21.00'},{'name':'Knocked\x20Loose','stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x1fd),'e':a0_0x5cac30(0x341)},{'name':a0_0x5cac30(0x310),'stage':a0_0x5cac30(0x32d),'s':'12.00','e':'12.40'},{'name':a0_0x5cac30(0x33e),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0xf7),'e':'14.05'},{'name':a0_0x5cac30(0x2c4),'stage':a0_0x5cac30(0x32d),'s':'14.45','e':a0_0x5cac30(0x14e)},{'name':'Suicidal\x20Angels','stage':'Marquee','s':'16.10','e':'17.00'},{'name':a0_0x5cac30(0x31c),'stage':a0_0x5cac30(0x32d),'s':'17.40','e':a0_0x5cac30(0x157)},{'name':'Possessed','stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x26d),'e':a0_0x5cac30(0x25b)},{'name':a0_0x5cac30(0x1c8),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x370),'e':'21.45'},{'name':'Cradle\x20Of\x20Filth','stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x10b),'e':a0_0x5cac30(0x257)},{'name':a0_0x5cac30(0x29c),'stage':'Jupiler\x20Stage','s':'12.40','e':a0_0x5cac30(0xf7)},{'name':a0_0x5cac30(0x21e),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x107),'e':a0_0x5cac30(0x2b2)},{'name':'Guilt\x20Trip','stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x2fe),'e':'16.25'},{'name':a0_0x5cac30(0x369),'stage':'Jupiler\x20Stage','s':a0_0x5cac30(0x224),'e':a0_0x5cac30(0x34c)},{'name':a0_0x5cac30(0x238),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x26d),'e':a0_0x5cac30(0x25b)},{'name':'Kublai\x20Khan\x20TX','stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x261),'e':a0_0x5cac30(0x184)},{'name':a0_0x5cac30(0x2bc),'stage':'Jupiler\x20Stage','s':a0_0x5cac30(0x279),'e':a0_0x5cac30(0x24d)},{'name':a0_0x5cac30(0x313),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x197),'e':a0_0x5cac30(0x142)},{'name':a0_0x5cac30(0x2e4),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0xf7),'e':a0_0x5cac30(0x107)},{'name':a0_0x5cac30(0x371),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x18e),'e':a0_0x5cac30(0x360)},{'name':a0_0x5cac30(0x1d9),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x35d),'e':'17.20'},{'name':a0_0x5cac30(0x1d8),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x102),'e':a0_0x5cac30(0x19e)},{'name':'Kadavar','stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x177),'e':a0_0x5cac30(0x112)},{'name':a0_0x5cac30(0x128),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x198),'e':a0_0x5cac30(0x16f)}],[{'name':a0_0x5cac30(0x1f6),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x2f2),'e':a0_0x5cac30(0x1b6)},{'name':a0_0x5cac30(0x2c3),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x2b2),'e':'15.35'},{'name':a0_0x5cac30(0x358),'stage':'South\x20Stage','s':a0_0x5cac30(0x354),'e':a0_0x5cac30(0x153)},{'name':a0_0x5cac30(0x159),'stage':'South\x20Stage','s':a0_0x5cac30(0x134),'e':a0_0x5cac30(0x334)},{'name':a0_0x5cac30(0x1c1),'stage':'South\x20Stage','s':'21.10','e':a0_0x5cac30(0x266)},{'name':a0_0x5cac30(0x162),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x257),'e':a0_0x5cac30(0x203)},{'name':a0_0x5cac30(0x244),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x197),'e':a0_0x5cac30(0x1db)},{'name':a0_0x5cac30(0x2e2),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x29d),'e':a0_0x5cac30(0x25c)},{'name':'Sepultura','stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x1d2),'e':a0_0x5cac30(0x345)},{'name':'Three\x20Days\x20Grace','stage':'North\x20Stage','s':a0_0x5cac30(0x1f8),'e':a0_0x5cac30(0x337)},{'name':a0_0x5cac30(0x190),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x25b),'e':a0_0x5cac30(0x261)},{'name':a0_0x5cac30(0x2ff),'stage':'North\x20Stage','s':a0_0x5cac30(0x1fd),'e':a0_0x5cac30(0x341)},{'name':a0_0x5cac30(0x35e),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x2a4),'e':'13.00'},{'name':a0_0x5cac30(0x247),'stage':'Marquee','s':a0_0x5cac30(0x1b6),'e':a0_0x5cac30(0x315)},{'name':a0_0x5cac30(0x27b),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x269),'e':'15.50'},{'name':a0_0x5cac30(0x231),'stage':'Marquee','s':'16.30','e':a0_0x5cac30(0x258)},{'name':a0_0x5cac30(0x109),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x2c8),'e':a0_0x5cac30(0x145)},{'name':a0_0x5cac30(0x15d),'stage':'Marquee','s':a0_0x5cac30(0x2ed),'e':a0_0x5cac30(0x220)},{'name':'Moonspell','stage':a0_0x5cac30(0x32d),'s':'20.55','e':a0_0x5cac30(0x285)},{'name':a0_0x5cac30(0x178),'stage':'Marquee','s':a0_0x5cac30(0x1fd),'e':'23.35'},{'name':a0_0x5cac30(0x1f1),'stage':'Jupiler\x20Stage','s':a0_0x5cac30(0x142),'e':a0_0x5cac30(0xf7)},{'name':a0_0x5cac30(0x122),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x212),'e':'14.45'},{'name':'Primal\x20Fear','stage':'Jupiler\x20Stage','s':a0_0x5cac30(0x2fe),'e':a0_0x5cac30(0x18b)},{'name':a0_0x5cac30(0x23e),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x224),'e':'18.10'},{'name':'Sonata\x20Arctica','stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x26d),'e':a0_0x5cac30(0x25b)},{'name':a0_0x5cac30(0x160),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x261),'e':'21.50'},{'name':a0_0x5cac30(0x199),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x187),'e':a0_0x5cac30(0x257)},{'name':'Mouth\x20Culture','stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x197),'e':a0_0x5cac30(0x142)},{'name':a0_0x5cac30(0x235),'stage':a0_0x5cac30(0x143),'s':'13.20','e':a0_0x5cac30(0x212)},{'name':'Rivers\x20of\x20Nihil','stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x18e),'e':'15.35'},{'name':a0_0x5cac30(0x2dc),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x35d),'e':a0_0x5cac30(0x2bf)},{'name':a0_0x5cac30(0x16d),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x102),'e':'19.05'},{'name':'Uncle\x20Acid\x20&\x20the\x20Deadbeats','stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x177),'e':a0_0x5cac30(0x112)},{'name':a0_0x5cac30(0x1e4),'stage':a0_0x5cac30(0x143),'s':'21.55','e':a0_0x5cac30(0x16f)}],[{'name':a0_0x5cac30(0x25d),'stage':'South\x20Stage','s':'12.00','e':a0_0x5cac30(0x1db)},{'name':a0_0x5cac30(0x32b),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x26f),'e':a0_0x5cac30(0x2b2)},{'name':a0_0x5cac30(0x1ea),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x278),'e':a0_0x5cac30(0x2ae)},{'name':a0_0x5cac30(0x19c),'stage':'South\x20Stage','s':a0_0x5cac30(0x102),'e':a0_0x5cac30(0x2b6)},{'name':a0_0x5cac30(0x2c2),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x370),'e':'21.55'},{'name':a0_0x5cac30(0x222),'stage':a0_0x5cac30(0x174),'s':a0_0x5cac30(0x279),'e':a0_0x5cac30(0x367)},{'name':a0_0x5cac30(0x19f),'stage':'North\x20Stage','s':'12.55','e':'13.45'},{'name':'Europe','stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x217),'e':a0_0x5cac30(0x1d2)},{'name':'Foreigner','stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x1ac),'e':a0_0x5cac30(0x309)},{'name':a0_0x5cac30(0x127),'stage':a0_0x5cac30(0x14a),'s':'19.25','e':a0_0x5cac30(0x115)},{'name':a0_0x5cac30(0x343),'stage':a0_0x5cac30(0x14a),'s':a0_0x5cac30(0x289),'e':a0_0x5cac30(0x246)},{'name':'Killus','stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x197),'e':a0_0x5cac30(0x142)},{'name':'Gaerea','stage':'Marquee','s':a0_0x5cac30(0xfb),'e':a0_0x5cac30(0x212)},{'name':a0_0x5cac30(0x2f9),'stage':a0_0x5cac30(0x32d),'s':'14.40','e':'15.30'},{'name':a0_0x5cac30(0x378),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x219),'e':'17.00'},{'name':a0_0x5cac30(0x30d),'stage':a0_0x5cac30(0x32d),'s':a0_0x5cac30(0x136),'e':a0_0x5cac30(0x337)},{'name':a0_0x5cac30(0x215),'stage':a0_0x5cac30(0x32d),'s':'19.20','e':a0_0x5cac30(0x283)},{'name':'Venom','stage':a0_0x5cac30(0x32d),'s':'20.50','e':'21.50'},{'name':'Mastodon','stage':'Marquee','s':'22.35','e':a0_0x5cac30(0x341)},{'name':a0_0x5cac30(0x290),'stage':'Jupiler\x20Stage','s':a0_0x5cac30(0x142),'e':'13.20'},{'name':a0_0x5cac30(0x34d),'stage':'Jupiler\x20Stage','s':'14.00','e':'14.45'},{'name':a0_0x5cac30(0x14f),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x2fe),'e':a0_0x5cac30(0x18b)},{'name':a0_0x5cac30(0x12e),'stage':a0_0x5cac30(0x1a1),'s':'17.25','e':a0_0x5cac30(0x34c)},{'name':'Lagwagon','stage':'Jupiler\x20Stage','s':a0_0x5cac30(0x26d),'e':a0_0x5cac30(0x25b)},{'name':a0_0x5cac30(0x22a),'stage':a0_0x5cac30(0x1a1),'s':a0_0x5cac30(0x261),'e':a0_0x5cac30(0x184)},{'name':a0_0x5cac30(0x2d5),'stage':a0_0x5cac30(0x1a1),'s':'23.00','e':a0_0x5cac30(0x257)},{'name':a0_0x5cac30(0x213),'stage':a0_0x5cac30(0x143),'s':'12.00','e':'12.40'},{'name':a0_0x5cac30(0x155),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0xf7),'e':a0_0x5cac30(0x212)},{'name':'Rain\x20City\x20Drive','stage':'Metal\x20Dome','s':a0_0x5cac30(0x18e),'e':'15.35'},{'name':'Future\x20Palace','stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x35d),'e':'17.20'},{'name':a0_0x5cac30(0x2f3),'stage':a0_0x5cac30(0x143),'s':'18.15','e':'19.05'},{'name':a0_0x5cac30(0x28f),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x177),'e':a0_0x5cac30(0x112)},{'name':a0_0x5cac30(0x141),'stage':a0_0x5cac30(0x143),'s':a0_0x5cac30(0x198),'e':a0_0x5cac30(0x16f)}]],DAY_NAMES=[a0_0x5cac30(0x33a),'Vrijdag\x2019/06',a0_0x5cac30(0x26a),a0_0x5cac30(0x211)];let genreOrder=GENRES['map']((_0x30a38a,_0x499394)=>_0x499394),mustBands=new Set(),currentDay=0x0,schedules=[];function a0_0x2066(){var _0x1905cc=['Aw5JBhvKzxm','twfTBw90Aa','mtuUntu','mJmUmZa','C29YDa','vwfKyq','rxzLCNL0AgLUzYb0Agf0igH1CNrZlIbuAguGBw9YzsbICNv0ywWSihrOzsbIzxr0zxiU','ugLJAYb5B3vYiduGzMf2B3vYAxrLigDLBNjLCW','zgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMnLBNrLCJTNyxa6mtbWEdTIywnRz3jVDw5KoNjNyMeOmJmYldiWmsW3ncWWlJa3ktTIB3jKzxi6mxb4ihnVBgLKihjNyMeOmJmYldiWmsW3ncWWlJi1ktTIB3jKzxiTCMfKAxvZoJHWEdTWywrKAw5NoJe0ChGGmJbWEdTJDxjZB3i6Cg9PBNrLCJT0B3vJAc1Hy3rPB246BwfUAxb1Bgf0Aw9Uo2zVBNqTzMfTAwX5oNnHBNmTC2vYAwy7D2LKDgG6mtaWjtTTyxGTD2LKDgG6ndaWChG7Dgv4Dc1HBgLNBJPSzwz0o2jVEc1ZAxPPBMC6yM9YzgvYlwjVEdTTyxjNAw4TDg9WoJeWChG7','DMfYkc0TyM9YzgvYkq','BwLUlxDPzhrOoJuYChG7yM9YzgvYlxjPz2H0oJfWEcbZB2XPzcbYz2jHkdi1nsWYntuSmJu1ldaUmdCPo3bHzgrPBMCTCMLNAhq6mtrWEdS','u3vUzgf5idiXlZa2','C21VB3rO','mJaUmta','4Ocv4Ocvia','mJeUndu','mJbWEa','mJmUmJu','BwfUAxb1Bgf0Aw9U','mJiUmdu','mJeUmta','BMv4DfbPy2TcDg4','nxb4','rgvHDgGGtwv0ywW','AgvHzgXPBMvYCW','u8oZBhn0ywzPCG','s3vHEMfY','4PYfienVCgLLzce','C3rHCNq','BMWTqKu','B3bHy2L0Eq','C2nOzwqTzhvYyxrPB24','lNnJAgvKlwjHBMqTC3rHz2v7zM9UDc1ZAxPLoJeYChG7y29SB3i6iZy2nJT9','uMf3lcbHz2DYzxnZAxzLlcbZAhjPzwTPBMCGDM9JywXZlIbeyxjRBMvZCYbHBMqGD2fYlG','DgfImW','CMvWBgfJzq','C2LUz2XL','yM90Dg9T','vgHVCM5OAwXS','mtmUnta','CgfKzgLUzZOXnNb4idiWChG7yM9YzgvYlxrVCdOXChGGC29SAwqGCMDIysGYntuSmJu1ldi1nsWWlJa2ktTKAxnWBgf5oMzSzxG7ANvZDgLMEs1JB250zw50oNnWywnLlwjLDhDLzw47','y3jLyxrLvgv4De5Vzgu','tMv4DdOGy2HVB3nLihLVDxiGBxvZDc1ZzwvZiokgKG','Dc1JyxjKCW','8j+tIYbdB3b5ihrLEhq','CMvTB3zL','mtiUmtu','yMfJA2DYB3vUzdPYz2jHkdiZmIWYmdeSnZqSmc4WocK7yM9YzgvYoJfWEcbZB2XPzcbYz2jHkdiZmIWYmdeSnZqSmc4YnsK7yM9YzgvYlxjHzgL1CZOXmhb4o3bHzgrPBMC6mtrWEcaXohb4o21HCMDPBI10B3a6ms4YnxjLBtTKAxnWBgf5oMzSzxG7ywXPz24TAxrLBxm6y2vUDgvYo2DHCdOXmNb4oW','ywrK','zM9UDfnPEMu','B3jKzxi','pc9IB2r5pJWVAhrTBd4','BMv4DfnPyMXPBMC','vMvUB20','lNnJAgvKlw92zxjSyxaTyMfUzhn7zgLZCgXHEtPMBgv4o30','ANnVBG','mtyUntu','Bg9JA2vK','rMfZDcbHBMqGywDNCMvZC2L2zs4GvgHLigjHy2TIB25Lig9MigHLyxz5ig1LDgfSlG','y29UDgvUDhm','mtqUndu','CMDIysGYntuSmJu1ldi1nsWWlJaZkq','C2nOzwqTyMfUzc1Uyw1L','EM9UzgfN','mtKUmtu','8j+oUcbzzxmG4OcuignOB29ZzsbMCM9Tigz1BgWGBgLUzs11Ca','C2nYzwvUlwrLC2m','y2HLy2ST','Bwf0y2G','CgLJA0nVDw50zxi','tgLVBMHLyxj0','mtqUnda','4PIg4PIg4PIg4PIg4PIg','mtCUmJa','Aw5UzxjuzxH0','tNuTtwv0ywW','rwXLy3rYAwmGq2fSBgjVEq','twfSzxzVBgvUy2u','qxnVBxzLBa','yMfJA2DYB3vUzdPUB25Lo2jVCMrLCJPUB25Lo2nVBg9YoIm5otK7zM9UDc1ZAxPLoJiYChG7y3vYC29YoNbVAw50zxi7CgfKzgLUzZO0ChG7BwfYz2LUlwXLzNq6mtjWEdTMBgv4lxnOCMLUAZOWoW','qw5RB3i','ywXS','mtCUntu','DgfI','zw1WDhKTC3rHDgu','zg9UzgvYzgfN','C2nOzwqTB3zLCMXHCa','BgLUzxvWu3rHDhvZ','C2f2zwrty2HLzhvSzuj0BG','Dg9Nz2XL','yMfUzc1Uyw1L','mxb4','Dc1Yyw5RlxjVDW','rgvHDgHJB3jL','ywn0AxzL','vgHLifbSB3qGsw4Gww91','u3LTCgHVBMLJie1LDgfS','C3bHBG','mtm1ntq5nhbSq0nsAG','r2vUzxjHDgvKigj5igXPBMv1CgzVCM1LlM5LDa','twfZDg9KB24','q2HVB3nLihLVDxiGChjVzMLSzq','tg9HDgHL','mJeUnda','BwfW','u2f0idiWlZa2','DMfYkc0TDgv4DcK','ig9Mia','uc5plKqU','yMfUzc1JyxjKlxDYyxa','vfGY','yM9YzgvYq29SB3i','CxvLCNLtzwXLy3rVCG','mcbVzIa','yMfUzc1JAgvJAW','BxvZDa','4Q2qifLLCYdIGjqGy2HVB3nLigzYB20GAgvHzgXPBMvYCW','Dc1Iyxi','Dc1Yyw5Rlw5HBwu','mtKUmJu','u2vWDgLJzMXLC2G','rNjPzgf5ide5lZa2','BhvMBv9Zy2HLzhvSzxm','zM9JDxm','mtiUntu','ugvYAxbOzxj5','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJe1ChG7zM9UDc13zwLNAhq6ntaWo2nVBg9YoNzHCIGTlxrLEhqPo21HCMDPBI1IB3r0B206lJrYzw07iJ5iB3CGzg9LCYbPDcb3B3jRpZWVzgL2pG','txKGr3jHC3bVCcaYmdi2iokaLca','Dg9vChbLCKnHC2u','B3bLBG','BxvZDc1ZzwuG4PYt','rgvJyxbPDgf0zwq','Cg9ZAxrPB246C3rPy2T5o3rVCdOWo2jHy2TNCM91BMq6iZbHmgeWytTWywrKAw5NoJe2ChGGmJbWEcaXmNb4o2jVCMrLCI1IB3r0B206mxb4ihnVBgLKihjNyMeOmJmYldiWmsW3ncWWlJe1ktTKAxnWBgf5oMzSzxG7ywXPz24TAxrLBxm6y2vUDgvYo2P1C3rPzNKTy29UDgvUDdPZCgfJzs1Izxr3zwvUo3OTAw5KzxG6mtS','ig11C3q','zgf0yxnLDa','rM9YzwLNBMvY','mtuUnda','qMfKie9Tzw5Z','lNnJAgvKlw11C3qTyMfKz2v7yMfJA2DYB3vUzdOJzta1ytjIo2nVBg9YoInMzMy7zM9UDc1ZAxPLoJeWChG7CgfKzgLUzZOYChGGnNb4o2jVCMrLCI1YywrPDxm6m3b4o21HCMDPBI1Szwz0oJzWEdT9','o2jVCMrLCI1YywrPDxm6mtbWEdTWywrKAw5NoJeYChGGmtrWEdTKAxnWBgf5oMzSzxG7ywXPz24TAxrLBxm6y2vUDgvYo2DHCdOXnhb4oW','q2HVB3nLiokaLcbVDMvYBgfW','C2nYzwvUlxrPDgXL','BwfYz2LU','sgvHDNKGtwv0ywW','zMXVB3i','Dc1JyxjKlwv4','twfJAgLUzxmGyxmGAw5ZDhj1BwvUDhmUievSzwn0CM9UAwmGCMH5DgHTCYbHBMqGBwv0ywWU','mtGUmdu','Dc1Yyw5RAw5NlxbYzxzPzxC','DgLRig9TihrLig1HCMTLCMvU','lNnJAgvKlwjHBMqTBMfTzxTMB250lxDLAwDODdO2mda7zM9UDc1ZAxPLoJe1ChG7Fq','s2fUB25LBMzPzwjLCG','vgfWigfUigfJDcb0BYbTyxjRigL0igfZig11C3qTC2vLlIbby3rZihDPDgGGyw4Gyw5PBwf0zwqGyM9YzgvYigfYzsbHBhjLywr5igXPBMvKihvWigjHC2vKig9UihLVDxiGz2vUCMuGCMfUA2LUzY4','C2nYzwvUmMnVBNrLBNq','shvSzgvY','qxjRB25Himk3ievSDxzLAxrPzsdcTYbxAw5KifjVC2u','C2nOzwqTCMfUAY1IywrNzq','vM93zxi','vgHLierPBgXPBMDLCIbfC2nHCguGugXHBIdcTYbqzw5UExDPC2u','mtqUmJu','yMfUzc1NCMLK','ugfUDgvYysdcTYbtzxb1Bhr1CMeGWRCGtwfJAgLUzsbizwfK','BwLU','zgf5lxrHyNm','ms41CMvT','vM9SyMvHDa','t2XKie1HBIDZienOAwXK','AM9PBG','mtaWjq','DhjPBq','qNjLywTPBMCGqMvUAMfTAw4','DNjPAMrHzW','BgfIzwW','zM9YrwfJAa','C2nYzwvUmG','vgfRzsbHihnJCMvLBNnOB3qGDg8GC2f2zq','m2fss3jzCG','DxnLCKfNzw50','y29Uy2f0','lNnJAgvKlw92zxjSyxaTAgvHzgvYE2jHy2TNCM91BMq6i2u4yZK0ytTWywrKAw5NoJzWEcaXmNb4o2zVBNqTC2L6ztOXmNb4o2zVBNqTD2vPz2H0oJyWmdT9','o2jVCMrLCJOXChGGC29SAwqG','tgLMzsbVzIbbz29UEq','D2LUBMvY','twfYCxvLzq','lMjHBMqTAgLUDa','twv0ywXJB3jL','BgLUzwqTDxaTBgfIzwW','vgHYyxnOie1LDgfS','4PIf4PIf4PIf4PIg4PIg','DhLWzq','mtKUnta','lNnJAgvKlxnPBMDSzxTIB3jKzxi6mxb4ihnVBgLKicnKzgq7yM9YzgvYlxjHzgL1CZO4ChG7CgfKzgLUzZOXmNb4o21HCMDPBI1IB3r0B206ohb4o2rPC3bSyxK6zMXLEdTNyxa6mtjWEdT9','pc9ZDhLSzt48l2HLywq+pgjVzhK+','mtGUnda','Dg9W','zM9UDc1ZAxPLoJeZChG7Bgv0DgvYlxnWywnPBMC6mxb4o21PBI13Awr0AdO4mhb4oW','rg9UzgvYzgfNide4lZa2','mtmUmZa','4OAqiejHy2S','iokaLEkaLq','qMfYAW','v29SDMvZieLUifrOzsbuAhjVBMuGuM9VBq','sgfYzgnVCMu','mJmUnta','BgLUzwq','rgvMieXLChbHCMq','C2nOzwqTBgLZDa','mtyUmZu','lJvYzw0','4PQHienit09trtO','C2nOzwqTC2XVDa','zM9UDc1ZAxPLoJeXChG7y29SB3i6iZy2nJTMB250lwzHBwLSEtPTB25VC3bHy2u7BwfYz2LUlxrVCdOYChG7','sw5KDxn0CMLHBcbTzxrHBa','Cg9ZAxrPB246ywjZB2X1Dgu7Dg9WoJHWEdTYAwDODdO5ChG7zM9UDc1ZAxPLoJeZChG7y29SB3i6CMDIysGYmJqSotaSndmSmc45ktTMB250lxDLAwDODdO3mda7','mtGUmta','s2LUzYa4mta','q2f0y2H5lcbHy2nLC3nPyMXLlcbIzwf1DgLMDwWUieHLyxz5igLZigzPBMuSigj1Dcb3AxrOigzLzwXPBMCU','iZeXmq','CgLJA0DYAwq','qw1LBNjHimk3ie5LDxjVC2LZimk3ien1BhqGB2yGthvUysdcTYbnyxn0B2rVBG','jsbKB25L','CMDIysGYmJqSotaSndmSlJa4kq','mtyUndu','twf5AgvTimk3ierHCMT0AhjVBMuGWRCGv29SDMvZieLUifrOzsbuAhjVBMuGuM9VBq','s25Vy2TLzcbmB29Zzq','u2XLzxaGWRCGs3L1C3mGWRCGrwXLy3rYAwmGv2L6yxjKimk3ienSDxrJAa','sg9SBhL3B29KifvUzgvHza','zgLZCgXHEtPMBgv4oW','u2vWDwX0DxjH','u29UyxrHiefYy3rPy2e','C2nYB2XSsw50B1zPzxC','mtyUmZa','rw1ICNLVBMLJief1Dg9WC3K','qMXPBMqGr3vHCMrPyw4GWRCGsgvSBg93zwvUimk3ifnHyMf0B24','mtuUmZu','C2f2zunVBMzPCM1HDgLVBG','ug93zxiGBwv0ywW','DgfIma','mtKUmZu','zgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMnLBNrLCJTNyxa6mtjWEdTWywrKAw5NoI43nxjLBsaXCMvTo21PBI13Awr0AdP1BNnLDdTTyxGTD2LKDgG6Dw5Zzxq7D2LKDgG6mtaWjtTIywnRz3jVDw5KoImXmte7y29SB3i6i2yWzwrLodS','yMfUza','mdeUmda','u3rLCcaYig9Midi','rhjHAw4','CgfYC2u','Dc1JyxjKlw5HBwu','zM9UDc1ZAxPLoJiWChG7zM9UDc13zwLNAhq6nZaWo2nVBg9YoInMmgvKztG7BwfYz2LUlxrVCdOYChG7zM9UDc1Myw1PBhK6C2fUCY1ZzxjPzJS','BhvMBv9TDxn0qMfUzhm','tgLTCcbcAxPRAxq','tw9ZAhbPDcWGywrYzw5HBgLUzsWGyNjLywTKB3DUCY4Gq2HHB3mGAxmGDgHLigDVywWU','mJaUndu','t3jHBNnZAsbqyxP1ENu','ndqZnJm5mezXExHQDW','sgfYzcbsB2nR','qwXSigjHBMrZigzYB20GywXSihn0ywDLCYWGCgvYigrHEs4','zM9UDc1ZAxPLoJeWChG7y29SB3i6i2u4yZK0ytTMB250lwzHBwLSEtPTB25VC3bHy2u7Dgv4Dc1HBgLNBJPSzwz0o21HCMDPBI10B3a6m3b4oW','vgvJAg5Py2fSigfUzcbICNv0ywWUieDYB3DSzwqGDM9JywXZigfUzcbIBgfZDcbIzwf0CY4','pgrPDIbJBgfZCZ0Iy2HVAwnLlwnHCMqTDgL0BguIpG','vMX0Aw1HCW','n3zzB0TruW','r3jVB3zLig1LDgfS','v2L0AgLUifrLBxb0yxrPB24GWRCGtMLNAhr3AxnOimk3ievWAwnH','uhjVz3jLC3nPDMu','AxnnDxn0','CMvTB3zLsxrLBq','mtmUmJa','C3r5Bgu','zM9UDc1ZAxPLoJeYChG7y29SB3i6i2u4yZK0ytTSzxr0zxiTC3bHy2LUzZOXChG7BwfYz2LUlxrVCdO0ChG7','zM9UDc1ZAxPLoJeWChG7y29SB3i6iZK5otTTyxjNAw4TDg9WoJjWEdS','mtmUmtu','BhvMBv9Nzw5Yzu9YzgvY','rM9SAYbTzxrHBa','sgfYzgnVCMuGlYbqB3n0lwHHCMrJB3jL','CgfKzgLUzZOXmNb4ide2ChGGndbWEdTKAxnWBgf5oMzSzxG7zMXLEc1KAxjLy3rPB246y29SDw1Uo2DHCdO4ChG7','uxvPy2TZyw5K','zgLZCgXHEq','mtGUmtu','qw50AhjHEa','Dc1WCM9NCMvZCY1YB3C','8j+oSIbtDxjWCMLZzsbTzq','C2nOzwqTDgLTzq','mtqUmdu','sw5KDxn0CMLHBcbnzxrHBa','tgfJDw5HienVAwW','vgHLiez1BMvYywWGug9YDhjHAxq','mJiUndu','zM9UDc1ZAxPLoJe1ChG7zM9UDc13zwLNAhq6nJaWo2nVBg9YoInLogm5nge7zM9UDc1Myw1PBhK6Bw9UB3nWywnLoW','mtKUndu','vgHLBIb3zsbHDxrVBwf0AwnHBgX5igj1AwXKigeGCgvYC29UywXPC2vKihnJAgvKDwXLigzVCIbLywnOigzLC3rPDMfSigrHEs4','CMDIysGYmJqSotaSndmSmc4WocK','zM9UDc1ZAxPLoJeZChG7y29SB3i6DMfYkc0TBxv0zwqPo2XLDhrLCI1ZCgfJAw5NoI4Wn2vTo3rLEhqTDhjHBNnMB3jToNvWCgvYy2fZztTTyxjNAw4TyM90Dg9ToJfYzw07','8j+nUIbgzxn0AxzHBcbJBgfZC2LJCW','mJaUntu','phn0CM9UzYbZDhLSzt0Iy29SB3i6i2u4yZK0ytSIpLnJAgvKDwXLihnHDMvKitWVC3rYB25NpJXICJ5ozxH0ihrPBwuGEw91ig9Wzw4GBgLUzxvWzM9YBwuUBMv0lcb5B3vYihnJAgvKDwXLihDPBgWGC3rPBgWGyMuGAgvYzs4','rwDVieTPBgWGvgfSzw50','mJaUmZu','ug9ZDc1iyxjKy29Yzq','4PIf4PIf4PIf4PIf4PIg','mtGUmJu','v2HPy2GGB2yGDgHLC2uGyxbWzwfSCYb0BYb5B3uGBw9ZDd8','y3jLyxrLrwXLBwvUDa','r2vUCMv2B29YA2v1CIa','C2nYzwvUmW','yNv0Dg9U','CMDIysGYmJqSotaSndmSmc40kq','C2nYzwvU','zxzLCNK','zMXLEdOXo21PBI13Awr0AdOWoW','rMv1zxjZy2H3yw56','zM9UDc1ZAxPLoJe3ChG7zM9UDc13zwLNAhq6nJaWo2nVBg9YoInMmgvKztG7zM9UDc1Myw1PBhK6C2fUCY1ZzxjPzJT3AgL0zs1ZCgfJztPUB3DYyxa7B3zLCMzSB3C6AgLKzgvUo3rLEhqTB3zLCMzSB3C6zwXSAxbZAxm7','C3bSAwnL','s29YBIdcTYbmAw1WiejPEMTPDcdcTYbtBgLWA25VDa','lJC1CMvTidaGmxjLBq','qwXPy2uGq29VCgvY','tgvWCM91CW','y2HVAwnLlwnHCMq','pc9KAxy+','CM91BMq','ug9ZDcbnzxrHBa','yMfJA2DYB3vUza','u2v0ieL0ie9MzG','AgfZ','twv0ywXSAwnHimk3ie1Lz2fKzxrOimk3iefUDgHYyxGGWRCGu2XHEwvY','BgvUz3rO','y2XPCgjVyxjK','C2nOzwqTB3zLCMXHCc1Iyw5KCW','mtGUnta','u3rHDgLJlvG','mtCUnda','C2nOzwrpDxrWDxq','y3nZvgv4Da','sgfYzgnVCMuGAw50zw5ZAxr5ignVBwjPBMvKihDPDgGGBwv0ywWGCMLMzNmU','q2XHC3nPyYbMB3vUzgf0Aw9UoIbWB3DLCMz1BcbYAwzMCYWGC29SB3mGyw5KigfUDgHLBxmU','BgLUzxvWzM9YBwuUBMv0','zgf5lxrHyG','y29UDgfPBNm','zM9UDc1ZAxPLoJeZChG7y29SB3i6i2u4yZK0ytTMB250lwzHBwLSEtPTB25VC3bHy2u7BwfYz2LUlwjVDhrVBtOZChG7','pgrPDIbZDhLSzt0IzM9UDc1ZAxPLoJeZChG7y29SB3i6DMfYkc0TDgv4DcK7B3bHy2L0EtOUnZu7BgLUzs1OzwLNAhq6ms42oYi+','B3zLCMXHCa','q2fYCgvUDgvYiejYDxq','mtiUnda','twv0ywWGrg9Tzq','mxjLBq','mtGUndu','o2nVBg9YoImWmda7','tw9YyMLKiefUz2vSimk3ienHBM5PyMfSienVCNbZzsdcTYbpyML0DwfYEq','u2fMyxjP','qwX0zxiGqNjPzgDL','tM9YDgGGu3rHz2u','Dc1JyxjK','zM9UDc1ZAxPLoJeWChG7Bgv0DgvYlxnWywnPBMC6lJe1zw07Dgv4Dc10CMfUC2zVCM06DxbWzxjJyxnLo2nVBg9YoNjNyMeOmJmYldiWmsW3ncWWlJyPo2zVBNqTzMfTAwX5oM1VBM9ZCgfJztS','4PIf4PIf4PIg4PIg4PIg','mtuUmZa','v2fYz2fZBq','v2fUDcbZCgvJAwzPyYbHy3rZigLUihLVDxiGC2nOzwr1BguGBM8GBwf0DgvYihDOyxq/ie9YigP1C3qGz28GC3rYywLNAhqGDg8GDgHLihjLC3vSDd8','rxvYB3bL','zM9UDc1ZAxPLoJeYChG7y29SB3i6iZy2nJTMB250lwzHBwLSEtPTB25VC3bHy2u7BwfYz2LUlxrVCdOYChG7','mtCUmZu','C01PBG','wMv0CMe','zM9UDc1ZAxPLoJeYChG7y29SB3i6DMfYkc0TBxv0zwqPo21HCMDPBI1IB3r0B206mxjLBtS','mtGUmZa','C2nOzwqTyMfUzc1ZDgfNzq','swnLie5PBMuGs2LSBhm','vgH1CNnKyxKGmtGVmdy','qwnJzxb0','ihrVCa','q29YCM9ZAw9Uie9MienVBMzVCM1PDhK','u2TPCcb0AgLZihn0zxaUie15ihnJAgvKDwXLihDPBgWGyMuGyMfZzwqGzw50AxjLBhKGB24GBxKGz2vUCMuGCMfUA2LUzY4','rNv6EI1Ozwf2EsbHBMqGz3jVB3z5lIbqC3LJAgvKzwXPyYbHBMqGCMvWzxrPDgL2zs4','uxvLzw5ZCSo/y2HL','Bg9JywXLq29TCgfYzq','qNjPBMCGtwuGvgHLieHVCML6B24','vgHLie9MzNnWCMLUzW','C2nOzwqTDgLTzs1JB2W','yMfUzc1OAw50','yNrUigj0BI1ZzwnVBMrHCNK','u2nOzw1HigDLA29WAwvLCMqH','qMLNig5HBwvZlcbZAw5NlwfSB25NCYWGyMvLCIbPBIbOyw5KlG','zgL2','zgLZCgXHEtPMBgv4o2zSzxGTzgLYzwn0Aw9UoMnVBhvTBJTNyxa6n3b4oW','4PIf4PIf4PIf4PIf4PIf','Dc1MAwXS','q2f0y2GGww91CIbcCMvHDgG','vg9Tie1VCMvSBg8','mJiUntu','vgHYyxnOig1LDgfS','mtuUmJu','yMfUzc1JyxjK','zMLSDgvY','u291DgGGu3rHz2u','4PIf4PIg4PIg4PIg4PIg','tgv0igzHDguGzgvJAwrLlG','mJaUmdu','u2L4iezLzxqGvw5Kzxi','CgfYzw50tM9Kzq','zgLZywjSzwq','rg9VBsbTzxrHBa','r290AgLJifjVy2S','vw5JBguGqwnPzcaMihrOzsbezwfKyMvHDhm','u2X1zgDLic8Gug9ZDc1TzxrHBa','rgvHDgGGBwv0ywWGyNj1DgfSAxr5ihDPDgGGAgfYzgnVCMuGyNjLywTKB3DUCY4','u3LUDgH3yxzL','Dhj1zq','Aw5KzxHpzG','sw5Mzwn0zwqGuMfPBG','mJeUnta','zMLYC3rdAgLSza','igfJDgL2zq','mJmUmda','BwfYz2LUvg9W','BwfYz2LUqM90Dg9T','zg9Uzq','mtyUmJu','DgL0Bgu','zM9UDc1ZAxPLoJeYChG7y29SB3i6CMDIysGYmZiSmJaXldC0ldaUncK7zM9UDc1Myw1PBhK6Bw9UB3nWywnLoW','mtqUnta','u3vUidiXlZa2','qKfcwu1fvefm','D3jPDgu','igjVDhrVBq','sxqGDgfRzxmGBgvZCYb0AgfUigeGBwLUDxrLlIa','D2LKDgG6mJjWEdTOzwLNAhq6mJjWEdTIB3jKzxiTCMfKAxvZoJuWjtTIB3jKzxi6mNb4ihnVBgLKihzHCIGTlwjVCMrLCIK7zMXLEc1ZAhjPBMS6mdTKAxnWBgf5oMzSzxG7ywXPz24TAxrLBxm6y2vUDgvYo2P1C3rPzNKTy29UDgvUDdPJzw50zxi7zM9UDc1ZAxPLoJeZChG7DhjHBNnPDgLVBJPHBgWGlJe1CZS','zM9UDc1ZAxPLoJeYChG7y29SB3i6iZK5otT0zxH0lwfSAwDUoMXLzNq7BwfYz2LUlxrVCdOYChG7BgLUzs1OzwLNAhq6ms40oW','q2HYB21L','mtiUmda','mJeUntu','qxzHDgfY','C2nOzwqTyMfUzc1Nzw5Yzq','r2f0zwnYzwvWzxi','qMXHy2SGtgfIzwWGu29JAwv0Eq','twv0ywWGy3jVC3nLCYbOAxaTAg9WlcbNCNvUz2uGyw5KigvSzwn0CM9UAwnZlG','mtKUmdu','rxzLCMDYzxK','Cg9ZAxrPB246zML4zwq7Dg9WoJa7BgvMDdOWo3jPz2H0oJa7yMfJA2DYB3vUzdOJztHJotrHo2nVBg9YoImWmda7CgfKzgLUzZOXmNb4ide2ChG7EI1PBMrLEdO5otK5o2zVBNqTzMfTAwX5oNnHBNmTC2vYAwy7zM9UDc1ZAxPLoJeZChG7zgLZCgXHEtPMBgv4o2fSAwDUlwL0zw1ZoMnLBNrLCJTQDxn0Awz5lwnVBNrLBNq6C3bHy2uTyMv0D2vLBJTNyxa6mtjWEdS','sNvWAwXLCIbtDgfNzq','lNnJAgvKlwXPC3r7Bwf4lxDPzhrOoJyWmhb4o30','C2nOzwr1BgvjBwfNzu92zxjSyxK','iokyHsbnvvnulvnfrq','CMvZDa','ugLJAYb5B3vYidmGBgvHC3qGzMf2B3vYAxrLigDLBNjLCW','yMfUzeDYAwq','ug9ZC2vZC2vK','zMXLEdOXo3bHzgrPBMC6mtbWEcaXmNb4oW','C3rYAw5NAwz5','zg9JDw1LBNq','mtCUmdu','u2XHEsbtCxvHza','zgLZCgXHEtPMBgv4o2zSzxGTzgLYzwn0Aw9UoMnVBhvTBJTNyxa6mtbWEdS','u3rVBMvYifjVy2S','tw9VBNnWzwXS','y29SB3i','u2v4ifbPC3rVBhmGzMvHDc4GrNjHBMSGq2fYDgvY','mc42nq','u3rLCcaXig9Midi','DMfYkc0TyMCYkq','mtmUnda','ugvUBNL3AxnL','C3rHz2u','rgfUA28GsM9Uzxm','lMrHEs10ywi','ChvZAa','ntaL','rxbPyYbHBMqGBwvSB2rPyYWGD2L0AcbOAwDOignSzwfUihzVy2fSCY4','r2vLBIbIyw5KCYbNzxnLBgvJDgvLCMqGDM9VCIbKzxPLigrHzY4','u2f0DxjKyxKGmJaVmdy','yNrUlxjVDW','qxjJAgL0zwn0CW','ywXYzwfKEsbSAw5Lzcb1CcbMB3iGEw91','ignOB3nLBG','pgH0BwW+pgHLywq+phrPDgXLpK1PAM4Gr3jHC3bVCcbty2HLBwe8l3rPDgXLpG','iZq0na','iZK5oq','DMfYkc0TywnJzw50kq','rgvHDgGGvg8GqwXS','nZjUt3zYt0u','zu1PBG','v2LUzcbsB3nL','C3bSAxq','ms4YnxjLBq','CMDIysGYmZiSmJaXldC0lc4WocK','B3zLCMXHCc1Py29U','BhvMBv9ZyxzLza','zM9UDc1ZAxPLoJeWChG7yMfJA2DYB3vUzdPYz2jHkdiYncW5mcW0mYWWlJiPo2nVBg9YoInLmdvHmMi7CgfKzgLUzZOZChGGohb4o2jVCMrLCI1YywrPDxm6nhb4o2zVBNqTzMfTAwX5oM1VBM9ZCgfJztS','mtuUndu','iZy2nG','C2nOzwqTB3zLCMXHCc1OzwfKzxi','zgvSzxrL','qMXVB2r5D29Vza','yxbWzw5Kq2HPBgq','rwXKzxi','sgfYywTPCMKGzM9YihrOzsbtA3K','teLorvvqrK9stuuUtKvu','mtiUndu','AgvPz2H0','C2v0sxrLBq','qKXbq0Tht0Xe','uhjLC2LKzw50','sM9OBIbdB2zMzxK','yMfUzc10Aw1L','lNnJAgvKlwr1CMf0Aw9UE2zVBNqTC2L6ztOXmNb4o2nVBg9YoIm4odG7Fq','yMfJA2DYB3vUzdPYz2jHkdiZmIWYmdeSnZqSmc4WncK7yM9YzgvYoJfWEcbZB2XPzcbYz2jHkdiZmIWYmdeSnZqSmc4YnsK7yM9YzgvYlxjHzgL1CZOXmhb4o292zxjMBg93oMHPzgrLBJS','vgvZC2vYywn0','mtq0oty4ogzryuHiqG','yMfJA2DYB3vUzdPUB25Lo2jVCMrLCJPUB25Lo2zVBNqTC2L6ztOXohb4o2n1CNnVCJPWB2LUDgvYo3bHzgrPBMC6nhb4o2zSzxGTC2HYAw5RoJa7y29SB3i6iZaWmdS','u3rVBMvYig1LDgfS','CMfUzg9T','Ahr0Chm6lY9HCgKUywXSB3jPz2LUCY53Aw4Vz2v0p3vYBd0','rxH0CMvTzq','ig11C3qTC2XVDa','B3zLCMXHCc1SywjLBa','Aw5Uzxjive1m','B3b0Aw9UCW','v2L0AgLUifrLBxb0yxrPB24','tvvtvc1truu','vMLJAw91CYbsDw1VCNm','BxvZDfnLzvbHBMvS','DMfYkc0TywnJzw50mIK','uhjVz3jLC3nPDMuGBwv0ywW','rhjVD25PBMCGug9VBa','rMXLzgr5ie1LBgn1BhK','mcuGzg9Uzq','mtCUndu','D2LKDgG6mJjWEdTOzwLNAhq6mJjWEdTIB3jKzxiTCMfKAxvZoJuWjtTMBgv4lxnOCMLUAZOWo2rPC3bSyxK6zMXLEdTHBgLNBI1PDgvTCZPJzw50zxi7ANvZDgLMEs1JB250zw50oMnLBNrLCJTMB250lxnPEMu6mtnWEdT0CMfUC2L0Aw9UoMfSBcaUmtvZo2jHy2TNCM91BMq6','ww91CIbNzw5YzsbYyw5RAw5N','zM9UDc1ZAxPLoJe0ChG7y29SB3i6i2u4yZK0ytTSzxr0zxiTC3bHy2LUzZOXChG7','C2XPy2u','mJiUmZu','8j+uPsbfBMvYz3KGyw5KignOyw9Z','r3jVB3zLie1LDgfS','qMXHy2SGtwv0ywW','4PQGieXPDMuGDxbKyxrLig5PzxqGyMvZy2HPA2jHyxiG4OcuigLUz2vIB3v3zguGzgf0ysbNzwjYDwLRDa','y2XHC3noyw1L','mdeUmZa','DgfImG','Ahr0Chm6lY93D3CUz3jHC3bVCc5Izs9UBc9SAw5LlxvWlW','D3jPDgvuzxH0','v2uGCMfUAYaXocbTzxrHBcbNzw5YzxmGyMfZzwqGB24GEw91CIbWCMvMzxjLBMnLCY4G','Dgv4DenVBNrLBNq','CMfUAW','twLKlxrLBxbVigfUzcbPCNjLC2LZDgLIBguUieHLyxz5ihjPzMzZihDPDgGGC3DPBMCU','zgvZyW','yMfUzc1ZDgfNzq','yNrUigj0BI1WCMLTyxj5','z2v0rwXLBwvUDej5swq','mtyUmdu','iokaKYa','wM9UzgfNidiXlZa2','mtqUmda','uMv0DxjUifrVier1C3q','rg9VBsbTzwv0CYbOyxjKy29Yzs4GqxrTB3nWAgvYzsbHBMqGzw1VDgLVBMfSihDLAwDODc4','vgHLieDHDgHLCMLUzW','qwX0zxjUyxrPDMuGtwv0ywW','mtqUntu','uhjVz3jLC3nPDMuGuM9JAW','mtyUmta','Aw5Zzxj0qMvMB3jL','Dc1XDwvZDgLVBG','ug93zxiGtwv0ywW','y2vUDgvY','Bgv0BgL2zs4','q3vSDcbVzIbmDw5H','mJaUmtu','tM90igLUihrOzsbTywLUC3rYzwfTlIbtBwfSBcbZDgfNzxmSigjPzYbPBxbYzxnZAw9UlG','u2fIyxrVBG','uMf3igfUzcbLBMvYz2v0AwmGD2L0AcbHigrPCMvJDcbTzxnZywDLlG','mtCUmJu','zM9UDc1ZAxPLoJeZChG7zM9UDc13zwLNAhq6ntaWo2nVBg9YoInMmgvKztG7BgLUzs1OzwLNAhq6ms4Zo3bHzgrPBMCTCMLNAhq6mtHWEdS','CgLJA2vK','nZiWoty4qMzzrunn','tgLUzs11Ccb3B3jKDcbNzwXHzgvU4OcM','rhLPBMCGv2LZAa','qNvYEsbuB21VCNjVDW','twfUDgfO','tNuTBwv0ywW','u2XLzxaGvgHLB3j5','BMfTzq','Cg9ZAxrPB246zML4zwq7Aw5Zzxq6mdTIywnRz3jVDw5KoImWytbHmge7EI1PBMrLEdO5otK5o292zxjMBg93lxK6yxv0BZSTD2vIA2L0lw92zxjMBg93lxnJCM9SBgLUzZP0B3vJAdS','8j+sGcbvBMrLCMDYB3vUzcbLEhbLCNq','vgvYCM9YAxPLCG','vg9VBcdcTYbpCgv0AcdcTYbeCMvHBsbuAgvHDgvYimk3ieDVAMLYyq','twvNywrLDgG','yNrUu3rHCNq','rMfLDg9VDgG','DgvZDa','B25JBgLJAW','v2uGq2fTzsbbCYbsB21HBNm','CxvLCNLtzwXLy3rVCKfSBa','uMvMAw5LihrOzsbTAwrKBguG4Ocuihf1zxn0Aw9Uia','vgHLierPBgXPBMDLCIbfC2nHCguGugXHBG','z2v0sxrLBq','Dg91CM5HBwvUDfDYyxa','t3jKzw4Gt2DHBG','rNjPide5lZa2','sgvHzgXPBMvYCW','mJy4nduYELzAvxPV','C2nOzwqTBxvZDc1IywrNzq','C2nYzwvUma','vgHLifbYzxr0EsbxAwXK','uhvUAYbsB2nR','mJmUmJa','u2LUC2fLBNvT','txvZDc1ZzwuGywn0CW','l3nJAgvKDwXL','mZu3otiWmhLeDxvYAq','mZC2nZi5mZbvqKPuuKC','q2f2ywXLCMeGiKnOyw9ZieeUrc4I','mdaUmZa','BxvZDc1Zzwu','r2vUzxjHDguGBxKGC2nOzwr1BguG4OAs','u3rHCNqGB3zLCG','DgfImq','uhjVz3jLC3nPDMuGtwv0ywW','r290AgLJie1LDgfS','8j+KMcbuAguGAgvHDMLLCIb0AguGyMv0DgvY','vgvJAg5Py2fSigfUzcbHBwjPDgLVDxmUienVBxbSzxGGC3rYDwn0DxjLCY4','v2HPDgvJAgfWzwWGWRCGu3vPy2LKzsbtAwXLBMnLimk3ier5Aw5NifDPC2G','mdaUmda','mtCUmtu','rg9UzsdIGjqGyNvPBgqGBxKGCMfUA2LUzYdIHPi','lNnJAgvKlxrPBwv7zM9UDc13zwLNAhq6nZaWo2zVBNqTC2L6ztOXnNb4o30','mJaUmda','mtqUmZu','qMf0DgXLiejLyxn0','lNnJAgvKlxrPBwuTy29SE21PBI13Awr0AdO2mhb4o30','lNnJAgvKlw92zxjSyxb7yM9YzgvYoJjWEcbZB2XPzcaJztHJotrHo2jVCMrLCI1YywrPDxm6ohb4o21HCMDPBI1IB3r0B206ohb4o30','qsbeyxKGDg8GuMvTzw1Izxi','mJeUmda','r290AgLJig1LDgfS','zMXLEc1ZAhjPBMS6mdT0zxH0lwfSAwDUoNjPz2H0oW','rM9SAYbPBNn0CNvTzw50CYbJB21IAw5Lzcb3AxrOig1LDgfSlG','mtGUmZu','mJiUmJu','y2XHC3nmAxn0','phn0EwXLpMjVzhL7zM9UDc1Myw1PBhK6C2fUCY1ZzxjPzJTWywrKAw5NoJiWChG7yMfJA2DYB3vUzdOJzMzMo2nVBg9YoImWmda7Fq','mtuUmdu','wMf0zxjKywCGmJaVmdy','i2u4yZK0yq','C2nYB2XSvg8','mtKUmta','zM9UDc1Myw1PBhK6C2fUCY1ZzxjPzJTMB250lxnPEMu6mtnWEdTJB2XVCJOJzJbLzgu4o2XPBMuTAgvPz2H0oJeUntS','mtmUntu','rg9VBsbnzxrHBa','zM9UDc1ZAxPLoJeZChG7y29SB3i6DMfYkc0TBxv0zwqPo2XLDhrLCI1ZCgfJAw5NoI4Wn2vTo3rLEhqTDhjHBNnMB3jToNvWCgvYy2fZztTTyxjNAw4TyM90Dg9ToJeUmJvYzw07','u2XVDYWGAgvHDNKGyw5Kigf0Bw9ZCgHLCMLJlIbezxnWywLYigfZig11C2LJlG','lNnJAgvKlwrHEs10ywi','CMDIysGYmJqSotaSndmSmc42kq','u2X1zgDLie1LDgfS'];a0_0x2066=function(){return _0x1905cc;};return a0_0x2066();}function genreRank(_0x36837a){var _0x16f3a4=a0_0x5cac30;const _0xd2029=BAND_GENRE[_0x36837a];if(!_0xd2029)return 0x63;return genreOrder[_0x16f3a4(0x182)](_0xd2029[0x0]);}function genreLabel(_0x5c0d37){const _0x3acc8e=BAND_GENRE[_0x5c0d37];return _0x3acc8e?_0x3acc8e[0x1]:'';}function buildSchedule(_0x25146f){var _0x2b4d0c=a0_0x5cac30;const _0x10e445=LINEUP[_0x25146f][_0x2b4d0c(0x2de)](function(_0x5b7581){var _0x434010=_0x2b4d0c;return{'name':_0x5b7581[_0x434010(0x22e)],'stage':_0x5b7581[_0x434010(0x1b8)],'s':_0x5b7581['s'],'e':_0x5b7581['e'],'sMin':toMin(_0x5b7581['s']),'eMin':toMin(_0x5b7581['e']),'rank':mustBands[_0x434010(0x12f)](_0x5b7581['name'])?-0x1:genreRank(_0x5b7581[_0x434010(0x22e)]),'isMust':mustBands['has'](_0x5b7581[_0x434010(0x22e)])};}),_0x1c260c=[..._0x10e445][_0x2b4d0c(0x27a)]((_0x1782ad,_0x3f26d7)=>_0x1782ad[_0x2b4d0c(0x209)]!==_0x3f26d7[_0x2b4d0c(0x209)]?_0x1782ad[_0x2b4d0c(0x209)]-_0x3f26d7[_0x2b4d0c(0x209)]:_0x1782ad[_0x2b4d0c(0x154)]-_0x3f26d7[_0x2b4d0c(0x154)]),_0x227441=[],_0x4a618a=new Set();for(const _0x4443a3 of _0x1c260c){if(_0x4a618a[_0x2b4d0c(0x12f)](_0x4443a3[_0x2b4d0c(0x22e)]))continue;const _0x20779a=_0x227441[_0x2b4d0c(0x173)](_0x543cf0=>{var _0x55a8f6=_0x2b4d0c;const _0x2d253a=_0x543cf0[_0x55a8f6(0x333)]===_0x55a8f6(0x29a)?[_0x543cf0[_0x55a8f6(0x366)]]:_0x543cf0[_0x55a8f6(0x1ee)];return _0x2d253a['some'](_0x286d04=>_0x286d04[_0x55a8f6(0x154)]<_0x4443a3[_0x55a8f6(0x1ca)]&&_0x4443a3[_0x55a8f6(0x154)]<_0x286d04['eMin']);});if(_0x20779a[_0x2b4d0c(0x131)]===0x0)_0x227441[_0x2b4d0c(0x1bb)]({'type':_0x2b4d0c(0x29a),'band':_0x4443a3}),_0x4a618a[_0x2b4d0c(0x2a6)](_0x4443a3[_0x2b4d0c(0x22e)]);else{if(_0x4443a3[_0x2b4d0c(0xf5)]||_0x4443a3[_0x2b4d0c(0x209)]<=0x2){const _0x47018e=_0x20779a[0x0];if(_0x47018e[_0x2b4d0c(0x333)]===_0x2b4d0c(0x29a)){const _0x343cee=_0x47018e;_0x227441[_0x227441[_0x2b4d0c(0x182)](_0x343cee)]={'type':_0x2b4d0c(0x140),'options':[_0x343cee[_0x2b4d0c(0x366)],_0x4443a3]},_0x4a618a[_0x2b4d0c(0x2a6)](_0x4443a3[_0x2b4d0c(0x22e)]);}else _0x47018e[_0x2b4d0c(0x333)]===_0x2b4d0c(0x140)&&(!_0x47018e[_0x2b4d0c(0x1ee)]['find'](_0x45f023=>_0x45f023[_0x2b4d0c(0x22e)]===_0x4443a3['name'])&&(_0x47018e[_0x2b4d0c(0x1ee)][_0x2b4d0c(0x1bb)](_0x4443a3),_0x4a618a[_0x2b4d0c(0x2a6)](_0x4443a3['name'])));}}}return _0x227441[_0x2b4d0c(0x27a)]((_0x334b22,_0x20ece5)=>{var _0x4bb73a=_0x2b4d0c;const _0xb3443a=_0x334b22['type']===_0x4bb73a(0x29a)?_0x334b22[_0x4bb73a(0x366)][_0x4bb73a(0x154)]:_0x334b22['options'][0x0]['sMin'],_0x3a913c=_0x20ece5[_0x4bb73a(0x333)]===_0x4bb73a(0x29a)?_0x20ece5[_0x4bb73a(0x366)][_0x4bb73a(0x154)]:_0x20ece5[_0x4bb73a(0x1ee)][0x0]['sMin'];return _0xb3443a-_0x3a913c;}),_0x227441;}function buildAllSchedules(){var _0x5b1ca0=a0_0x5cac30;schedules=[0x0,0x1,0x2,0x3][_0x5b1ca0(0x2de)](function(_0x3a79a2){return buildSchedule(_0x3a79a2);});}function fmtTime(_0x2f3c85){var _0x48506a=a0_0x5cac30;return _0x2f3c85[_0x48506a(0x299)]('.',':');}function durLabel(_0x2358ca){var _0x41baae=a0_0x5cac30;const _0x32cd83=_0x2358ca[_0x41baae(0x1ca)]-_0x2358ca[_0x41baae(0x154)];return _0x32cd83+_0x41baae(0x318);}function el(_0x6df46a,_0x14d339){var _0x47fa87=a0_0x5cac30;const _0x5172ba=document[_0x47fa87(0x11a)](_0x6df46a);if(_0x14d339)_0x5172ba['className']=_0x14d339;return _0x5172ba;}function txt(_0xb8bee4,_0x485f9e,_0x3fe215,_0xe0ccc1){var _0x251e39=a0_0x5cac30;const _0x2ed58e=el(_0x485f9e,_0x3fe215);return _0x2ed58e['textContent']=_0xe0ccc1,_0xb8bee4[_0x251e39(0x1d7)](_0x2ed58e),_0x2ed58e;}function renderBandSlotDOM(b){
-  var wrap=el('div','sched-single'+(b.isMust?' must-slot':''));
-  var timeCol=el('div','sched-time-col');
-  txt(timeCol,'div','sched-time',fmtTime(b.s));
-  txt(timeCol,'div','sched-end',fmtTime(b.e));
-  wrap.appendChild(timeCol);
-  var bandCol=el('div','sched-band-col');
-  var nameRow=el('div','sched-band-name');
-  nameRow.textContent=b.name;
-  if(b.isMust){
-    var badge=el('span','sched-must-badge');
-    badge.textContent='must-see';
-    nameRow.appendChild(badge);
-  } else {
-    var rank=genreRank(b.name)+1;
-    if(rank && rank<=15){
-      var badge=el('span','sched-rank-badge');
-      badge.style.cssText='color:#e8c94a;font-size:13px;margin-left:6px;letter-spacing:1px;background:none;border:none;padding:0;';
-      if(rank<=5)       badge.textContent='★★★★★';
-      else if(rank<=8)  badge.textContent='★★★★';
-      else if(rank<=10) badge.textContent='★★★';
-      else if(rank<=13) badge.textContent='★★';
-      else              badge.textContent='★';
-      nameRow.appendChild(badge);
-    }
-  }
-  bandCol.appendChild(nameRow);
-  txt(bandCol,'div','sched-band-stage',b.stage);
-  var gName=genreLabel(b.name);
-  if(gName) txt(bandCol,'div','sched-band-genre',gName);
-  wrap.appendChild(bandCol);
-  return wrap;
+/* ---------- Genre taxonomy (generic, reused across festivals) ---------- */
+const GENRES = [
+  { name: "Black metal", desc: "Raw, aggressive, shrieking vocals. Darkness and war.", ex: "Mayhem · Darkthrone · Wolves In The Throne Room" },
+  { name: "Death metal", desc: "Technical and brutal. Growled vocals and blast beats.", ex: "Morbid Angel · Cannibal Corpse · Obituary" },
+  { name: "Thrash metal", desc: "Fast and aggressive. The backbone of heavy metal.", ex: "Metallica · Megadeth · Anthrax · Slayer" },
+  { name: "Heavy metal", desc: "Classic foundation: powerful riffs, solos and anthems.", ex: "Black Sabbath · Judas Priest · Accept · Iron Maiden" },
+  { name: "Power metal", desc: "Epic and melodic, with high clean vocals.", ex: "Blind Guardian · Helloween · Sabaton" },
+  { name: "Doom metal", desc: "Slow, heavy and atmospheric. Despair as music.", ex: "Candlemass · My Dying Bride · YOB" },
+  { name: "Sludge / Post-metal", desc: "Doom meets hardcore. Atmosphere and emotional weight.", ex: "Amenra · Neurosis · Cult of Luna · Mastodon" },
+  { name: "Stoner metal", desc: "Fuzz-heavy and groovy. Psychedelic and repetitive.", ex: "Sleep · Kyuss · Electric Wizard · Clutch" },
+  { name: "Groove metal", desc: "Mid-tempo and irresistible. Heavy riffs with swing.", ex: "Pantera · Sepultura · Machine Head" },
+  { name: "Nu-metal", desc: "Metal crosses hip-hop, grunge and electronics.", ex: "Korn · Limp Bizkit · Slipknot" },
+  { name: "Metalcore", desc: "Hardcore intensity combined with metal riffs.", ex: "Killswitch Engage · Architects · Trivium" },
+  { name: "Deathcore", desc: "Death metal brutality with hardcore breakdowns.", ex: "Whitechapel · Suicide Silence · Dying Wish" },
+  { name: "Hardcore / Post-hardcore", desc: "Raw and energetic with a direct message.", ex: "The Dillinger Escape Plan · Pennywise" },
+  { name: "Symphonic metal", desc: "Orchestral grandeur meets metal. Theatrical.", ex: "Within Temptation · Nightwish · Epica" },
+  { name: "Folk metal", desc: "Folk instruments combined with metal.", ex: "Arkona · Eluveitie · Wind Rose" },
+  { name: "Gothic metal", desc: "Dark and atmospheric with melancholic themes.", ex: "Type O Negative · HIM · Lacuna Coil" },
+  { name: "Industrial metal", desc: "Machines as instruments. Electronic rhythms and metal.", ex: "Nine Inch Nails · Ministry · Combichrist" },
+  { name: "Progressive metal", desc: "Technical and ambitious. Complex structures.", ex: "Tool · Opeth · Dream Theater · Gojira" },
+];
+
+/* Groups of 3 genre-indices used for the first round of the mini-tournament */
+const T_GROUPS = [
+  [0, 1, 2], [3, 4, 5], [6, 7, 8], [9, 10, 11], [12, 13, 14], [15, 16, 17],
+];
+
+/* One-tap preset orderings (best → least favourite genre index) */
+const PROFILES = [
+  { label: "🤘 The heavier the better", desc: "Everything that hurts. The more brutal, the better.", examples: "Deicide · Immolation · Enthroned · Internal Bleeding", order: [0,1,5,6,2,7,8,11,3,12,9,10,17,4,13,16,14,15] },
+  { label: "🍺 Festival classics", desc: "Big names, sing-alongs, beer in hand.", examples: "Saxon · Testament · Lamb of God · Powerwolf", order: [3,2,8,4,7,17,0,1,9,6,5,13,10,12,14,15,16,11] },
+  { label: "💀 Underground expert", desc: "Not in the mainstream. Small stages, big impression.", examples: "Der Weg Einer Freiheit · The Ruins of Beverast · Witch Club Satan · Blackbraid", order: [0,5,6,1,7,17,2,12,3,8,4,11,10,15,13,14,16,9] },
+  { label: "🔥 Energy and chaos", desc: "Moshpit, adrenaline, breakdowns. Chaos is the goal.", examples: "Hatebreed · Thy Art Is Murder · The Ghost Inside · Terror", order: [10,12,11,2,8,9,1,0,6,3,7,5,17,13,4,14,15,16] },
+  { label: "🎸 Melody first", desc: "Catchy, accessible, beautiful. Heavy is fine, but with feeling.", examples: "Carach Angren · Powerwolf · Alcest · Bloodbound", order: [13,4,15,14,17,3,10,8,9,7,6,12,2,5,1,16,0,11] },
+  { label: "🎲 Surprise me", desc: "Let fate decide.", examples: null, order: null },
+];
+
+/* ---------- Alcatraz Open Air 2026 data (6–9 Aug, Kortrijk) ---------- */
+const LINEUP = [
+  [
+    { name: "Wings of Steel", stage: "Prison", s: "17.45", e: "18.25" },
+    { name: "Aeveris", stage: "Helldorado", s: "17.45", e: "18.25" },
+    { name: "Death Fury", stage: "La Morgue", s: "17.45", e: "18.25" },
+    { name: "Cyclone", stage: "Swamp", s: "18.25", e: "19.25" },
+    { name: "Soulfly", stage: "Prison", s: "19.25", e: "20.25" },
+    { name: "Funeral Dress", stage: "Helldorado", s: "19.25", e: "20.25" },
+    { name: "Left to Die", stage: "La Morgue", s: "19.25", e: "20.25" },
+    { name: "Sacred Reich", stage: "Swamp", s: "20.25", e: "21.25" },
+    { name: "Channel Zero", stage: "Prison", s: "21.25", e: "22.35" },
+    { name: "Heidevolk", stage: "Helldorado", s: "21.25", e: "22.25" },
+    { name: "Enthroned", stage: "La Morgue", s: "21.25", e: "22.25" },
+    { name: "Mikkey Dee with Friends", stage: "Swamp", s: "22.35", e: "23.45" },
+    { name: "Der Weg Einer Freiheit", stage: "La Morgue", s: "23.15", e: "00.15" },
+    { name: "Alestorm", stage: "Prison", s: "23.45", e: "01.00" },
+    { name: "Imminence", stage: "Helldorado", s: "23.45", e: "00.45" },
+  ],
+  [
+    { name: "Amenra", stage: "Swamp", s: "00.20", e: "01.30" },
+    { name: "Warrior Soul", stage: "La Morgue", s: "00.25", e: "01.25" },
+    { name: "Masterplan", stage: "Prison", s: "11.20", e: "12.00" },
+    { name: "Hope Erodes", stage: "Helldorado", s: "11.25", e: "12.05" },
+    { name: "Dead Serious", stage: "Swamp", s: "12.00", e: "12.40" },
+    { name: "Hope As A Weapon", stage: "La Morgue", s: "12.05", e: "12.45" },
+    { name: "Vended", stage: "Prison", s: "12.25", e: "13.10" },
+    { name: "200 Stab Wounds", stage: "Helldorado", s: "12.35", e: "13.20" },
+    { name: "Insanity Alert", stage: "Swamp", s: "13.10", e: "13.55" },
+    { name: "Sons of Lioth", stage: "La Morgue", s: "13.15", e: "13.55" },
+    { name: "Crimson Glory", stage: "Prison", s: "13.40", e: "14.25" },
+    { name: "Temptations For The Weak", stage: "Helldorado", s: "13.50", e: "14.35" },
+    { name: "Coven", stage: "Swamp", s: "14.25", e: "15.10" },
+    { name: "A Thousand Sufferings", stage: "La Morgue", s: "14.30", e: "15.15" },
+    { name: "Combichrist", stage: "Prison", s: "15.00", e: "15.50" },
+    { name: "Revocation", stage: "Helldorado", s: "15.10", e: "16.00" },
+    { name: "Monolord", stage: "Swamp", s: "15.50", e: "16.35" },
+    { name: "Modder", stage: "La Morgue", s: "15.50", e: "16.35" },
+    { name: "Dirkschneider", stage: "Prison", s: "16.25", e: "17.15" },
+    { name: "Merauder", stage: "Helldorado", s: "16.35", e: "17.25" },
+    { name: "Soen", stage: "Swamp", s: "17.15", e: "18.05" },
+    { name: "Graceless", stage: "La Morgue", s: "17.15", e: "18.05" },
+    { name: "Armored Saint", stage: "Prison", s: "17.50", e: "18.50" },
+    { name: "Alien Ant Farm", stage: "Helldorado", s: "18.05", e: "19.00" },
+    { name: "Health", stage: "Swamp", s: "18.50", e: "19.45" },
+    { name: "Witch Club Satan", stage: "La Morgue", s: "18.55", e: "19.45" },
+    { name: "Body Count", stage: "Prison", s: "19.30", e: "20.30" },
+    { name: "Ill Niño", stage: "Helldorado", s: "19.45", e: "20.40" },
+    { name: "Crowbar", stage: "Swamp", s: "20.30", e: "21.30" },
+    { name: "The Ruins of Beverast", stage: "La Morgue", s: "20.30", e: "21.25" },
+    { name: "Savatage", stage: "Prison", s: "21.15", e: "22.20" },
+    { name: "Thy Art Is Murder", stage: "Helldorado", s: "21.25", e: "22.25" },
+    { name: "Igorrr", stage: "Swamp", s: "22.20", e: "23.20" },
+    { name: "Cowboys & Aliens", stage: "La Morgue", s: "22.25", e: "23.20" },
+    { name: "Slaughter to Prevail", stage: "Prison", s: "23.20", e: "00.40" },
+    { name: "Bleed From Within", stage: "Helldorado", s: "23.20", e: "00.25" },
+  ],
+  [
+    { name: "Amorphis", stage: "Swamp", s: "00.20", e: "01.30" },
+    { name: "Coroner", stage: "La Morgue", s: "00.25", e: "01.25" },
+    { name: "Tailgunner", stage: "Prison", s: "11.20", e: "12.00" },
+    { name: "Graphic Nature", stage: "Helldorado", s: "11.25", e: "12.05" },
+    { name: "Vacuous", stage: "Swamp", s: "12.00", e: "12.40" },
+    { name: "Poseydon", stage: "La Morgue", s: "12.05", e: "12.45" },
+    { name: "Miracle of Sound", stage: "Prison", s: "12.25", e: "13.10" },
+    { name: "Brutal Sphincter", stage: "Helldorado", s: "12.35", e: "13.20" },
+    { name: "Hate", stage: "Swamp", s: "13.10", e: "13.55" },
+    { name: "Mortal Scepter", stage: "La Morgue", s: "13.15", e: "13.55" },
+    { name: "Firewind", stage: "Prison", s: "13.40", e: "14.25" },
+    { name: "Mushroomhead", stage: "Helldorado", s: "13.50", e: "14.35" },
+    { name: "Jungle Rot", stage: "Swamp", s: "14.25", e: "15.10" },
+    { name: "Divided", stage: "La Morgue", s: "14.30", e: "15.15" },
+    { name: "Kittie", stage: "Prison", s: "15.00", e: "15.50" },
+    { name: "Midnight", stage: "Helldorado", s: "15.10", e: "16.00" },
+    { name: "Aura Noir", stage: "Swamp", s: "15.50", e: "16.35" },
+    { name: "Your Highness", stage: "La Morgue", s: "15.50", e: "16.35" },
+    { name: "Metal Church", stage: "Prison", s: "16.25", e: "17.15" },
+    { name: "Mantah", stage: "Helldorado", s: "16.35", e: "17.25" },
+    { name: "Carach Angren", stage: "Swamp", s: "17.15", e: "18.05" },
+    { name: "Ronker", stage: "La Morgue", s: "17.15", e: "18.05" },
+    { name: "Biohazard", stage: "Prison", s: "17.50", e: "18.50" },
+    { name: "Psychonaut", stage: "Helldorado", s: "18.05", e: "19.00" },
+    { name: "Immolation", stage: "Swamp", s: "18.50", e: "19.45" },
+    { name: "Castle Rat", stage: "La Morgue", s: "18.50", e: "19.45" },
+    { name: "Hatebreed", stage: "Prison", s: "19.30", e: "20.30" },
+    { name: "Municipal Waste", stage: "Helldorado", s: "19.45", e: "20.40" },
+    { name: "Alcest", stage: "Swamp", s: "20.30", e: "21.30" },
+    { name: "The Troops Of Doom", stage: "La Morgue", s: "20.30", e: "21.25" },
+    { name: "Testament", stage: "Prison", s: "21.15", e: "22.20" },
+    { name: "Terror", stage: "Helldorado", s: "21.25", e: "22.25" },
+    { name: "Orbit Culture", stage: "Swamp", s: "22.20", e: "23.20" },
+    { name: "Ratos de Porão", stage: "La Morgue", s: "22.25", e: "23.20" },
+    { name: "Arch Enemy", stage: "Prison", s: "23.20", e: "00.50" },
+    { name: "Primus", stage: "Helldorado", s: "23.20", e: "00.25" },
+  ],
+  [
+    { name: "Gutalax", stage: "Swamp", s: "00.25", e: "01.25" },
+    { name: "Kylesa", stage: "La Morgue", s: "00.25", e: "01.25" },
+    { name: "Luna Kills", stage: "Prison", s: "11.20", e: "12.00" },
+    { name: "Encounters", stage: "Helldorado", s: "11.25", e: "12.05" },
+    { name: "Izegrim", stage: "Swamp", s: "12.00", e: "12.40" },
+    { name: "Steengruis", stage: "La Morgue", s: "12.05", e: "12.45" },
+    { name: "Bloodbound", stage: "Prison", s: "12.25", e: "13.10" },
+    { name: "Breakout", stage: "Helldorado", s: "12.35", e: "13.20" },
+    { name: "Blackbraid", stage: "Swamp", s: "13.10", e: "13.55" },
+    { name: "Turpentine Valley", stage: "La Morgue", s: "13.15", e: "13.55" },
+    { name: "Warkings", stage: "Prison", s: "13.40", e: "14.25" },
+    { name: "Sanguisugabogg", stage: "Helldorado", s: "13.50", e: "14.35" },
+    { name: "Firespawn", stage: "Swamp", s: "14.25", e: "15.10" },
+    { name: "Hemelbestormer", stage: "La Morgue", s: "14.30", e: "15.15" },
+    { name: "Creeper", stage: "Prison", s: "15.00", e: "15.50" },
+    { name: "Animals As Leaders", stage: "Helldorado", s: "15.10", e: "16.00" },
+    { name: "Anaal Nathrakh", stage: "Swamp", s: "15.50", e: "16.35" },
+    { name: "Mortal Sin", stage: "La Morgue", s: "15.50", e: "16.35" },
+    { name: "Rose Tattoo", stage: "Prison", s: "16.25", e: "17.15" },
+    { name: "Northlane", stage: "Helldorado", s: "16.35", e: "17.15" },
+    { name: "Misþyrming & Nergal", stage: "Swamp", s: "17.15", e: "18.05" },
+    { name: "Internal Bleeding", stage: "La Morgue", s: "17.15", e: "18.05" },
+    { name: "Nevermore", stage: "Prison", s: "17.50", e: "18.50" },
+    { name: "Fit For An Autopsy", stage: "Helldorado", s: "18.05", e: "19.00" },
+    { name: "Death Angel", stage: "Swamp", s: "18.50", e: "19.45" },
+    { name: "Deceased", stage: "La Morgue", s: "18.50", e: "19.45" },
+    { name: "Saxon", stage: "Prison", s: "19.30", e: "20.30" },
+    { name: "Rise of the Northstar", stage: "Helldorado", s: "19.45", e: "20.40" },
+    { name: "Deicide", stage: "Swamp", s: "20.30", e: "21.30" },
+    { name: "Nefarious", stage: "La Morgue", s: "20.35", e: "21.30" },
+    { name: "Lamb of God", stage: "Prison", s: "21.15", e: "22.20" },
+    { name: "Paleface Swiss", stage: "Helldorado", s: "21.25", e: "22.25" },
+    { name: "Satyricon", stage: "Swamp", s: "22.20", e: "23.30" },
+    { name: "Voivod", stage: "La Morgue", s: "22.25", e: "23.20" },
+    { name: "Powerwolf", stage: "Prison", s: "23.20", e: "00.50" },
+    { name: "The Ghost Inside", stage: "Helldorado", s: "23.20", e: "00.25" },
+  ],
+];
+
+const BAND_GENRE = {
+  "Wings of Steel": [3, "Heavy Metal"],
+  "Soulfly": [8, "Groove Metal"],
+  "Channel Zero": [8, "Groove Metal"],
+  "Alestorm": [14, "Pirate Metal"],
+  "Cyclone": [2, "Thrash Metal"],
+  "Sacred Reich": [2, "Thrash Metal"],
+  "Mikkey Dee with Friends": [3, "Heavy Metal"],
+  "Aeveris": [1, "Melodic Death Metal"],
+  "Funeral Dress": [12, "Punk Rock"],
+  "Heidevolk": [14, "Folk Metal"],
+  "Imminence": [10, "Metalcore"],
+  "Death Fury": [1, "Death Metal"],
+  "Left to Die": [11, "Deathcore"],
+  "Enthroned": [0, "Black Metal"],
+  "Der Weg Einer Freiheit": [0, "Black Metal"],
+  "Masterplan": [4, "Power Metal"],
+  "Vended": [9, "Nu-Metal"],
+  "Crimson Glory": [4, "Power Metal"],
+  "Combichrist": [16, "Industrial Metal"],
+  "Dirkschneider": [3, "Heavy Metal"],
+  "Armored Saint": [3, "Heavy Metal"],
+  "Body Count": [8, "Rap Metal"],
+  "Savatage": [4, "Power Metal"],
+  "Slaughter to Prevail": [11, "Deathcore"],
+  "Dead Serious": [12, "Hardcore"],
+  "Insanity Alert": [2, "Thrash Metal"],
+  "Coven": [5, "Doom Metal"],
+  "Monolord": [7, "Stoner Metal"],
+  "Soen": [17, "Progressive Metal"],
+  "Health": [16, "Industrial"],
+  "Crowbar": [6, "Sludge Metal"],
+  "Igorrr": [16, "Experimental"],
+  "Amenra": [6, "Post-Metal"],
+  "Hope Erodes": [10, "Metalcore"],
+  "200 Stab Wounds": [1, "Death Metal"],
+  "Temptations For The Weak": [10, "Metalcore"],
+  "Revocation": [2, "Thrash Metal"],
+  "Merauder": [12, "Hardcore"],
+  "Alien Ant Farm": [9, "Nu-Metal"],
+  "Ill Niño": [9, "Nu-Metal"],
+  "Thy Art Is Murder": [11, "Deathcore"],
+  "Bleed From Within": [10, "Metalcore"],
+  "Hope As A Weapon": [10, "Metalcore"],
+  "Sons of Lioth": [10, "Metalcore"],
+  "A Thousand Sufferings": [11, "Deathcore"],
+  "Modder": [12, "Hardcore"],
+  "Graceless": [11, "Deathcore"],
+  "Witch Club Satan": [0, "Black Metal"],
+  "The Ruins of Beverast": [0, "Black Metal"],
+  "Cowboys & Aliens": [12, "Hardcore"],
+  "Warrior Soul": [3, "Hard Rock"],
+  "Tailgunner": [3, "Heavy Metal"],
+  "Miracle of Sound": [3, "Heavy Metal"],
+  "Firewind": [4, "Power Metal"],
+  "Kittie": [9, "Nu-Metal"],
+  "Metal Church": [2, "Thrash Metal"],
+  "Biohazard": [12, "Hardcore"],
+  "Hatebreed": [12, "Hardcore"],
+  "Testament": [2, "Thrash Metal"],
+  "Arch Enemy": [1, "Melodic Death Metal"],
+  "Vacuous": [1, "Death Metal"],
+  "Hate": [1, "Death Metal"],
+  "Jungle Rot": [1, "Death Metal"],
+  "Aura Noir": [0, "Black/Thrash Metal"],
+  "Carach Angren": [13, "Symphonic Metal"],
+  "Immolation": [1, "Death Metal"],
+  "Alcest": [6, "Post-Metal"],
+  "Orbit Culture": [1, "Melodic Death Metal"],
+  "Amorphis": [1, "Melodic Death Metal"],
+  "Graphic Nature": [10, "Metalcore"],
+  "Brutal Sphincter": [11, "Deathcore"],
+  "Mushroomhead": [9, "Nu-Metal"],
+  "Midnight": [0, "Black Metal"],
+  "Mantah": [10, "Metalcore"],
+  "Psychonaut": [17, "Progressive Metal"],
+  "Municipal Waste": [2, "Thrash Metal"],
+  "Terror": [12, "Hardcore"],
+  "Primus": [17, "Alternative/Prog Rock"],
+  "Poseydon": [10, "Metalcore"],
+  "Mortal Scepter": [1, "Death Metal"],
+  "Divided": [10, "Metalcore"],
+  "Your Highness": [7, "Stoner Rock"],
+  "Ronker": [12, "Hardcore"],
+  "Castle Rat": [7, "Stoner Metal"],
+  "The Troops Of Doom": [2, "Thrash Metal"],
+  "Ratos de Porão": [12, "Hardcore Punk"],
+  "Coroner": [2, "Thrash Metal"],
+  "Luna Kills": [10, "Metalcore"],
+  "Bloodbound": [4, "Power Metal"],
+  "Warkings": [4, "Power Metal"],
+  "Creeper": [15, "Gothic Rock"],
+  "Rose Tattoo": [3, "Hard Rock"],
+  "Nevermore": [17, "Progressive Metal"],
+  "Saxon": [3, "Heavy Metal"],
+  "Lamb of God": [8, "Groove Metal"],
+  "Powerwolf": [4, "Power Metal"],
+  "Izegrim": [1, "Death Metal"],
+  "Blackbraid": [0, "Black Metal"],
+  "Firespawn": [1, "Death Metal"],
+  "Anaal Nathrakh": [0, "Black Metal"],
+  "Misþyrming & Nergal": [0, "Black Metal"],
+  "Death Angel": [2, "Thrash Metal"],
+  "Deicide": [1, "Death Metal"],
+  "Satyricon": [0, "Black Metal"],
+  "Gutalax": [1, "Goregrind"],
+  "Encounters": [10, "Metalcore"],
+  "Breakout": [12, "Hardcore"],
+  "Sanguisugabogg": [1, "Death Metal"],
+  "Animals As Leaders": [17, "Progressive Metal"],
+  "Northlane": [10, "Metalcore"],
+  "Fit For An Autopsy": [11, "Deathcore"],
+  "Rise of the Northstar": [10, "Metalcore"],
+  "Paleface Swiss": [11, "Deathcore"],
+  "The Ghost Inside": [10, "Metalcore"],
+  "Steengruis": [6, "Sludge Metal"],
+  "Turpentine Valley": [7, "Stoner Metal"],
+  "Hemelbestormer": [0, "Black Metal"],
+  "Mortal Sin": [2, "Thrash Metal"],
+  "Internal Bleeding": [1, "Death Metal"],
+  "Deceased": [1, "Death Metal"],
+  "Nefarious": [0, "Black Metal"],
+  "Voivod": [17, "Progressive Metal"],
+  "Kylesa": [6, "Sludge Metal"],
+};
+
+const HEADLINERS = new Set([
+  "Alcest",
+  "Alestorm",
+  "Amorphis",
+  "Animals As Leaders",
+  "Arch Enemy",
+  "Biohazard",
+  "Body Count",
+  "Channel Zero",
+  "Combichrist",
+  "Deicide",
+  "Hatebreed",
+  "Immolation",
+  "Lamb of God",
+  "Municipal Waste",
+  "Powerwolf",
+  "Primus",
+  "Satyricon",
+  "Savatage",
+  "Saxon",
+  "Slaughter to Prevail",
+  "Soulfly",
+  "Testament",
+  "The Ghost Inside",
+  "Thy Art Is Murder",
+  "Voivod"
+]);
+
+const DAY_LABELS = ["Thu 06/08", "Fri 07/08", "Sat 08/08", "Sun 09/08"];
+
+/* ---------- Runtime state ---------- */
+let genreOrder = GENRES.map((_, i) => i);
+let mustBands = new Set();
+let currentDay = 0;
+let schedules = [];
+
+let topPicks = [];
+let bottomPicks = [];
+let middleGenres = [];
+let tRounds = [];
+let tRoundIdx = 0;
+let tGroupIdx = 0;
+let tGroupResults = [];
+let tCurrentGroupResults = [];
+
+/* ---------- Small DOM helpers ---------- */
+function el(tag, className) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  return node;
 }
-function showSchedDay(_0x1e0a6f){var _0xb6446c=a0_0x5cac30;document[_0xb6446c(0x239)](_0xb6446c(0x273))[_0xb6446c(0x323)]((_0x222ef6,_0xc392ae)=>_0x222ef6[_0xb6446c(0x267)][_0xb6446c(0x2cf)]('active',_0xc392ae===_0x1e0a6f));const _0x41dd6b=document[_0xb6446c(0x20e)](_0xb6446c(0x137));_0x41dd6b[_0xb6446c(0x1ed)]='';const _0x3f9202=schedules[_0x1e0a6f];if(!_0x3f9202||_0x3f9202['length']===0x0){const _0x443f7b=el('p',_0xb6446c(0x2ca));_0x443f7b[_0xb6446c(0x208)]=_0xb6446c(0x1be),_0x41dd6b['appendChild'](_0x443f7b);return;}const _0x405fb6=el(_0xb6446c(0x169),_0xb6446c(0x344));for(const _0x2f35c7 of _0x3f9202){const _0x154e73=el(_0xb6446c(0x169),_0xb6446c(0x348));if(_0x2f35c7[_0xb6446c(0x333)]==='single')_0x154e73['appendChild'](renderBandSlotDOM(_0x2f35c7[_0xb6446c(0x366)]));else{const _0x535fe9=el('div',_0xb6446c(0x2cc)),_0x107206=el(_0xb6446c(0x169),_0xb6446c(0x1d4)),_0x247ba1=el(_0xb6446c(0x2d7),_0xb6446c(0x1cf));_0x107206['appendChild'](_0x247ba1),_0x107206[_0xb6446c(0x1d7)](document[_0xb6446c(0x29f)](_0xb6446c(0x302))),_0x535fe9[_0xb6446c(0x1d7)](_0x107206);const _0x1d25fe=el(_0xb6446c(0x169),_0xb6446c(0x133));for(const _0x5c05b2 of _0x2f35c7['options']){const _0x509bef=el(_0xb6446c(0x169),'sched-overlap-option');txt(_0x509bef,_0xb6446c(0x169),_0xb6446c(0x1ec),fmtTime(_0x5c05b2['s'])+_0xb6446c(0x210)+fmtTime(_0x5c05b2['e']));const _0x387fcc=el(_0xb6446c(0x169),_0xb6446c(0x2b4));_0x387fcc['textContent']=_0x5c05b2[_0xb6446c(0x22e)];if(_0x5c05b2[_0xb6446c(0xf5)]){const _0x4e98fd=el('span','sched-must-badge');_0x4e98fd[_0xb6446c(0x208)]=_0xb6446c(0x24e),_0x387fcc['appendChild'](_0x4e98fd);}else{const _0x526471=genreRank(_0x5c05b2['name'])+0x1;if(_0x526471){const _0x3ec6aa=el(_0xb6446c(0x2d7),_0xb6446c(0x312));if(_0x526471<=0x3)_0x3ec6aa[_0xb6446c(0x208)]=_0xb6446c(0x16b);else{if(_0x526471<=0x6)_0x3ec6aa[_0xb6446c(0x208)]='★★★★☆';else{if(_0x526471<=0x9)_0x3ec6aa[_0xb6446c(0x208)]='★★★☆☆';else{if(_0x526471<=0xc)_0x3ec6aa[_0xb6446c(0x208)]='★★☆☆☆';else _0x526471<=0xf?_0x3ec6aa[_0xb6446c(0x208)]='★☆☆☆☆':_0x3ec6aa[_0xb6446c(0x208)]=_0xb6446c(0x2be);}}}_0x3ec6aa[_0xb6446c(0xf8)][_0xb6446c(0x1b1)]=_0xb6446c(0x26b),_0x3ec6aa[_0xb6446c(0xf8)]['letterSpacing']=_0xb6446c(0x2d1),_0x3ec6aa[_0xb6446c(0x18c)]=_0xb6446c(0x11b)+_0x526471+'\x20van\x2018',_0x387fcc['appendChild'](_0x3ec6aa);}}_0x509bef[_0xb6446c(0x1d7)](_0x387fcc),txt(_0x509bef,_0xb6446c(0x169),_0xb6446c(0x158),_0x5c05b2[_0xb6446c(0x1b8)]);const _0x5a8f81=genreLabel(_0x5c05b2[_0xb6446c(0x22e)]);if(_0x5a8f81)txt(_0x509bef,_0xb6446c(0x169),_0xb6446c(0x19a),_0x5a8f81);_0x1d25fe[_0xb6446c(0x1d7)](_0x509bef);}_0x535fe9[_0xb6446c(0x1d7)](_0x1d25fe),_0x154e73[_0xb6446c(0x1d7)](_0x535fe9);}_0x405fb6['appendChild'](_0x154e73);}_0x41dd6b['appendChild'](_0x405fb6);}function a0_0x40e5(_0x1e2b04,_0x57eda4){_0x1e2b04=_0x1e2b04-0xf2;var _0x206673=a0_0x2066();var _0x40e548=_0x206673[_0x1e2b04];if(a0_0x40e5['rQRFrM']===undefined){var _0xf03c88=function(_0x54a291){var _0x307a76='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';var _0x176d4d='',_0x457f9d='';for(var _0x273e68=0x0,_0x30a38a,_0x499394,_0x36837a=0x0;_0x499394=_0x54a291['charAt'](_0x36837a++);~_0x499394&&(_0x30a38a=_0x273e68%0x4?_0x30a38a*0x40+_0x499394:_0x499394,_0x273e68++%0x4)?_0x176d4d+=String['fromCharCode'](0xff&_0x30a38a>>(-0x2*_0x273e68&0x6)):0x0){_0x499394=_0x307a76['indexOf'](_0x499394);}for(var _0xd2029=0x0,_0x5c0d37=_0x176d4d['length'];_0xd2029<_0x5c0d37;_0xd2029++){_0x457f9d+='%'+('00'+_0x176d4d['charCodeAt'](_0xd2029)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x457f9d);};a0_0x40e5['pfpjwn']=_0xf03c88,a0_0x40e5['RJHYAW']={},a0_0x40e5['rQRFrM']=!![];}var _0x2517d8=_0x206673[0x0],_0x18ca35=_0x1e2b04+_0x2517d8,_0x3bcf7d=a0_0x40e5['RJHYAW'][_0x18ca35];return!_0x3bcf7d?(_0x40e548=a0_0x40e5['pfpjwn'](_0x40e548),a0_0x40e5['RJHYAW'][_0x18ca35]=_0x40e548):_0x40e548=_0x3bcf7d,_0x40e548;}const T_GROUPS=[[0x0,0x1,0x2],[0x3,0x4,0x5],[0x6,0x7,0x8],[0x9,0xa,0xb],[0xc,0xd,0xe],[0xf,0x10,0x11]];var topPicks=[],bottomPicks=[],middleGenres=[],tRounds=[],tRoundIdx=0x0,tGroupIdx=0x0,tGroupResults=[],tCurrentGroupResults=[],PROFILES=[{'label':a0_0x5cac30(0x254),'desc':a0_0x5cac30(0x27c),'order':[0x0,0x1,0x5,0x6,0x2,0x7,0x8,0xb,0x3,0xc,0x9,0xa,0x11,0x4,0xd,0x10,0xe,0xf]},{'label':a0_0x5cac30(0x111),'desc':a0_0x5cac30(0x168),'order':[0x3,0x2,0x8,0x4,0x7,0x11,0x0,0x1,0x9,0x6,0x5,0xd,0xa,0xc,0xe,0xf,0x10,0xb]},{'label':a0_0x5cac30(0x230),'desc':a0_0x5cac30(0x221),'order':[0x0,0x5,0x6,0x1,0x7,0x11,0x2,0xc,0x3,0x8,0x4,0xb,0xa,0xf,0xd,0xe,0x10,0x9]},{'label':a0_0x5cac30(0x1fe),'desc':a0_0x5cac30(0x36f),'order':[0xa,0xc,0xb,0x2,0x8,0x9,0x1,0x0,0x6,0x3,0x7,0x5,0x11,0xd,0x4,0xe,0xf,0x10]},{'label':'🎸\x20Melody\x20first','desc':a0_0x5cac30(0x34e),'order':[0xd,0x4,0xf,0xe,0x11,0x3,0xa,0x8,0x9,0x7,0x6,0xc,0x2,0x5,0x1,0x10,0x0,0xb]},{'label':a0_0x5cac30(0x105),'desc':a0_0x5cac30(0x176),'order':null}];function applyProfile(_0x2c45f0){var _0x2bf1fb=a0_0x5cac30;if(_0x2c45f0[_0x2bf1fb(0x2a8)]===null){var _0x57f20b=GENRES[_0x2bf1fb(0x2de)](function(_0x3340ac,_0x263925){return _0x263925;});for(var _0x3c5341=_0x57f20b[_0x2bf1fb(0x131)]-0x1;_0x3c5341>0x0;_0x3c5341--){var _0x22e4eb=Math['floor'](Math[_0x2bf1fb(0x1e8)]()*(_0x3c5341+0x1)),_0x11a370=_0x57f20b[_0x3c5341];_0x57f20b[_0x3c5341]=_0x57f20b[_0x22e4eb],_0x57f20b[_0x22e4eb]=_0x11a370;}genreOrder=_0x57f20b;}else genreOrder=_0x2c45f0['order'][_0x2bf1fb(0x1fc)]();finishStep1();}function startTournament(){var _0xab8179=a0_0x5cac30,_0x2bc593=document[_0xab8179(0x20e)]('tournamentWrap');_0x2bc593[_0xab8179(0x1ed)]='';var _0x196862=document[_0xab8179(0x11a)](_0xab8179(0x169));_0x196862['style'][_0xab8179(0x138)]='background:var(--bg2);border:1px\x20solid\x20var(--border);border-radius:12px;padding:1.1rem\x201.25rem;margin-bottom:1rem;',_0x196862['innerHTML']=_0xab8179(0x2f4)+_0xab8179(0x13f)+_0xab8179(0x207)+_0xab8179(0x193)+_0xab8179(0x10e)+_0xab8179(0x12a),_0x2bc593[_0xab8179(0x1d7)](_0x196862);var _0x11f42d=document['createElement'](_0xab8179(0x169));_0x11f42d[_0xab8179(0xf8)][_0xab8179(0x138)]=_0xab8179(0x1ae);var _0x2b31b6=document[_0xab8179(0x11a)](_0xab8179(0x11d));_0x2b31b6[_0xab8179(0x333)]='button',_0x2b31b6[_0xab8179(0x202)]='choice-card',_0x2b31b6[_0xab8179(0x1ed)]='<div\x20class=\x22choice-card-title\x22>🎯\x20I\x20choose\x20my\x20own\x20sound</div><div\x20class=\x22choice-card-desc\x22>Pick\x20your\x205\x20favourites\x20and\x203\x20least\x20favourites.\x20Then\x20we\x27ll\x20face\x20off\x20the\x20rest\x20head-to-head.</div>',_0x2b31b6[_0xab8179(0x237)]=startCustomFlow,_0x11f42d[_0xab8179(0x1d7)](_0x2b31b6);var _0x50f972=document[_0xab8179(0x11a)](_0xab8179(0x11d));_0x50f972[_0xab8179(0x333)]=_0xab8179(0x11d),_0x50f972[_0xab8179(0x202)]=_0xab8179(0x129),_0x50f972['innerHTML']='<div\x20class=\x22choice-card-title\x22>⚡\x20I\x20pick\x20a\x20pre-defined\x20profile</div><div\x20class=\x22choice-card-desc\x22>One\x20tap\x20and\x20you\x27re\x20done.\x20Choose\x20the\x20profile\x20that\x20suits\x20you.</div>',_0x50f972[_0xab8179(0x237)]=showPresets,_0x11f42d[_0xab8179(0x1d7)](_0x50f972),_0x2bc593[_0xab8179(0x1d7)](_0x11f42d);}function showPresets(){var _0x4a5a91=a0_0x5cac30,_0x204899=document['getElementById'](_0x4a5a91(0x23d));_0x204899['innerHTML']='';var _0x2e1c64=document[_0x4a5a91(0x11a)]('div');_0x2e1c64[_0x4a5a91(0xf8)]['cssText']=_0x4a5a91(0x271),_0x2e1c64['textContent']=_0x4a5a91(0x2db),_0x204899[_0x4a5a91(0x1d7)](_0x2e1c64);var _0x5a2a96=document['createElement'](_0x4a5a91(0x169));_0x5a2a96[_0x4a5a91(0xf8)][_0x4a5a91(0x138)]=_0x4a5a91(0x1ae),PROFILES[_0x4a5a91(0x323)](function(_0x35750d){var _0x5b8e48=_0x4a5a91,_0x46793e=document[_0x5b8e48(0x11a)](_0x5b8e48(0x11d));_0x46793e[_0x5b8e48(0x333)]='button',_0x46793e['className']=_0x5b8e48(0x129),_0x46793e[_0x5b8e48(0x1ed)]=_0x5b8e48(0x377)+_0x35750d[_0x5b8e48(0x322)]+'</div><div\x20class=\x22choice-card-desc\x22>'+_0x35750d[_0x5b8e48(0x20b)]+_0x5b8e48(0x12a),_0x46793e[_0x5b8e48(0x237)]=function(_0x2c633c){return function(){applyProfile(_0x2c633c);};}(_0x35750d),_0x5a2a96[_0x5b8e48(0x1d7)](_0x46793e);}),_0x204899['appendChild'](_0x5a2a96);var _0x12406a=document[_0x4a5a91(0x11a)]('button');_0x12406a[_0x4a5a91(0x333)]=_0x4a5a91(0x11d),_0x12406a[_0x4a5a91(0x202)]=_0x4a5a91(0x166),_0x12406a[_0x4a5a91(0xf8)]['marginTop']=_0x4a5a91(0x144),_0x12406a['textContent']=_0x4a5a91(0x33c),_0x12406a[_0x4a5a91(0x237)]=startTournament,_0x204899['appendChild'](_0x12406a);}function startCustomFlow(){var _0x4530e8=a0_0x5cac30;topPicks=[],bottomPicks=[],renderPickScreen(_0x4530e8(0x338));}function renderPickScreen(_0x142f3b){var _0x3710df=a0_0x5cac30,_0xbc975d=document['getElementById'](_0x3710df(0x23d));_0xbc975d[_0x3710df(0x1ed)]='',window[_0x3710df(0x26c)]({'top':0x0,'behavior':_0x3710df(0x282)});var _0x1069a9=_0x142f3b==='top',_0x43ca81=_0x1069a9?topPicks:bottomPicks,_0xc38317=_0x1069a9?[]:topPicks,_0x3376f1=_0x1069a9?0x5:0x3,_0x4e0e97=document[_0x3710df(0x11a)](_0x3710df(0x169));_0x4e0e97[_0x3710df(0x202)]=_0x3710df(0x104);var _0x1dda9c=document[_0x3710df(0x11a)](_0x3710df(0x2d7));_0x1dda9c[_0x3710df(0x208)]=_0x1069a9?_0x3710df(0x1b4):_0x3710df(0x368);var _0x2d2f42=document[_0x3710df(0x11a)](_0x3710df(0x2d7));_0x2d2f42['textContent']=_0x1069a9?_0x3710df(0x1f7):'50%\x20done',_0x4e0e97[_0x3710df(0x1d7)](_0x1dda9c),_0x4e0e97[_0x3710df(0x1d7)](_0x2d2f42),_0xbc975d[_0x3710df(0x1d7)](_0x4e0e97);var _0x18b5bb=document['createElement']('div');_0x18b5bb[_0x3710df(0x202)]=_0x3710df(0x2eb);var _0x2da4ce=document[_0x3710df(0x11a)](_0x3710df(0x169));_0x2da4ce['className']=_0x3710df(0x16c),_0x2da4ce[_0x3710df(0xf8)]['width']=_0x1069a9?'0%':_0x3710df(0x1bc),_0x18b5bb[_0x3710df(0x1d7)](_0x2da4ce),_0xbc975d[_0x3710df(0x1d7)](_0x18b5bb);var _0x5ab4d0=document[_0x3710df(0x11a)](_0x3710df(0x169));_0x5ab4d0[_0x3710df(0x202)]=_0x3710df(0x21b),_0x5ab4d0['style']['margin']=_0x3710df(0x126),_0x5ab4d0[_0x3710df(0x208)]=_0x1069a9?_0x3710df(0x27d):_0x3710df(0x1a6),_0xbc975d[_0x3710df(0x1d7)](_0x5ab4d0);var _0x17f500=document[_0x3710df(0x11a)](_0x3710df(0x169));_0x17f500[_0x3710df(0xf8)][_0x3710df(0x138)]=_0x3710df(0x156),_0x17f500['id']=_0x3710df(0x2bb),_0x17f500[_0x3710df(0x208)]=_0x3710df(0x2e7)+_0x3376f1+'\x20chosen',_0xbc975d['appendChild'](_0x17f500);var _0x3be92c=document[_0x3710df(0x11a)](_0x3710df(0x169));_0x3be92c[_0x3710df(0xf8)][_0x3710df(0x138)]=_0x3710df(0x16a),_0x3be92c['id']=_0x3710df(0x350),GENRES[_0x3710df(0x323)](function(_0x10ce23,_0x2a4f73){var _0x170774=_0x3710df;if(_0xc38317[_0x170774(0x182)](_0x2a4f73)!==-0x1)return;var _0x36d656=document[_0x170774(0x11a)](_0x170774(0x11d));_0x36d656[_0x170774(0x333)]=_0x170774(0x11d),_0x36d656['className']=_0x170774(0x14b),_0x36d656[_0x170774(0xf8)][_0x170774(0x138)]=_0x170774(0x365),_0x36d656[_0x170774(0x2fc)]['gi']=_0x2a4f73;var _0x295cc5=document[_0x170774(0x11a)]('span');_0x295cc5['style'][_0x170774(0x138)]='width:22px;height:22px;border-radius:50%;border:2px\x20solid\x20var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all\x20.15s;',_0x295cc5['id']=_0x170774(0x2b9)+_0x2a4f73;var _0x5397f1=document[_0x170774(0x11a)](_0x170774(0x169)),_0x434bc0=document[_0x170774(0x11a)](_0x170774(0x169));_0x434bc0[_0x170774(0xf8)][_0x170774(0x138)]='font-size:14px;font-weight:500;text-align:left;color:#f0ede8;',_0x434bc0['textContent']=_0x10ce23[_0x170774(0x22e)];var _0x3b3c90=document[_0x170774(0x11a)]('div');_0x3b3c90[_0x170774(0xf8)][_0x170774(0x138)]=_0x170774(0x195),_0x3b3c90[_0x170774(0x208)]=_0x10ce23['desc'];var _0x3b487a=document[_0x170774(0x11a)](_0x170774(0x169));_0x3b487a['style'][_0x170774(0x138)]=_0x170774(0x375),_0x3b487a[_0x170774(0x208)]=_0x10ce23['ex'],_0x5397f1[_0x170774(0x1d7)](_0x434bc0),_0x5397f1[_0x170774(0x1d7)](_0x3b3c90),_0x5397f1['appendChild'](_0x3b487a),_0x36d656[_0x170774(0x1d7)](_0x295cc5),_0x36d656[_0x170774(0x1d7)](_0x5397f1),_0x36d656[_0x170774(0x237)]=function(_0x54aefe,_0x5a6143,_0x2fa986,_0x4c3d57,_0x3f7539){return function(){var _0x15db8e=a0_0x40e5,_0x5958eb=_0x4c3d57[_0x15db8e(0x182)](_0x54aefe);if(_0x5958eb!==-0x1)_0x4c3d57[_0x15db8e(0x124)](_0x5958eb,0x1),_0x5a6143[_0x15db8e(0xf8)][_0x15db8e(0x2e5)]=_0x15db8e(0x27f),_0x5a6143[_0x15db8e(0xf8)]['background']=_0x15db8e(0x1b5),_0x2fa986['style'][_0x15db8e(0x138)]=_0x15db8e(0x194),_0x2fa986[_0x15db8e(0x208)]='';else{if(_0x4c3d57[_0x15db8e(0x131)]<_0x3376f1){_0x4c3d57[_0x15db8e(0x1bb)](_0x54aefe);var _0x568bd7=_0x3f7539===_0x15db8e(0x338)?_0x15db8e(0x1c7):_0x15db8e(0x1f3);_0x5a6143[_0x15db8e(0xf8)]['borderColor']=_0x568bd7,_0x5a6143[_0x15db8e(0xf8)][_0x15db8e(0x12d)]=_0x3f7539===_0x15db8e(0x338)?_0x15db8e(0x1ce):_0x15db8e(0x353),_0x2fa986[_0x15db8e(0xf8)][_0x15db8e(0x138)]=_0x15db8e(0x1f9)+_0x568bd7+';border:2px\x20solid\x20'+_0x568bd7+_0x15db8e(0x146),_0x2fa986[_0x15db8e(0x208)]=_0x4c3d57['length'];}}document[_0x15db8e(0x20e)]('pickCounter')[_0x15db8e(0x208)]=_0x4c3d57[_0x15db8e(0x131)]+_0x15db8e(0x2e1)+(_0x1069a9?0x5:0x3)+_0x15db8e(0x1c3);var _0x67277c=document['getElementById'](_0x15db8e(0x28b));_0x67277c&&(_0x67277c[_0x15db8e(0x17a)]=_0x4c3d57[_0x15db8e(0x131)]<_0x3376f1,_0x4c3d57[_0x15db8e(0x131)]===_0x3376f1&&_0x67277c[_0x15db8e(0x35c)]({'behavior':_0x15db8e(0x282),'block':_0x15db8e(0x21d)}));};}(_0x2a4f73,_0x36d656,_0x295cc5,_0x43ca81,_0x142f3b),_0x3be92c[_0x170774(0x1d7)](_0x36d656);}),_0xbc975d['appendChild'](_0x3be92c);var _0x59f9e3=document['createElement'](_0x3710df(0x11d));_0x59f9e3[_0x3710df(0x333)]=_0x3710df(0x11d),_0x59f9e3['id']=_0x3710df(0x28b),_0x59f9e3[_0x3710df(0x202)]=_0x3710df(0x20d),_0x59f9e3[_0x3710df(0xf8)][_0x3710df(0x188)]='1.25rem',_0x59f9e3[_0x3710df(0x17a)]=!![],_0x59f9e3[_0x3710df(0x208)]=_0x1069a9?'Next:\x20least\x20favourites\x20→':_0x3710df(0x259),_0x59f9e3[_0x3710df(0x237)]=_0x1069a9?function(){var _0x1864b6=_0x3710df;renderPickScreen(_0x1864b6(0x29b));}:finalizeCustomFlow,_0xbc975d[_0x3710df(0x1d7)](_0x59f9e3);var _0x49e408=document['createElement'](_0x3710df(0x11d));_0x49e408[_0x3710df(0x333)]='button',_0x49e408[_0x3710df(0x202)]='btn\x20btn-secondary',_0x49e408[_0x3710df(0xf8)][_0x3710df(0x188)]='.5rem',_0x49e408[_0x3710df(0x208)]='←\x20Back',_0x49e408['onclick']=_0x1069a9?startTournament:function(){var _0x43c231=_0x3710df;renderPickScreen(_0x43c231(0x338));},_0xbc975d[_0x3710df(0x1d7)](_0x49e408);}function finalizeCustomFlow(){var _0x421dc9=a0_0x5cac30;middleGenres=[];for(var _0x5acd55=0x0;_0x5acd55<GENRES[_0x421dc9(0x131)];_0x5acd55++){topPicks[_0x421dc9(0x182)](_0x5acd55)===-0x1&&bottomPicks['indexOf'](_0x5acd55)===-0x1&&middleGenres['push'](_0x5acd55);}for(var _0x5acd55=middleGenres[_0x421dc9(0x131)]-0x1;_0x5acd55>0x0;_0x5acd55--){var _0xb3485d=Math[_0x421dc9(0x306)](Math[_0x421dc9(0x1e8)]()*(_0x5acd55+0x1)),_0x8d8389=middleGenres[_0x5acd55];middleGenres[_0x5acd55]=middleGenres[_0xb3485d],middleGenres[_0xb3485d]=_0x8d8389;}tRounds=[],tRoundIdx=0x0,tGroupIdx=0x0,tGroupResults=[[]],tCurrentGroupResults=tGroupResults[0x0];var _0x2568b6=[];for(var _0x5acd55=0x0;_0x5acd55<middleGenres[_0x421dc9(0x131)];_0x5acd55+=0x3){_0x2568b6[_0x421dc9(0x1bb)](middleGenres['slice'](_0x5acd55,_0x5acd55+0x3));}tRounds=[_0x2568b6],renderMiniTournament();}function renderMiniTournament(){
-  var wrap=document.getElementById('tournamentWrap');
-  var round=tRounds[tRoundIdx];
-  if(!round||tGroupIdx>=round.length){advanceMiniRound();return;}
-  var group=round[tGroupIdx];
+function txt(parent, tag, className, content) {
+  const node = el(tag, className);
+  node.textContent = content;
+  parent.appendChild(node);
+  return node;
+}
+function toMin(hhmm) {
+  const [h, m] = hhmm.split(".").map(Number);
+  // times before 06:00 belong to "after midnight" of the festival day
+  return h < 6 ? (h + 24) * 60 + m : h * 60 + m;
+}
+function fmtTime(hhmm) {
+  return hhmm.replace(".", ":");
+}
+function genreRank(bandName) {
+  const entry = BAND_GENRE[bandName];
+  if (!entry) return 99;
+  return genreOrder.indexOf(entry[0]);
+}
+function genreLabel(bandName) {
+  const entry = BAND_GENRE[bandName];
+  return entry ? entry[1] : "";
+}
+function starsForRank(rank) {
+  if (rank <= 5) return "★★★★★";
+  if (rank <= 8) return "★★★★☆";
+  if (rank <= 10) return "★★★☆☆";
+  if (rank <= 13) return "★★☆☆☆";
+  if (rank <= 15) return "★☆☆☆☆";
+  return "☆☆☆☆☆";
+}
 
-  // Auto-skip solo groups
-  if(group.length===1){
-    tCurrentGroupResults.push({winner:group[0],rest:[]});
+/* ---------- Step navigation ---------- */
+function goToStep(step) {
+  const targetTab = document.getElementById("tab" + step);
+  if (targetTab && targetTab.classList.contains("locked")) return;
+  [0, 1, 2, 3].forEach((s) => {
+    const tab = document.getElementById("tab" + s);
+    const screen = document.getElementById("screen" + s);
+    if (tab) tab.classList.remove("active");
+    if (screen) screen.classList.remove("active");
+  });
+  const tab = document.getElementById("tab" + step);
+  const screen = document.getElementById("screen" + step);
+  if (tab) tab.classList.add("active");
+  if (screen) screen.classList.add("active");
+}
+function startApp() {
+  document.getElementById("screen0").classList.remove("active");
+  document.getElementById("tab1").classList.add("locked"); // stays locked until unlocked below
+  document.getElementById("tab1").classList.remove("locked");
+  goToStep(1);
+  setTimeout(startTournament, 50);
+}
+
+/* ---------- Step 1: genre ranking ---------- */
+function startTournament() {
+  const wrap = document.getElementById("tournamentWrap");
+  wrap.innerHTML = "";
+
+  const intro = el("div");
+  intro.style.cssText = "background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:1rem;";
+  intro.innerHTML =
+    "<div style=\"font-weight:600;margin-bottom:.4rem;\">How do you want to rank metal genres?</div>" +
+    "<div style=\"font-size:13px;color:var(--muted);\">Pick whichever feels quickest — both give a full ranking of all 18 metal genres.</div>";
+  wrap.appendChild(intro);
+
+  const choices = el("div");
+  choices.style.cssText = "display:flex;flex-direction:column;gap:10px;";
+
+  const custom = el("button", "choice-card");
+  custom.type = "button";
+  custom.innerHTML =
+    "<div class=\"choice-card-title\">🎯 I'll pick my own metal genres</div>" +
+    "<div class=\"choice-card-desc\">Pick your 5 favourites and 3 least favourites. Then we'll face off the rest head-to-head.</div>";
+  custom.onclick = startCustomFlow;
+
+  const preset = el("button", "choice-card");
+  preset.type = "button";
+  preset.innerHTML =
+    "<div class=\"choice-card-title\">⚡ I pick a pre-defined profile</div>" +
+    "<div class=\"choice-card-desc\">One tap and you're done. Choose the profile that suits you.</div>";
+  preset.onclick = showPresets;
+
+  choices.appendChild(custom);
+  choices.appendChild(preset);
+  wrap.appendChild(choices);
+}
+
+function showPresets() {
+  const wrap = document.getElementById("tournamentWrap");
+  wrap.innerHTML = "";
+  txt(wrap, "div", null, "Pick the profile that fits you best:").style.cssText = "font-weight:600;margin-bottom:.9rem;";
+
+  const list = el("div");
+  list.style.cssText = "display:flex;flex-direction:column;gap:10px;";
+  PROFILES.forEach((profile) => {
+    const card = el("button", "choice-card");
+    card.type = "button";
+    card.innerHTML =
+      "<div class=\"choice-card-title\">" + profile.label + "</div>" +
+      "<div class=\"choice-card-desc\">" + profile.desc + "</div>" +
+      (profile.examples ? "<div class=\"genre-examples\" style=\"margin-top:.5rem;\">" + profile.examples + "</div>" : "");
+    card.onclick = () => applyProfile(profile);
+    list.appendChild(card);
+  });
+  wrap.appendChild(list);
+
+  const back = el("button", "btn btn-secondary");
+  back.type = "button";
+  back.style.marginTop = "1rem";
+  back.textContent = "← Back";
+  back.onclick = startTournament;
+  wrap.appendChild(back);
+}
+
+function applyProfile(profile) {
+  if (profile.order === null) {
+    // shuffle a fresh copy of all genre indices
+    const shuffled = GENRES.map((_, i) => i);
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    genreOrder = shuffled;
+  } else {
+    genreOrder = profile.order.slice();
+  }
+  finishStep1();
+}
+
+function startCustomFlow() {
+  topPicks = [];
+  bottomPicks = [];
+  renderPickScreen("top");
+}
+
+function renderPickScreen(mode) {
+  const wrap = document.getElementById("tournamentWrap");
+  wrap.innerHTML = "";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const isTop = mode === "top";
+  const picks = isTop ? topPicks : bottomPicks;
+  const excluded = isTop ? [] : topPicks;
+  const target = isTop ? 5 : 3;
+
+  const header = el("div");
+  const title = el("div");
+  title.textContent = isTop ? "Pick your 5 favourite metal genres" : "Now pick your 3 least favourite";
+  const progress = el("div");
+  progress.textContent = isTop ? "Step 1 of 2" : "50% done";
+  header.appendChild(title);
+  header.appendChild(progress);
+  wrap.appendChild(header);
+
+  const bar = el("div");
+  const fill = el("div", "t-fill");
+  fill.style.width = isTop ? "0%" : "50%";
+  bar.appendChild(fill);
+  wrap.appendChild(bar);
+
+  const hint = el("div");
+  hint.style.margin = ".5rem 0 1rem";
+  hint.textContent = isTop
+    ? "Tap the metal genres you're most excited for."
+    : "Tap the metal genres that speak to you least.";
+  wrap.appendChild(hint);
+
+  const counter = el("div");
+  counter.style.cssText = "font-weight:600;margin-bottom:.75rem;";
+  counter.id = "pickCounter";
+  counter.textContent = picks.length + " / " + target + " chosen";
+  wrap.appendChild(counter);
+
+  const list = el("div");
+  list.id = "pickList";
+  GENRES.forEach((genre, gi) => {
+    if (excluded.indexOf(gi) !== -1) return;
+
+    const row = el("button", "genre-row");
+    row.type = "button";
+    row.dataset.gi = gi;
+    // reset button UA defaults (browsers center-align <button> text by default,
+    // which otherwise gets inherited by any child that doesn't override it)
+    row.style.cssText = "width:100%;box-sizing:border-box;text-align:left;align-items:flex-start;font:inherit;color:inherit;";
+
+    const dot = el("span");
+    dot.style.cssText = "width:22px;height:22px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .15s;margin-top:1px;";
+    dot.id = "pickDot" + gi;
+
+    const info = el("div");
+    info.style.cssText = "flex:1;min-width:0;text-align:left;";
+    const name = el("div");
+    name.style.cssText = "font-size:14px;font-weight:500;text-align:left;color:#f0ede8;";
+    name.textContent = genre.name;
+    const desc = el("div", "genre-desc");
+    desc.style.textAlign = "left";
+    desc.textContent = genre.desc;
+    const ex = el("div", "genre-examples");
+    ex.style.textAlign = "left";
+    ex.textContent = genre.ex;
+    info.appendChild(name);
+    info.appendChild(desc);
+    info.appendChild(ex);
+
+    row.appendChild(dot);
+    row.appendChild(info);
+    row.onclick = () => {
+      const idx = picks.indexOf(gi);
+      if (idx !== -1) {
+        picks.splice(idx, 1);
+        dot.style.borderColor = "var(--border)";
+        dot.style.background = "none";
+        dot.textContent = "";
+      } else if (picks.length < target) {
+        picks.push(gi);
+        const color = mode === "top" ? "var(--accent)" : "var(--accent2)";
+        dot.style.borderColor = color;
+        dot.style.background = color;
+        dot.textContent = picks.length;
+      }
+      counter.textContent = picks.length + " / " + target + " chosen";
+      const nextBtn = document.getElementById("pickNext");
+      if (nextBtn) {
+        nextBtn.disabled = picks.length < target;
+        if (picks.length === target) nextBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    };
+    list.appendChild(row);
+  });
+  wrap.appendChild(list);
+
+  const next = el("button", "btn btn-primary");
+  next.type = "button";
+  next.id = "pickNext";
+  next.style.marginTop = "1.25rem";
+  next.disabled = true;
+  next.textContent = isTop ? "Next: least favourites →" : "Continue →";
+  next.onclick = isTop ? () => renderPickScreen("bottom") : finalizeCustomFlow;
+  wrap.appendChild(next);
+
+  const back = el("button", "btn btn-secondary");
+  back.type = "button";
+  back.style.marginTop = ".5rem";
+  back.textContent = "← Back";
+  back.onclick = isTop ? startTournament : () => renderPickScreen("top");
+  wrap.appendChild(back);
+}
+
+function finalizeCustomFlow() {
+  middleGenres = [];
+  for (let gi = 0; gi < GENRES.length; gi++) {
+    if (topPicks.indexOf(gi) === -1 && bottomPicks.indexOf(gi) === -1) middleGenres.push(gi);
+  }
+  // shuffle the middle genres before splitting into face-off groups
+  for (let i = middleGenres.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [middleGenres[i], middleGenres[j]] = [middleGenres[j], middleGenres[i]];
+  }
+
+  tRoundIdx = 0;
+  tGroupIdx = 0;
+  tGroupResults = [[]];
+  tCurrentGroupResults = tGroupResults[0];
+
+  const firstRound = [];
+  for (let i = 0; i < middleGenres.length; i += 3) {
+    firstRound.push(middleGenres.slice(i, i + 3));
+  }
+  tRounds = [firstRound];
+  renderMiniTournament();
+}
+
+function renderMiniTournament() {
+  const wrap = document.getElementById("tournamentWrap");
+  const round = tRounds[tRoundIdx];
+  if (!round || tGroupIdx >= round.length) {
+    advanceMiniRound();
+    return;
+  }
+  const group = round[tGroupIdx];
+
+  // a group of one has no real choice — auto-advance
+  if (group.length === 1) {
+    tCurrentGroupResults.push({ winner: group[0], rest: [] });
     tGroupIdx++;
-    if(tGroupIdx>=tRounds[tRoundIdx].length) advanceMiniRound();
+    if (tGroupIdx >= tRounds[tRoundIdx].length) advanceMiniRound();
     else renderMiniTournament();
     return;
   }
 
-  var totalGroups=tRounds[0].length;
-  var stepsDone=tGroupIdx;
-  for(var r=0;r<tRoundIdx;r++) stepsDone+=tRounds[r].length;
-  var pct=Math.round(50+(stepsDone/(totalGroups+1))*45);
+  const totalGroups = tRounds[0].length;
+  let stepsDone = tGroupIdx;
+  for (let r = 0; r < tRoundIdx; r++) stepsDone += tRounds[r].length;
+  const pct = Math.round(50 + (stepsDone / (totalGroups + 1)) * 45);
 
-  wrap.innerHTML='';
-  var progRow=document.createElement('div');progRow.className='t-progress-row';
-  var s1=document.createElement('span');s1.textContent='Refine the middle — question '+(stepsDone+1);
-  var s2=document.createElement('span');s2.textContent=pct+'% done';
-  progRow.appendChild(s1);progRow.appendChild(s2);wrap.appendChild(progRow);
-  var bar=document.createElement('div');bar.className='t-bar';
-  var fill=document.createElement('div');fill.className='t-fill';fill.style.width=pct+'%';
-  bar.appendChild(fill);wrap.appendChild(bar);
-  var q=document.createElement('div');q.className='t-question';q.style.margin='.75rem 0 1rem';
-  q.textContent='Which of these appeals to you most?';wrap.appendChild(q);
-  var cards=document.createElement('div');cards.className='t-cards';
-  group.forEach(function(gi){
-    var g=GENRES[gi];var card=document.createElement('button');card.type='button';card.className='t-card';card.dataset.gi=gi;
-    var nm=document.createElement('div');nm.className='t-card-name';nm.textContent=g.name;
-    var ds=document.createElement('div');ds.className='t-card-desc';ds.textContent=g.desc;
-    var ex=document.createElement('div');ex.className='t-card-ex';ex.textContent=g.ex;
-    card.appendChild(nm);card.appendChild(ds);card.appendChild(ex);
-    card.onclick=(function(wgi){return function(){
-      document.querySelectorAll('.t-card').forEach(function(c){c.classList.add(parseInt(c.dataset.gi)===wgi?'picked':'faded');});
-      var rest=group.filter(function(g){return g!==wgi;});
-      tCurrentGroupResults.push({winner:wgi,rest:rest});
-      setTimeout(function(){tGroupIdx++;if(tGroupIdx>=tRounds[tRoundIdx].length)advanceMiniRound();else renderMiniTournament();},280);
-    };})(gi);
+  wrap.innerHTML = "";
+  const progRow = el("div", "t-progress-row");
+  txt(progRow, "span", null, "Refine the middle — question " + (stepsDone + 1));
+  txt(progRow, "span", null, pct + "% done");
+  wrap.appendChild(progRow);
+
+  const bar = el("div", "t-bar");
+  const fill = el("div", "t-fill");
+  fill.style.width = pct + "%";
+  bar.appendChild(fill);
+  wrap.appendChild(bar);
+
+  const question = el("div", "t-question");
+  question.style.margin = ".75rem 0 1rem";
+  question.textContent = "Which of these appeals to you most?";
+  wrap.appendChild(question);
+
+  const cards = el("div", "t-cards");
+  group.forEach((gi) => {
+    const genre = GENRES[gi];
+    const card = el("button", "t-card");
+    card.type = "button";
+    card.dataset.gi = gi;
+    txt(card, "div", "t-card-name", genre.name);
+    txt(card, "div", "t-card-desc", genre.desc);
+    txt(card, "div", "t-card-ex", genre.ex);
+    card.onclick = () => {
+      document.querySelectorAll(".t-card").forEach((c) => {
+        c.classList.add(parseInt(c.dataset.gi) === gi ? "picked" : "faded");
+      });
+      const rest = group.filter((g) => g !== gi);
+      tCurrentGroupResults.push({ winner: gi, rest });
+      setTimeout(() => {
+        tGroupIdx++;
+        if (tGroupIdx >= tRounds[tRoundIdx].length) advanceMiniRound();
+        else renderMiniTournament();
+      }, 280);
+    };
     cards.appendChild(card);
   });
   wrap.appendChild(cards);
 }
 
-function advanceMiniRound(){
-  var winners=tCurrentGroupResults.map(function(r){return r.winner;});
-  if(winners.length<=1){buildFinalOrder();return;}
-
-  // Build groups of max 3, merge any trailing solo into previous group
-  var nextGroups=[];
-  for(var i=0;i<winners.length;i+=3){
-    var g=winners.slice(i,Math.min(i+3,winners.length));
-    if(g.length===1&&nextGroups.length>0){
-      nextGroups[nextGroups.length-1].push(g[0]);
-    } else {
-      nextGroups.push(g);
-    }
+function advanceMiniRound() {
+  const winners = tCurrentGroupResults.map((r) => r.winner);
+  if (winners.length <= 1) {
+    buildFinalOrder();
+    return;
   }
 
-  // If all groups resolved, build final order
-  if(nextGroups.every(function(g){return g.length<=1;})){
-    buildFinalOrder();return;
+  const nextGroups = [];
+  for (let i = 0; i < winners.length; i += 3) {
+    const g = winners.slice(i, Math.min(i + 3, winners.length));
+    if (g.length === 1 && nextGroups.length > 0) nextGroups[nextGroups.length - 1].push(g[0]);
+    else nextGroups.push(g);
   }
 
-  tRoundIdx++;tGroupIdx=0;
+  if (nextGroups.every((g) => g.length <= 1)) {
+    buildFinalOrder();
+    return;
+  }
+
+  tRoundIdx++;
+  tGroupIdx = 0;
   tRounds.push(nextGroups);
   tGroupResults.push([]);
-  tCurrentGroupResults=tGroupResults[tRoundIdx];
+  tCurrentGroupResults = tGroupResults[tRoundIdx];
   renderMiniTournament();
 }
 
-function computeMiddleOrder(){var _0x4ffdd5=a0_0x5cac30,_0x4d153d=[],_0x16db9a=new Set(),_0x2ef864=function(_0x2cc009){var _0x31acee=a0_0x40e5;!_0x16db9a[_0x31acee(0x12f)](_0x2cc009)&&(_0x16db9a[_0x31acee(0x2a6)](_0x2cc009),_0x4d153d['push'](_0x2cc009));};for(var _0xc38363=tRoundIdx;_0xc38363>=0x0;_0xc38363--){var _0x3044db=tGroupResults[_0xc38363]||[];_0x3044db[_0x4ffdd5(0x323)](function(_0x4ad529){var _0x88f71f=_0x4ffdd5;_0x2ef864(_0x4ad529[_0x88f71f(0x32c)]);});}for(var _0xc38363=0x0;_0xc38363<=tRoundIdx;_0xc38363++){var _0x3044db=tGroupResults[_0xc38363]||[];_0x3044db[_0x4ffdd5(0x323)](function(_0x5200b0){var _0x37d003=_0x4ffdd5;if(_0x5200b0[_0x37d003(0x1a5)][0x0]!==undefined)_0x2ef864(_0x5200b0[_0x37d003(0x1a5)][0x0]);});}for(var _0xc38363=0x0;_0xc38363<=tRoundIdx;_0xc38363++){var _0x3044db=tGroupResults[_0xc38363]||[];_0x3044db[_0x4ffdd5(0x323)](function(_0x51b7fa){var _0x20bb46=_0x4ffdd5;if(_0x51b7fa['rest'][0x1]!==undefined)_0x2ef864(_0x51b7fa[_0x20bb46(0x1a5)][0x1]);});}return middleGenres['forEach'](function(_0x370c70){_0x2ef864(_0x370c70);}),_0x4d153d;}function buildFinalOrder(){var _0xc2b32=a0_0x5cac30,_0x5e4b6f=computeMiddleOrder();genreOrder=topPicks[_0xc2b32(0x328)](_0x5e4b6f)['concat'](bottomPicks),showFinalRanking();}function showFinalRanking(){var _0x30b6cf=a0_0x5cac30,_0x1bd7db=document['getElementById'](_0x30b6cf(0x23d));_0x1bd7db[_0x30b6cf(0x1ed)]='';var _0x3ea417=document['createElement']('div');_0x3ea417[_0x30b6cf(0xf8)][_0x30b6cf(0x138)]=_0x30b6cf(0x110),_0x3ea417[_0x30b6cf(0x208)]=_0x30b6cf(0x1fa),_0x1bd7db[_0x30b6cf(0x1d7)](_0x3ea417);var _0x46ab61=document[_0x30b6cf(0x11a)](_0x30b6cf(0x169));_0x46ab61[_0x30b6cf(0x202)]=_0x30b6cf(0x30a),_0x46ab61['style']['gap']=_0x30b6cf(0x28c),genreOrder[_0x30b6cf(0x323)](function(_0x4acce5,_0x51baa7){var _0x346180=_0x30b6cf,_0x32f60d=document[_0x346180(0x11a)](_0x346180(0x169));_0x32f60d[_0x346180(0x202)]=_0x346180(0x2d2);var _0x1e0130=document[_0x346180(0x11a)]('span');_0x1e0130[_0x346180(0xf8)]['cssText']=_0x346180(0x339);var _0x43c953;if(_0x51baa7<0x5)_0x43c953=_0x346180(0x16b),_0x1e0130['style'][_0x346180(0x1b1)]='#e8c94a';else{if(_0x51baa7<0x8)_0x43c953=_0x346180(0x117),_0x1e0130[_0x346180(0xf8)][_0x346180(0x1b1)]=_0x346180(0x26b),_0x1e0130[_0x346180(0xf8)]['opacity']='0.8';else{if(_0x51baa7<0xa)_0x43c953=_0x346180(0x332),_0x1e0130[_0x346180(0xf8)][_0x346180(0x1b1)]=_0x346180(0x26b),_0x1e0130[_0x346180(0xf8)][_0x346180(0x294)]=_0x346180(0x1b3);else{if(_0x51baa7<0xd)_0x43c953=_0x346180(0x14d),_0x1e0130['style'][_0x346180(0x1b1)]=_0x346180(0x1c6);else _0x51baa7<0xf?(_0x43c953=_0x346180(0x175),_0x1e0130['style'][_0x346180(0x1b1)]=_0x346180(0x1d3)):(_0x43c953=_0x346180(0x2be),_0x1e0130[_0x346180(0xf8)]['color']=_0x346180(0x1c5));}}}_0x1e0130['textContent']=_0x43c953;var _0x11bcc6=document[_0x346180(0x11a)]('span');_0x11bcc6[_0x346180(0x202)]=_0x346180(0x2ec)+(_0x51baa7<0x5?_0x346180(0x15c):_0x51baa7>=0xf?_0x346180(0x192):''),_0x11bcc6['textContent']=GENRES[_0x4acce5][_0x346180(0x22e)],_0x32f60d['appendChild'](_0x1e0130),_0x32f60d[_0x346180(0x1d7)](_0x11bcc6),_0x46ab61[_0x346180(0x1d7)](_0x32f60d);}),_0x1bd7db[_0x30b6cf(0x1d7)](_0x46ab61);var _0x33c71d=document['createElement'](_0x30b6cf(0x11d));_0x33c71d[_0x30b6cf(0x333)]=_0x30b6cf(0x11d),_0x33c71d[_0x30b6cf(0x202)]=_0x30b6cf(0x20d),_0x33c71d['style'][_0x30b6cf(0x188)]=_0x30b6cf(0x1cd),_0x33c71d['textContent']=_0x30b6cf(0x2a0),_0x33c71d[_0x30b6cf(0x237)]=finishStep1,_0x1bd7db['appendChild'](_0x33c71d);var _0x5a171d=document[_0x30b6cf(0x11a)](_0x30b6cf(0x11d));_0x5a171d['type']=_0x30b6cf(0x11d),_0x5a171d[_0x30b6cf(0x202)]=_0x30b6cf(0x166),_0x5a171d['style']['marginTop']=_0x30b6cf(0x346),_0x5a171d[_0x30b6cf(0x208)]=_0x30b6cf(0x250),_0x5a171d['onclick']=startTournament,_0x1bd7db['appendChild'](_0x5a171d);}function goToStep(_0x378ea6){var _0x23820f=a0_0x5cac30,_0x187c3e=document[_0x23820f(0x20e)](_0x23820f(0x2c9)+_0x378ea6);if(_0x187c3e&&_0x187c3e[_0x23820f(0x267)][_0x23820f(0x13d)]('locked'))return;var _0x407877=[0x0,0x1,0x2,0x3];for(var _0x2986bc=0x0;_0x2986bc<_0x407877[_0x23820f(0x131)];_0x2986bc++){var _0x37155d=document[_0x23820f(0x20e)](_0x23820f(0x11f)+_0x407877[_0x2986bc]),_0x237b3d=document[_0x23820f(0x20e)](_0x23820f(0x2c9)+_0x407877[_0x2986bc]);if(_0x37155d)_0x37155d[_0x23820f(0x267)][_0x23820f(0x2a3)](_0x23820f(0x2d4));if(_0x237b3d)_0x237b3d[_0x23820f(0x267)][_0x23820f(0x2a3)](_0x23820f(0x2d4));}var _0x352f76=document['getElementById'](_0x23820f(0x11f)+_0x378ea6),_0x2b1f6f=document[_0x23820f(0x20e)](_0x23820f(0x2c9)+_0x378ea6);if(_0x352f76)_0x352f76['classList'][_0x23820f(0x2a6)](_0x23820f(0x2d4));if(_0x2b1f6f)_0x2b1f6f['classList']['add'](_0x23820f(0x2d4));}function startApp(){var _0x3220e2=a0_0x5cac30;document[_0x3220e2(0x20e)](_0x3220e2(0x251))[_0x3220e2(0x267)]['remove'](_0x3220e2(0x2af)),document['getElementById'](_0x3220e2(0x363))[_0x3220e2(0x267)][_0x3220e2(0x2a6)](_0x3220e2(0x18a)),goToStep(0x1),setTimeout(startTournament,0x32);}function finishStep1(){var _0x360e5f=a0_0x5cac30;document[_0x360e5f(0x20e)]('tab2')[_0x360e5f(0x267)][_0x360e5f(0x2a3)](_0x360e5f(0x2af)),document[_0x360e5f(0x20e)]('tab1')[_0x360e5f(0x267)]['add'](_0x360e5f(0x18a)),mustBands=new Set(),goToStep(0x2),window[_0x360e5f(0x26c)]({'top':0x0}),renderScreen2();}const HEADLINERS=new Set([a0_0x5cac30(0x15b),a0_0x5cac30(0x260),'Within\x20Temptation',a0_0x5cac30(0x163),'Megadeth','Limp\x20Bizkit',a0_0x5cac30(0x103),a0_0x5cac30(0x23b),a0_0x5cac30(0x1b7),'Cult\x20of\x20Luna',a0_0x5cac30(0x33f),a0_0x5cac30(0x2ee),a0_0x5cac30(0x149),'Volbeat',a0_0x5cac30(0x356),'Cradle\x20Of\x20Filth','Trivium','Breaking\x20Benjamin',a0_0x5cac30(0x1a8),a0_0x5cac30(0x1c8),'Leprous',a0_0x5cac30(0x24c),a0_0x5cac30(0x1b2),a0_0x5cac30(0x1c1),a0_0x5cac30(0x162),a0_0x5cac30(0x35a),a0_0x5cac30(0x190),a0_0x5cac30(0x2ff),a0_0x5cac30(0x178),'Lacuna\x20Coil',a0_0x5cac30(0x1b0),a0_0x5cac30(0x35b),a0_0x5cac30(0x160),a0_0x5cac30(0x1e4),a0_0x5cac30(0x17d),a0_0x5cac30(0x222),'Def\x20Leppard',a0_0x5cac30(0x127),a0_0x5cac30(0x2da),a0_0x5cac30(0x2ab),a0_0x5cac30(0x2c2),'Black\x20Label\x20Society',a0_0x5cac30(0x2f3),a0_0x5cac30(0x28f),a0_0x5cac30(0x2f9),a0_0x5cac30(0x19f),a0_0x5cac30(0x151),a0_0x5cac30(0x2fd)]);let mustSeeMode=a0_0x5cac30(0x2c7);function showMustSeeMode(_0x14a85e){var _0x1a5ee9=a0_0x5cac30;mustSeeMode=_0x14a85e,document[_0x1a5ee9(0x20e)](_0x1a5ee9(0x1f2))[_0x1a5ee9(0xf8)][_0x1a5ee9(0x101)]='block',document[_0x1a5ee9(0x20e)](_0x1a5ee9(0x1f2))[_0x1a5ee9(0x35c)]({'behavior':'smooth','block':_0x1a5ee9(0x292)}),renderBandGrid();}function finishStep2(){var _0xc7894=a0_0x5cac30;document[_0xc7894(0x20e)](_0xc7894(0x298))[_0xc7894(0x267)][_0xc7894(0x2a3)]('locked'),document[_0xc7894(0x20e)](_0xc7894(0x204))['classList'][_0xc7894(0x2a6)](_0xc7894(0x18a)),buildAllSchedules(),goToStep(0x3),showSchedDay(0x0),saveScheduleToStorage(),showSaveConfirmation(),setTimeout(function(){if(typeof renderSpotifyBtn==='function')renderSpotifyBtn();},0x64);}function parseSchedulePage(_0x3ee773,_0xa24534){var _0x135609=a0_0x5cac30;const _0x37b6c5=[],_0x3cb1b7=_0x3ee773[_0x135609(0x1cc)](/##\s+/);return _0x3cb1b7[_0x135609(0x323)](_0x1f02bf=>{var _0x4c4dde=_0x135609;const _0x18493b=_0x1f02bf[_0x4c4dde(0x2ba)](/^([^\n]+)/);if(!_0x18493b)return;const _0x453fa7=_0x18493b[0x1][_0x4c4dde(0x31f)]();if(![_0x4c4dde(0x174),_0x4c4dde(0x14a),_0x4c4dde(0x32d),'Jupiler\x20Stage','Metal\x20Dome'][_0x4c4dde(0x276)](_0x453fa7))return;const _0x2244d6=/\[([^\]]+?)\s+(\d{1,2}\.\d{2})\s*-\s*(\d{1,2}\.\d{2})/g;let _0x53c5b4;while((_0x53c5b4=_0x2244d6['exec'](_0x1f02bf))!==null){const _0x201798=_0x53c5b4[0x1]['trim'](),_0x5ba181=_0x201798[_0x4c4dde(0x299)](/https?:\/\/[^\s]*/,'')['trim']();_0x5ba181&&_0x53c5b4[0x2]&&_0x53c5b4[0x3]&&_0x37b6c5['push']({'name':_0x5ba181,'stage':_0x453fa7,'s':_0x53c5b4[0x2],'e':_0x53c5b4[0x3]});}}),_0x37b6c5;}const DAYS_SLUGS=[a0_0x5cac30(0x2cb),a0_0x5cac30(0x321),'zaterdag',a0_0x5cac30(0x2b5)],PROXY=a0_0x5cac30(0x1e9);async function fetchLiveLineup(){var _0x45b310=a0_0x5cac30;const _0x8088f=document[_0x45b310(0x20e)](_0x45b310(0x2cd));if(_0x8088f)_0x8088f['textContent']=_0x45b310(0x228);let _0x5a1ff7=![];try{for(let _0x9a6a16=0x0;_0x9a6a16<0x4;_0x9a6a16++){const _0x37e339=_0x45b310(0x205)+DAYS_SLUGS[_0x9a6a16]+_0x45b310(0x249),_0x3c5008=await fetch(PROXY+encodeURIComponent(_0x37e339));if(!_0x3c5008['ok'])continue;const _0x5063e5=await _0x3c5008[_0x45b310(0x2ad)](),_0xeacbf6=_0x5063e5[_0x45b310(0x2b1)]||'',_0x309388=parseSchedulePage(_0xeacbf6,_0x9a6a16);_0x309388[_0x45b310(0x131)]>=0x5&&(LINEUP[_0x9a6a16]=_0x309388,_0x5a1ff7=!![]);}_0x8088f&&(_0x8088f[_0x45b310(0x208)]=_0x5a1ff7?'✓\x20Line-up\x20bijgewerkt\x20op\x20'+new Date()['toLocaleDateString'](_0x45b310(0x293)):'⚠\x20Live\x20update\x20niet\x20beschikbaar\x20—\x20ingebouwde\x20data\x20gebruikt');if(_0x5a1ff7){const _0x1e9c31=document[_0x45b310(0x20e)](_0x45b310(0x1a7));if(_0x1e9c31&&document['getElementById'](_0x45b310(0x324))[_0x45b310(0x267)]['contains']('active'))renderBandGrid();schedules[_0x45b310(0x131)]>0x0&&(buildAllSchedules(),showSchedDay(0x0));}}catch(_0x33f72c){if(_0x8088f)_0x8088f[_0x45b310(0x208)]=_0x45b310(0x201);}}function switchDay(_0x1e5ad9){var _0x33a662=a0_0x5cac30;currentDay=_0x1e5ad9,document['querySelectorAll'](_0x33a662(0x1ba))[_0x33a662(0x323)]((_0x44a468,_0x1a2495)=>_0x44a468[_0x33a662(0x267)][_0x33a662(0x2cf)](_0x33a662(0x2d4),_0x1a2495===_0x1e5ad9)),renderBandGrid();}function renderBandGrid(){var _0x372076=a0_0x5cac30;const _0x74d870=document[_0x372076(0x20e)]('bandGrid'),_0x19902e=document[_0x372076(0x11a)](_0x372076(0x169));_0x19902e['className']=_0x372076(0x316);const _0x5ddcd4=mustSeeMode===_0x372076(0x28e)?LINEUP[currentDay]['filter'](_0x295938=>HEADLINERS['has'](_0x295938[_0x372076(0x22e)])):LINEUP[currentDay];_0x5ddcd4[_0x372076(0x323)](_0x28c354=>{var _0xf274ef=_0x372076;const _0x2262ea=document[_0xf274ef(0x11a)](_0xf274ef(0x11d));_0x2262ea[_0xf274ef(0x333)]=_0xf274ef(0x11d),_0x2262ea['className']=_0xf274ef(0x172)+(mustBands[_0xf274ef(0x12f)](_0x28c354[_0xf274ef(0x22e)])?_0xf274ef(0x2fb):'');var _0x220a31=mustBands['has'](_0x28c354[_0xf274ef(0x22e)]),_0x1921f5=document['createElement'](_0xf274ef(0x169));_0x1921f5[_0xf274ef(0x202)]=_0xf274ef(0x2d0),_0x1921f5[_0xf274ef(0xf8)]['color']=_0xf274ef(0x2e0),_0x1921f5[_0xf274ef(0x208)]=_0x28c354['name'];var _0x5f1964=document[_0xf274ef(0x11a)](_0xf274ef(0x169));_0x5f1964['className']=_0xf274ef(0x1e1),_0x5f1964[_0xf274ef(0x208)]=_0x28c354['s'][_0xf274ef(0x299)]('.',':')+_0xf274ef(0x210)+_0x28c354['e'][_0xf274ef(0x299)]('.',':');var _0x53d756=document[_0xf274ef(0x11a)]('div');_0x53d756[_0xf274ef(0x202)]=_0xf274ef(0x20c),_0x53d756[_0xf274ef(0x208)]=_0x28c354[_0xf274ef(0x1b8)];var _0x52ee6c=document[_0xf274ef(0x11a)](_0xf274ef(0x169));_0x52ee6c[_0xf274ef(0x202)]=_0xf274ef(0x165),_0x52ee6c[_0xf274ef(0x208)]=_0x220a31?_0xf274ef(0x2f8):_0xf274ef(0x30b),_0x2262ea[_0xf274ef(0x1d7)](_0x1921f5),_0x2262ea['appendChild'](_0x5f1964),_0x2262ea['appendChild'](_0x53d756),_0x2262ea[_0xf274ef(0x1d7)](_0x52ee6c),function(_0x1b6462,_0x4dca56){var _0x4d1b15=_0xf274ef;_0x4dca56[_0x4d1b15(0x237)]=function(){var _0x5519e7=_0x4d1b15;mustBands[_0x5519e7(0x12f)](_0x1b6462[_0x5519e7(0x22e)])?(mustBands['delete'](_0x1b6462[_0x5519e7(0x22e)]),_0x4dca56['classList'][_0x5519e7(0x2a3)](_0x5519e7(0x2e9)),_0x4dca56[_0x5519e7(0x2e6)](_0x5519e7(0x32e))[_0x5519e7(0x208)]=_0x5519e7(0x30b)):(mustBands[_0x5519e7(0x2a6)](_0x1b6462[_0x5519e7(0x22e)]),_0x4dca56[_0x5519e7(0x267)]['add'](_0x5519e7(0x2e9)),_0x4dca56['querySelector'](_0x5519e7(0x32e))[_0x5519e7(0x208)]=_0x5519e7(0x2f8));};}(_0x28c354,_0x2262ea),_0x19902e[_0xf274ef(0x1d7)](_0x2262ea);}),_0x74d870[_0x372076(0x1ed)]='',_0x74d870[_0x372076(0x1d7)](_0x19902e);}function copyResult(){var _0x516e4c=a0_0x5cac30,_0x37f64f=document['getElementById'](_0x516e4c(0x137))[_0x516e4c(0x2c0)];navigator[_0x516e4c(0x132)][_0x516e4c(0x206)](_0x37f64f)['then'](function(){var _0x2c2839=_0x516e4c;alert(_0x2c2839(0x167));});}function exportSchema(){var _0x4fc911=a0_0x5cac30,_0xa15f91=document[_0x4fc911(0x20e)](_0x4fc911(0x137)),_0x588f68=window[_0x4fc911(0x2f7)]('','_blank');_0x588f68[_0x4fc911(0x1ab)][_0x4fc911(0x191)](_0x4fc911(0x1c4)+_0x4fc911(0x268)+_0x4fc911(0x1a2)+_0x4fc911(0x335)+_0x4fc911(0x25e)+_0x4fc911(0x25a)+_0x4fc911(0x1e2)+_0x4fc911(0x30c)+_0x4fc911(0x296)+'.sched-band-genre{font-size:11px;color:#999;}'+_0x4fc911(0x25f)+_0x4fc911(0x329)+_0x4fc911(0x2ac)+'.sched-overlap-option{flex:1;padding:10px\x2012px;border-right:1px\x20solid\x20#eee;}'+_0x4fc911(0x300)+'.sched-rank-badge{font-size:11px;margin-left:6px;color:#888;}'+_0x4fc911(0x336)+'<h2>Mijn\x20Graspop\x202026\x20Schema</h2>'+_0xa15f91[_0x4fc911(0x1ed)]+_0x4fc911(0x2a9)),_0x588f68[_0x4fc911(0x1ab)]['close'](),_0x588f68[_0x4fc911(0x2f1)](),setTimeout(function(){_0x588f68['print']();},0x190);}function resetAll(){var _0x390d65=a0_0x5cac30;genreOrder=GENRES[_0x390d65(0x2de)]((_0x3ffb6e,_0x584ce4)=>_0x584ce4),mustBands=new Set(),currentDay=0x0,schedules=[],[0x0,0x1,0x2,0x3][_0x390d65(0x323)](_0x32d79d=>{var _0x55ee57=_0x390d65;const _0x57a68a=document[_0x55ee57(0x20e)](_0x55ee57(0x2c9)+_0x32d79d);if(_0x57a68a){_0x57a68a['classList'][_0x55ee57(0x2a3)](_0x55ee57(0x2d4),_0x55ee57(0x18a));if(_0x32d79d>0x0)_0x57a68a[_0x55ee57(0x267)]['add'](_0x55ee57(0x2af));}}),goToStep(0x0),renderBandGrid();}function starsForRank(_0x555a0d){var _0x22b0e8=a0_0x5cac30;return _0x555a0d<=0x5?_0x22b0e8(0x16b):_0x555a0d<=0x8?_0x22b0e8(0x117):_0x555a0d<=0xa?'★★★☆☆':_0x555a0d<=0xd?_0x22b0e8(0x14d):_0x555a0d<=0xf?_0x22b0e8(0x175):_0x22b0e8(0x2be);}function renderScreen2(){var _0x4489d1=a0_0x5cac30,_0x5a1df0=document['getElementById'](_0x4489d1(0x30f));_0x5a1df0[_0x4489d1(0x1ed)]='',window[_0x4489d1(0x26c)]({'top':0x0});var _0x212b85=document[_0x4489d1(0x11a)]('div');_0x212b85['className']=_0x4489d1(0x303),_0x212b85[_0x4489d1(0x208)]=_0x4489d1(0x248),_0x5a1df0[_0x4489d1(0x1d7)](_0x212b85);var _0x4f0294=document['createElement']('p');_0x4f0294[_0x4489d1(0x202)]=_0x4489d1(0x2b8),_0x4f0294[_0x4489d1(0x208)]=_0x4489d1(0x150),_0x5a1df0['appendChild'](_0x4f0294);var _0x26e120=document[_0x4489d1(0x11a)](_0x4489d1(0x169));_0x26e120[_0x4489d1(0xf8)][_0x4489d1(0x138)]='display:flex;flex-direction:column;gap:10px;max-width:480px;';function _0x3cd327(_0x1d84c2,_0x22dfe6,_0x461cad){var _0x1e67c2=_0x4489d1,_0x41a70e=document['createElement'](_0x1e67c2(0x11d));return _0x41a70e[_0x1e67c2(0x333)]=_0x1e67c2(0x11d),_0x41a70e['className']='choice-card',_0x41a70e[_0x1e67c2(0x1ed)]=_0x1e67c2(0x377)+_0x1d84c2+'</div><div\x20class=\x22choice-card-desc\x22>'+_0x22dfe6+_0x1e67c2(0x12a),_0x41a70e[_0x1e67c2(0x237)]=_0x461cad,_0x41a70e;}_0x26e120[_0x4489d1(0x1d7)](_0x3cd327('No,\x20generate\x20my\x20schedule\x20directly\x20→',_0x4489d1(0x15e),finishStep2)),_0x26e120[_0x4489d1(0x1d7)](_0x3cd327(_0x4489d1(0x2ea),'Only\x20the\x20big\x20names\x20and\x20headliners.',function(){var _0x2ef7a2=_0x4489d1;renderBandGrid2(_0x2ef7a2(0x28e));})),_0x26e120[_0x4489d1(0x1d7)](_0x3cd327(_0x4489d1(0x2b7),_0x4489d1(0x374),function(){renderBandGrid2('all');})),_0x5a1df0[_0x4489d1(0x1d7)](_0x26e120);var _0x56ac19=document[_0x4489d1(0x11a)](_0x4489d1(0x11d));_0x56ac19[_0x4489d1(0x333)]='button',_0x56ac19[_0x4489d1(0x202)]=_0x4489d1(0x166),_0x56ac19[_0x4489d1(0xf8)]['marginTop']=_0x4489d1(0x144),_0x56ac19['textContent']='←\x20Back',_0x56ac19[_0x4489d1(0x237)]=function(){goToStep(0x1);},_0x5a1df0[_0x4489d1(0x1d7)](_0x56ac19);}function renderBandGrid2(_0x2e8c9f){var _0x5e59db=a0_0x5cac30,_0x1bd7d6=document[_0x5e59db(0x20e)](_0x5e59db(0x30f));_0x1bd7d6[_0x5e59db(0x1ed)]='',window[_0x5e59db(0x26c)]({'top':0x0});var _0x58a1b2=document['createElement']('div');_0x58a1b2[_0x5e59db(0x202)]='screen-title',_0x58a1b2[_0x5e59db(0x208)]=_0x2e8c9f===_0x5e59db(0x28e)?_0x5e59db(0x240):'Full\x20line-up',_0x1bd7d6[_0x5e59db(0x1d7)](_0x58a1b2);var _0x45837c=document[_0x5e59db(0x11a)]('p');_0x45837c[_0x5e59db(0x202)]=_0x5e59db(0x2b8),_0x45837c[_0x5e59db(0xf8)][_0x5e59db(0x189)]=_0x5e59db(0x1cd),_0x45837c['textContent']=_0x5e59db(0x30e),_0x1bd7d6[_0x5e59db(0x1d7)](_0x45837c);var _0x1ca2eb=document['createElement'](_0x5e59db(0x169));_0x1ca2eb[_0x5e59db(0x202)]=_0x5e59db(0x319),_0x1ca2eb[_0x5e59db(0xf8)]['marginBottom']=_0x5e59db(0x1cd);var _0x2e0b2d=['Thu\x2018/06',_0x5e59db(0x23f),_0x5e59db(0x2df),_0x5e59db(0x18f)],_0x44577a=document[_0x5e59db(0x11a)]('div');_0x44577a['id']=_0x5e59db(0x1a7);function _0x5371ee(_0x27855a){var _0x10757a=_0x5e59db;_0x44577a[_0x10757a(0x1ed)]='';var _0x4950b3=[];LINEUP[_0x27855a][_0x10757a(0x323)](function(_0x2ca86f){var _0x592f7c=_0x10757a;if(_0x2e8c9f===_0x592f7c(0x28e)&&!HEADLINERS[_0x592f7c(0x12f)](_0x2ca86f[_0x592f7c(0x22e)]))return;_0x4950b3[_0x592f7c(0x1bb)]({'band':_0x2ca86f,'lined':genreRank(_0x2ca86f[_0x592f7c(0x22e)])+0x1<=0x9});}),_0x4950b3[_0x10757a(0x27a)](function(_0x4b8fc8,_0xb1fafb){var _0x359b39=_0x10757a;if(_0x4b8fc8['lined']&&!_0xb1fafb[_0x359b39(0x342)])return-0x1;if(!_0x4b8fc8[_0x359b39(0x342)]&&_0xb1fafb[_0x359b39(0x342)])return 0x1;return _0x4b8fc8['band']['s'][_0x359b39(0x161)](_0xb1fafb['band']['s']);});var _0x480ea2=document[_0x10757a(0x11a)](_0x10757a(0x169));_0x480ea2[_0x10757a(0xf8)][_0x10757a(0x138)]='display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px;grid-auto-rows:1fr;',_0x4950b3['forEach'](function(_0x405441){var _0x3bb9be=_0x10757a,_0x4d342e=_0x405441[_0x3bb9be(0x366)],_0x594289=document[_0x3bb9be(0x11a)](_0x3bb9be(0x169));_0x594289['className']=_0x3bb9be(0x2e3)+(_0x405441['lined']?'\x20lined-up':''),_0x594289[_0x3bb9be(0xf8)][_0x3bb9be(0x1dc)]=_0x3bb9be(0x31e);var _0xb4f36e=document[_0x3bb9be(0x11a)]('button');_0xb4f36e[_0x3bb9be(0x333)]='button',_0xb4f36e[_0x3bb9be(0x202)]=_0x3bb9be(0x172)+(mustBands[_0x3bb9be(0x12f)](_0x4d342e[_0x3bb9be(0x22e)])?_0x3bb9be(0x2fb):''),_0xb4f36e['style'][_0x3bb9be(0x138)]='display:block;width:100%;height:100%;background:#111;border:2px\x20solid\x20rgba(255,255,255,0.08);border-radius:10px;padding:12px\x2013px\x2010px;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-appearance:none;text-align:left;font-family:sans-serif;position:relative;transition:border-color\x20.15s,background\x20.15s;box-sizing:border-box;';mustBands[_0x3bb9be(0x12f)](_0x4d342e[_0x3bb9be(0x22e)])&&(_0xb4f36e[_0x3bb9be(0xf8)]['borderColor']=_0x3bb9be(0x274),_0xb4f36e['style'][_0x3bb9be(0x12d)]='rgba(224,90,43,0.08)');var _0x422e59=document[_0x3bb9be(0x11a)](_0x3bb9be(0x169));_0x422e59['style']['cssText']=_0x3bb9be(0x225),_0x422e59[_0x3bb9be(0x208)]=_0x4d342e['name'];var _0x1f2f60=document[_0x3bb9be(0x11a)](_0x3bb9be(0x169));_0x1f2f60[_0x3bb9be(0xf8)][_0x3bb9be(0x138)]='font-size:11px;color:#e8c94a;margin-top:5px;font-family:monospace;',_0x1f2f60[_0x3bb9be(0x208)]=_0x4d342e['s'][_0x3bb9be(0x299)]('.',':')+_0x3bb9be(0x210)+_0x4d342e['e'][_0x3bb9be(0x299)]('.',':');var _0x2e8573=document[_0x3bb9be(0x11a)](_0x3bb9be(0x169));_0x2e8573[_0x3bb9be(0xf8)][_0x3bb9be(0x138)]=_0x3bb9be(0xfa),_0x2e8573['textContent']=_0x4d342e['stage'];var _0x19f98b=document[_0x3bb9be(0x11a)]('div');_0x19f98b[_0x3bb9be(0x202)]=_0x3bb9be(0x2e8),_0x19f98b[_0x3bb9be(0xf8)][_0x3bb9be(0x138)]=_0x3bb9be(0x34b),_0x19f98b[_0x3bb9be(0x208)]=mustBands[_0x3bb9be(0x12f)](_0x4d342e[_0x3bb9be(0x22e)])?'✓':'',_0xb4f36e[_0x3bb9be(0x1d7)](_0x422e59),_0xb4f36e['appendChild'](_0x1f2f60),_0xb4f36e[_0x3bb9be(0x1d7)](_0x2e8573);if(_0x405441['lined']){var _0x241f07=document[_0x3bb9be(0x11a)](_0x3bb9be(0x169));_0x241f07[_0x3bb9be(0x202)]=_0x3bb9be(0x330),_0x241f07['textContent']=_0x3bb9be(0x1c2),_0xb4f36e[_0x3bb9be(0x1d7)](_0x241f07);}_0xb4f36e[_0x3bb9be(0x1d7)](_0x19f98b),function(_0xc43c21,_0x279c41,_0x487fda){var _0x3b41bb=_0x3bb9be;_0x279c41[_0x3b41bb(0x237)]=function(){var _0x24d6da=_0x3b41bb;mustBands['has'](_0xc43c21[_0x24d6da(0x22e)])?(mustBands[_0x24d6da(0x1d5)](_0xc43c21[_0x24d6da(0x22e)]),_0x279c41[_0x24d6da(0xf8)]['borderColor']='rgba(255,255,255,0.08)',_0x279c41[_0x24d6da(0xf8)][_0x24d6da(0x12d)]=_0x24d6da(0x34f),_0x487fda[_0x24d6da(0x208)]=''):(mustBands[_0x24d6da(0x2a6)](_0xc43c21[_0x24d6da(0x22e)]),_0x279c41[_0x24d6da(0xf8)]['borderColor']='rgba(224,90,43,0.6)',_0x279c41['style'][_0x24d6da(0x12d)]=_0x24d6da(0x10f),_0x487fda[_0x24d6da(0x208)]='✓');};}(_0x4d342e,_0xb4f36e,_0x19f98b),_0x594289[_0x3bb9be(0x1d7)](_0xb4f36e),_0x480ea2[_0x3bb9be(0x1d7)](_0x594289);}),_0x44577a[_0x10757a(0x1d7)](_0x480ea2);}_0x2e0b2d[_0x5e59db(0x323)](function(_0x2e2862,_0x63dbf2){var _0x10bb60=_0x5e59db,_0x427e4c=document[_0x10bb60(0x11a)](_0x10bb60(0x11d));_0x427e4c['type']='button',_0x427e4c[_0x10bb60(0x202)]=_0x10bb60(0x13c)+(_0x63dbf2===0x0?_0x10bb60(0x186):''),_0x427e4c[_0x10bb60(0x208)]=_0x2e2862,_0x427e4c[_0x10bb60(0x237)]=function(_0x43756d){return function(){var _0x1d8a20=a0_0x40e5;_0x1ca2eb[_0x1d8a20(0x239)](_0x1d8a20(0x1ba))[_0x1d8a20(0x323)](function(_0x41b76a,_0x183aff){var _0x399852=_0x1d8a20;_0x41b76a[_0x399852(0x267)]['toggle'](_0x399852(0x2d4),_0x183aff===_0x43756d);}),_0x5371ee(_0x43756d);};}(_0x63dbf2),_0x1ca2eb[_0x10bb60(0x1d7)](_0x427e4c);}),_0x1bd7d6[_0x5e59db(0x1d7)](_0x1ca2eb),_0x1bd7d6['appendChild'](_0x44577a),_0x5371ee(0x0);var _0x8e0f9f=document[_0x5e59db(0x11a)](_0x5e59db(0x169));_0x8e0f9f['className']=_0x5e59db(0x1c0),_0x8e0f9f[_0x5e59db(0xf8)]['marginTop']=_0x5e59db(0x31a);var _0x4b649c=document[_0x5e59db(0x11a)](_0x5e59db(0x11d));_0x4b649c[_0x5e59db(0x333)]=_0x5e59db(0x11d),_0x4b649c['className']='btn\x20btn-secondary',_0x4b649c[_0x5e59db(0x208)]='←\x20Back',_0x4b649c[_0x5e59db(0x237)]=renderScreen2,_0x8e0f9f[_0x5e59db(0x1d7)](_0x4b649c);var _0x1cbf7c=document[_0x5e59db(0x11a)]('button');_0x1cbf7c[_0x5e59db(0x333)]=_0x5e59db(0x11d),_0x1cbf7c[_0x5e59db(0x202)]=_0x5e59db(0x20d),_0x1cbf7c[_0x5e59db(0xf8)]['touchAction']=_0x5e59db(0x288),_0x1cbf7c[_0x5e59db(0x208)]=_0x5e59db(0x24f),_0x1cbf7c[_0x5e59db(0x237)]=finishStep2,_0x8e0f9f['appendChild'](_0x1cbf7c),_0x1bd7d6[_0x5e59db(0x1d7)](_0x8e0f9f);}function saveScheduleToStorage(){var _0x5e96b1=a0_0x5cac30;try{localStorage[_0x5e96b1(0x1dd)]('lufm_schedules',JSON[_0x5e96b1(0x1aa)](schedules)),localStorage[_0x5e96b1(0x1dd)](_0x5e96b1(0xfc),JSON['stringify'](genreOrder)),localStorage['setItem'](_0x5e96b1(0x36d),JSON[_0x5e96b1(0x1aa)]([...mustBands])),localStorage[_0x5e96b1(0x1dd)](_0x5e96b1(0x1d0),_0x5e96b1(0x181));}catch(_0x7d8eb5){}}function loadScheduleFromStorage(){var _0x42b778=a0_0x5cac30;try{var _0x3df1f9=localStorage[_0x42b778(0x23c)](_0x42b778(0x2f0)),_0x313c46=localStorage[_0x42b778(0x23c)](_0x42b778(0xfc)),_0x1718f2=localStorage[_0x42b778(0x23c)]('lufm_mustBands');if(!_0x3df1f9||!_0x313c46)return![];return schedules=JSON[_0x42b778(0x36a)](_0x3df1f9),genreOrder=JSON[_0x42b778(0x36a)](_0x313c46),mustBands=new Set(JSON['parse'](_0x1718f2||'[]')),!![];}catch(_0x18680d){return![];}}function hasSavedSchedule(){var _0x143bee=a0_0x5cac30;return localStorage[_0x143bee(0x23c)]('lufm_saved')===_0x143bee(0x181);}function clearSavedSchedule(){var _0x8d239e=a0_0x5cac30;[_0x8d239e(0x2f0),_0x8d239e(0xfc),_0x8d239e(0x36d),_0x8d239e(0x1d0)][_0x8d239e(0x323)](function(_0xff4e4a){var _0x3d3b24=_0x8d239e;localStorage[_0x3d3b24(0xf6)](_0xff4e4a);});}function showSavedSchedule(){var _0x2cd5a9=a0_0x5cac30;if(!loadScheduleFromStorage())return;[0x0,0x1,0x2,0x3]['forEach'](function(_0x21163c){var _0x12d975=a0_0x40e5,_0x1d85f1=document[_0x12d975(0x20e)]('tab'+_0x21163c);_0x1d85f1&&_0x1d85f1[_0x12d975(0x267)][_0x12d975(0x2a3)](_0x12d975(0x2af),_0x12d975(0x2d4),'done');}),document[_0x2cd5a9(0x20e)](_0x2cd5a9(0x298))[_0x2cd5a9(0x267)][_0x2cd5a9(0x2a6)](_0x2cd5a9(0x2d4)),goToStep(0x3),showSchedDay(0x0);}function renderSavedScheduleBtn(){var _0x2ee74d=a0_0x5cac30,_0x33b375=document[_0x2ee74d(0x20e)](_0x2ee74d(0x2ce));if(_0x33b375)_0x33b375[_0x2ee74d(0x2a3)]();if(!hasSavedSchedule())return;var _0x9d80c1=document[_0x2ee74d(0x20e)](_0x2ee74d(0x243));if(!_0x9d80c1)return;var _0x4edf43=document[_0x2ee74d(0x11a)](_0x2ee74d(0x11d));_0x4edf43[_0x2ee74d(0x333)]=_0x2ee74d(0x11d),_0x4edf43['id']=_0x2ee74d(0x2ce),_0x4edf43[_0x2ee74d(0xf8)][_0x2ee74d(0x138)]=_0x2ee74d(0x27e),_0x4edf43[_0x2ee74d(0x1ed)]='<span\x20style=\x22font-size:22px;\x22>&#128197;</span><div><div\x20style=\x22font-size:15px;font-weight:600;color:#e8c94a;\x22>View\x20my\x20saved\x20schedule</div><div\x20style=\x22font-size:12px;color:#999;margin-top:2px;\x22>Your\x20Graspop\x202026\x20schedule\x20is\x20ready</div></div>',_0x4edf43[_0x2ee74d(0x237)]=showSavedSchedule;var _0x540cd4=document[_0x2ee74d(0x20e)](_0x2ee74d(0x234));_0x540cd4&&_0x540cd4[_0x2ee74d(0x179)]?_0x540cd4[_0x2ee74d(0x179)][_0x2ee74d(0x21a)](_0x4edf43,_0x540cd4[_0x2ee74d(0x2aa)]):_0x9d80c1['appendChild'](_0x4edf43);}function showSaveConfirmation(){var _0x309789=a0_0x5cac30,_0x49f49c=document[_0x309789(0x20e)](_0x309789(0x361));if(_0x49f49c)return;var _0x537eab=document[_0x309789(0x11a)](_0x309789(0x169));_0x537eab['id']='saveConfirmation',_0x537eab['style'][_0x309789(0x138)]=_0x309789(0x2a5);var _0x149625=document[_0x309789(0x11a)](_0x309789(0x2d7));_0x149625['textContent']='✅',_0x149625[_0x309789(0xf8)][_0x309789(0x2a7)]=_0x309789(0x286);var _0x3fcf7a=document[_0x309789(0x11a)](_0x309789(0x169));_0x3fcf7a[_0x309789(0xf8)]['cssText']=_0x309789(0x26e),_0x3fcf7a[_0x309789(0x1ed)]=_0x309789(0x113),_0x537eab[_0x309789(0x1d7)](_0x149625),_0x537eab[_0x309789(0x1d7)](_0x3fcf7a);var _0x4b94a8=document[_0x309789(0x20e)](_0x309789(0x11c)),_0x597816=document[_0x309789(0x20e)]('schedOutput');if(_0x597816&&_0x597816[_0x309789(0x179)])_0x597816['parentNode'][_0x309789(0x21a)](_0x537eab,_0x597816);else{if(_0x4b94a8)_0x4b94a8[_0x309789(0x21a)](_0x537eab,_0x4b94a8[_0x309789(0x185)]);}}function checkInAppBrowser(){var _0x246378=a0_0x5cac30,_0x1167b3=navigator[_0x246378(0x327)]||'';if(!/Instagram|FBAN|FBAV|LinkedInApp|Twitter/i['test'](_0x1167b3))return;var _0x24249d=document[_0x246378(0x11a)]('div');_0x24249d[_0x246378(0xf8)][_0x246378(0x138)]=_0x246378(0x1a0);var _0x1df9f4=/iphone|ipad|ipod/i[_0x246378(0x236)](_0x1167b3),_0x525115=document[_0x246378(0x11a)](_0x246378(0x169));_0x525115['style']['cssText']='flex:1;line-height:1.4;',_0x525115['innerHTML']='<strong>For\x20the\x20best\x20experience:</strong>\x20open\x20in\x20'+(_0x1df9f4?_0x246378(0x148):_0x246378(0x196))+'\x20—\x20tap\x20the\x20menu\x20→\x20Open\x20in\x20browser';var _0x2ec265=document['createElement'](_0x246378(0x11d));_0x2ec265[_0x246378(0x333)]='button',_0x2ec265[_0x246378(0x208)]='✕',_0x2ec265[_0x246378(0xf8)][_0x246378(0x138)]=_0x246378(0x1e6),_0x2ec265[_0x246378(0x237)]=function(){_0x24249d['remove']();},_0x24249d[_0x246378(0x1d7)](_0x525115),_0x24249d['appendChild'](_0x2ec265),document['body'][_0x246378(0x21a)](_0x24249d,document['body'][_0x246378(0x185)]);}function copyResult(){var _0x46d8c0=a0_0x5cac30,_0x13ec0c=[_0x46d8c0(0x15a),_0x46d8c0(0x2ef),_0x46d8c0(0x1bf),_0x46d8c0(0x281)],_0x838586=['MY\x20GRASPOP\x202026\x20SCHEDULE',_0x46d8c0(0x2d9),''];for(var _0x202022=0x0;_0x202022<0x4;_0x202022++){if(!schedules[_0x202022]||!schedules[_0x202022][_0x46d8c0(0x131)])continue;_0x838586[_0x46d8c0(0x1bb)](_0x46d8c0(0x284)+_0x13ec0c[_0x202022][_0x46d8c0(0x2f6)]()+_0x46d8c0(0x33d)),schedules[_0x202022]['forEach'](function(_0xf53a0a){var _0x27a27c=_0x46d8c0;if(_0xf53a0a[_0x27a27c(0x333)]===_0x27a27c(0x29a)){var _0x12201c=_0xf53a0a[_0x27a27c(0x366)],_0x19db20=_0x12201c['s'][_0x27a27c(0x299)]('.',':')+'\x20'+_0x12201c[_0x27a27c(0x22e)]+'\x20('+_0x12201c[_0x27a27c(0x1b8)]+')';if(_0x12201c['isMust'])_0x19db20+=_0x27a27c(0x1a4);_0x838586[_0x27a27c(0x1bb)](_0x19db20);}else _0x838586[_0x27a27c(0x1bb)](_0x27a27c(0x347)),_0xf53a0a['options'][_0x27a27c(0x323)](function(_0x1d6f1e){var _0x3310e5=_0x27a27c;_0x838586[_0x3310e5(0x1bb)]('\x20\x20'+_0x1d6f1e['s'][_0x3310e5(0x299)]('.',':')+'\x20'+_0x1d6f1e['name']+'\x20('+_0x1d6f1e[_0x3310e5(0x1b8)]+')');});}),_0x838586[_0x46d8c0(0x1bb)]('');}navigator[_0x46d8c0(0x132)][_0x46d8c0(0x206)](_0x838586[_0x46d8c0(0x31d)]('\x0a'))['then'](function(){var _0x242a7d=_0x46d8c0,_0x4f90e3=document[_0x242a7d(0x20e)]('btnCopy');_0x4f90e3&&(_0x4f90e3['textContent']=_0x242a7d(0x291),setTimeout(function(){var _0x555f76=_0x242a7d;_0x4f90e3[_0x555f76(0x208)]=_0x555f76(0x2a2);},0x7d0));});}function exportSchema(){saveScheduleAsImage();}function saveScheduleAsImage(){var _0x55fef4=a0_0x5cac30,_0x39e3f3=0x0;document[_0x55fef4(0x239)]('.sched-day-tab')[_0x55fef4(0x323)](function(_0x4d7e2b,_0x16064a){var _0x505deb=_0x55fef4;if(_0x4d7e2b[_0x505deb(0x267)][_0x505deb(0x13d)](_0x505deb(0x2d4)))_0x39e3f3=_0x16064a;});var _0x245ce3=schedules[_0x39e3f3];if(!_0x245ce3||!_0x245ce3[_0x55fef4(0x131)])return;var _0x5db936=[_0x55fef4(0x15a),_0x55fef4(0x2ef),_0x55fef4(0x1bf),_0x55fef4(0x281)],_0x498ede=document[_0x55fef4(0x11a)](_0x55fef4(0x169));_0x498ede['id']=_0x55fef4(0x1a3),_0x498ede[_0x55fef4(0xf8)][_0x55fef4(0x138)]=_0x55fef4(0x22f);var _0x4fc617=document['createElement'](_0x55fef4(0x169));_0x4fc617['style']['cssText']=_0x55fef4(0x2fa);var _0x121c3e=document['createElement'](_0x55fef4(0x169)),_0x3d11d4=document[_0x55fef4(0x11a)]('div');_0x3d11d4[_0x55fef4(0xf8)][_0x55fef4(0x138)]=_0x55fef4(0x14c),_0x3d11d4['textContent']=_0x55fef4(0x1da);var _0xe28688=document[_0x55fef4(0x11a)](_0x55fef4(0x169));_0xe28688[_0x55fef4(0xf8)][_0x55fef4(0x138)]=_0x55fef4(0x36c),_0xe28688[_0x55fef4(0x208)]=_0x55fef4(0x2f5)+_0x5db936[_0x39e3f3],_0x121c3e[_0x55fef4(0x1d7)](_0x3d11d4),_0x121c3e[_0x55fef4(0x1d7)](_0xe28688);var _0x28f589=document[_0x55fef4(0x11a)](_0x55fef4(0x169));_0x28f589[_0x55fef4(0xf8)][_0x55fef4(0x138)]='font-size:11px;color:#666;text-align:right;font-family:sans-serif;line-height:1.4;max-width:110px;',_0x28f589[_0x55fef4(0x208)]=_0x55fef4(0x325);var _0x95725=document[_0x55fef4(0x11a)](_0x55fef4(0x11d));_0x95725['type']='button',_0x95725[_0x55fef4(0x208)]='✕',_0x95725[_0x55fef4(0xf8)][_0x55fef4(0x138)]=_0x55fef4(0x2c5),_0x95725[_0x55fef4(0x237)]=function(){var _0x2eb4f7=_0x55fef4;_0x498ede[_0x2eb4f7(0x2a3)]();},_0x4fc617[_0x55fef4(0x1d7)](_0x121c3e),_0x4fc617['appendChild'](_0x28f589),_0x4fc617[_0x55fef4(0x1d7)](_0x95725),_0x498ede[_0x55fef4(0x1d7)](_0x4fc617);var _0x38959a=document[_0x55fef4(0x11a)]('div');_0x38959a['style'][_0x55fef4(0x138)]=_0x55fef4(0xff),_0x245ce3['forEach'](function(_0x1d79ac){var _0x130686=_0x55fef4;if(_0x1d79ac[_0x130686(0x333)]===_0x130686(0x29a)){var _0xd26c80=_0x1d79ac['band'],_0x389870=document[_0x130686(0x11a)]('div');_0x389870['style'][_0x130686(0x138)]='background:'+(_0xd26c80['isMust']?_0x130686(0x10f):_0x130686(0x2b3))+_0x130686(0x32a)+(_0xd26c80[_0x130686(0xf5)]?_0x130686(0x11e):'rgba(255,255,255,0.08)')+_0x130686(0x301);var _0x99a47a=document['createElement'](_0x130686(0x169));_0x99a47a[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x280);var _0x101a34=document[_0x130686(0x11a)](_0x130686(0x169));_0x101a34[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x10c),_0x101a34['textContent']=_0xd26c80['s'][_0x130686(0x299)]('.',':'),_0x99a47a[_0x130686(0x1d7)](_0x101a34);var _0x18b8b1=document[_0x130686(0x11a)](_0x130686(0x169));_0x18b8b1[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x121);var _0x3a54bb=document[_0x130686(0x11a)](_0x130686(0x169));_0x3a54bb[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x123),_0x3a54bb['textContent']=_0xd26c80[_0x130686(0x22e)];var _0x19f765=document[_0x130686(0x11a)](_0x130686(0x169));_0x19f765['style'][_0x130686(0x138)]=_0x130686(0x152),_0x19f765['textContent']=_0xd26c80[_0x130686(0x1b8)],_0x18b8b1[_0x130686(0x1d7)](_0x3a54bb),_0x18b8b1[_0x130686(0x1d7)](_0x19f765);var _0x29649d=document[_0x130686(0x11a)](_0x130686(0x169));_0x29649d[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x263);if(_0xd26c80[_0x130686(0xf5)]){var _0x4133d0=document['createElement']('div');_0x4133d0['style'][_0x130686(0x138)]=_0x130686(0x1d1),_0x4133d0['textContent']=_0x130686(0x1f0),_0x29649d[_0x130686(0x1d7)](_0x4133d0);}else{var _0x23658d=document[_0x130686(0x11a)](_0x130686(0x169));_0x23658d[_0x130686(0xf8)]['cssText']=_0x130686(0x1fb),_0x23658d[_0x130686(0x208)]=starsForRank(genreRank(_0xd26c80['name'])+0x1),_0x29649d['appendChild'](_0x23658d);}_0x389870[_0x130686(0x1d7)](_0x99a47a),_0x389870[_0x130686(0x1d7)](_0x18b8b1),_0x389870[_0x130686(0x1d7)](_0x29649d),_0x38959a['appendChild'](_0x389870);}else{var _0x567793=document[_0x130686(0x11a)](_0x130686(0x169));_0x567793[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x1e3);var _0x36130e=document[_0x130686(0x11a)](_0x130686(0x169));_0x36130e[_0x130686(0xf8)][_0x130686(0x138)]='background:rgba(232,201,74,0.1);padding:7px\x2014px;font-size:11px;font-weight:600;color:#e8c94a;letter-spacing:.08em;text-transform:uppercase;font-family:monospace;',_0x36130e[_0x130686(0x208)]='⚡\x20Choose\x20—\x20overlap',_0x567793[_0x130686(0x1d7)](_0x36130e);var _0x2bf51c=document[_0x130686(0x11a)](_0x130686(0x169));_0x2bf51c[_0x130686(0xf8)][_0x130686(0x138)]=_0x130686(0x359),_0x1d79ac[_0x130686(0x1ee)][_0x130686(0x323)](function(_0x3b2e5b,_0x547f48){var _0x14f346=_0x130686,_0x5de4bf=document['createElement'](_0x14f346(0x169));_0x5de4bf['style'][_0x14f346(0x138)]=_0x14f346(0x1a9)+(_0x547f48>0x0?'border-left:1px\x20solid\x20rgba(232,201,74,0.15)':'');var _0x2884e4=document['createElement'](_0x14f346(0x169));_0x2884e4[_0x14f346(0xf8)][_0x14f346(0x138)]=_0x14f346(0x13e),_0x2884e4[_0x14f346(0x208)]=_0x3b2e5b['s'][_0x14f346(0x299)]('.',':');var _0x145e25=document['createElement']('div');_0x145e25[_0x14f346(0xf8)][_0x14f346(0x138)]='font-size:15px;font-weight:600;color:#f0ede8;font-family:sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;',_0x145e25[_0x14f346(0x208)]=_0x3b2e5b[_0x14f346(0x22e)];var _0x250760=document[_0x14f346(0x11a)](_0x14f346(0x169));_0x250760[_0x14f346(0xf8)][_0x14f346(0x138)]=_0x14f346(0x349),_0x250760[_0x14f346(0x208)]=_0x3b2e5b[_0x14f346(0x1b8)];var _0x34f847=document[_0x14f346(0x11a)]('div');_0x34f847['style'][_0x14f346(0x138)]=_0x14f346(0xf9),_0x34f847[_0x14f346(0x208)]=starsForRank(genreRank(_0x3b2e5b[_0x14f346(0x22e)])+0x1),_0x5de4bf[_0x14f346(0x1d7)](_0x2884e4),_0x5de4bf[_0x14f346(0x1d7)](_0x145e25),_0x5de4bf[_0x14f346(0x1d7)](_0x250760),_0x5de4bf[_0x14f346(0x1d7)](_0x34f847),_0x2bf51c[_0x14f346(0x1d7)](_0x5de4bf);}),_0x567793[_0x130686(0x1d7)](_0x2bf51c),_0x38959a['appendChild'](_0x567793);}});var _0x242eb4=document[_0x55fef4(0x11a)]('div');_0x242eb4[_0x55fef4(0xf8)][_0x55fef4(0x138)]=_0x55fef4(0x29e);var _0x4eb02e=document[_0x55fef4(0x11a)](_0x55fef4(0x169));_0x4eb02e[_0x55fef4(0xf8)][_0x55fef4(0x138)]=_0x55fef4(0x18d),_0x4eb02e[_0x55fef4(0x208)]=_0x55fef4(0x13b);var _0x2b7dc5=document[_0x55fef4(0x11a)]('div');_0x2b7dc5['style'][_0x55fef4(0x138)]='font-size:12px;color:rgba(240,237,232,0.2);font-family:sans-serif;',_0x2b7dc5['textContent']='@lineupforme',_0x242eb4[_0x55fef4(0x1d7)](_0x4eb02e),_0x242eb4[_0x55fef4(0x1d7)](_0x2b7dc5),_0x38959a['appendChild'](_0x242eb4),_0x498ede[_0x55fef4(0x1d7)](_0x38959a),document['body']['appendChild'](_0x498ede);}function resetAll(){var _0x3a7326=a0_0x5cac30;genreOrder=GENRES[_0x3a7326(0x2de)](function(_0x30a1b0,_0x493fac){return _0x493fac;}),mustBands=new Set(),currentDay=0x0,schedules=[],topPicks=[],bottomPicks=[],middleGenres=[],tRounds=[],tRoundIdx=0x0,tGroupIdx=0x0,tGroupResults=[[]],tCurrentGroupResults=tGroupResults[0x0],[0x0,0x1,0x2,0x3][_0x3a7326(0x323)](function(_0x57ac44){var _0x152d2b=_0x3a7326,_0xeec968=document[_0x152d2b(0x20e)](_0x152d2b(0x2c9)+_0x57ac44);if(_0xeec968){_0xeec968[_0x152d2b(0x267)][_0x152d2b(0x2a3)](_0x152d2b(0x2d4),'done');if(_0x57ac44>0x0)_0xeec968[_0x152d2b(0x267)]['add'](_0x152d2b(0x2af));}});var _0x9cc62a=document[_0x3a7326(0x20e)](_0x3a7326(0x1a7));if(_0x9cc62a)_0x9cc62a[_0x3a7326(0x1ed)]='';var _0x5f48e8=document[_0x3a7326(0x20e)](_0x3a7326(0x361));if(_0x5f48e8)_0x5f48e8[_0x3a7326(0x2a3)]();var _0x13be3a=document['getElementById']('savedScheduleBtn');if(_0x13be3a)_0x13be3a[_0x3a7326(0x2a3)]();clearSavedSchedule(),goToStep(0x0);}function renderSpotifyBtn(){}function checkSpotifyCallback(){}setTimeout(function(){try{renderSavedScheduleBtn();}catch(_0x5ebcdb){}},0x32);
+/* Reconstruct a single ordering out of every round's winners/runners-up */
+function computeMiddleOrder() {
+  const order = [];
+  const seen = new Set();
+  const add = (gi) => {
+    if (!seen.has(gi)) {
+      seen.add(gi);
+      order.push(gi);
+    }
+  };
+  for (let r = tRoundIdx; r >= 0; r--) {
+    (tGroupResults[r] || []).forEach((res) => add(res.winner));
+  }
+  for (let r = 0; r <= tRoundIdx; r++) {
+    (tGroupResults[r] || []).forEach((res) => { if (res.rest[0] !== undefined) add(res.rest[0]); });
+  }
+  for (let r = 0; r <= tRoundIdx; r++) {
+    (tGroupResults[r] || []).forEach((res) => { if (res.rest[1] !== undefined) add(res.rest[1]); });
+  }
+  middleGenres.forEach(add);
+  return order;
+}
+
+function buildFinalOrder() {
+  const middleOrder = computeMiddleOrder();
+  genreOrder = topPicks.concat(middleOrder).concat(bottomPicks);
+  showFinalRanking();
+}
+
+function showFinalRanking() {
+  const wrap = document.getElementById("tournamentWrap");
+  wrap.innerHTML = "";
+  txt(wrap, "div", null, "Your genre ranking").style.cssText = "font-weight:600;margin-bottom:1rem;";
+
+  const list = el("div", "t-ranking-preview");
+  list.style.gap = "6px";
+  genreOrder.forEach((gi, rank) => {
+    const row = el("div", "t-rank-row");
+    const num = el("span");
+    num.style.cssText = "font-family:monospace;font-size:12px;min-width:26px;";
+    num.textContent = starsForRank(rank + 1);
+    num.style.color = "#f2792b";
+    const name = el("span", "t-rank-name" + (rank < 5 ? " top" : rank >= 15 ? " bottom" : ""));
+    name.textContent = GENRES[gi].name;
+    row.appendChild(num);
+    row.appendChild(name);
+    list.appendChild(row);
+  });
+  wrap.appendChild(list);
+
+  const confirm = el("button", "btn btn-primary");
+  confirm.type = "button";
+  confirm.style.marginTop = "1.5rem";
+  confirm.textContent = "Looks good →";
+  confirm.onclick = finishStep1;
+  wrap.appendChild(confirm);
+
+  const redo = el("button", "btn btn-secondary");
+  redo.type = "button";
+  redo.style.marginTop = ".5rem";
+  redo.textContent = "Start over";
+  redo.onclick = startTournament;
+  wrap.appendChild(redo);
+}
+
+function finishStep1() {
+  document.getElementById("tab2").classList.remove("locked");
+  document.getElementById("tab1").classList.add("done");
+  mustBands = new Set();
+  goToStep(2);
+  window.scrollTo({ top: 0 });
+  renderScreen2();
+}
+
+/* ---------- Step 2: must-see picks ---------- */
+function renderScreen2() {
+  const screen = document.getElementById("screen2content");
+  screen.innerHTML = "";
+  window.scrollTo({ top: 0 });
+
+  txt(screen, "div", "screen-title", "Mark your must-sees");
+  txt(screen, "p", "screen-desc", "Headliners or icons that belong in your day no matter what.");
+
+  const choices = el("div");
+  choices.style.cssText = "display:flex;flex-direction:column;gap:10px;max-width:480px;";
+
+  function choiceCard(title, desc, onclick) {
+    const card = el("button", "choice-card");
+    card.type = "button";
+    card.innerHTML = "<div class=\"choice-card-title\">" + title + "</div><div class=\"choice-card-desc\">" + desc + "</div>";
+    card.onclick = onclick;
+    return card;
+  }
+
+  choices.appendChild(choiceCard("No, generate my schedule directly →", "Skip this step — I trust the genre ranking.", finishStep2));
+  choices.appendChild(choiceCard("Just the headliners", "Only the big names and headliners.", () => renderBandGrid2("headliners")));
+  choices.appendChild(choiceCard("Show me the full line-up", "Every band, every stage, all 4 days.", () => renderBandGrid2("all")));
+  screen.appendChild(choices);
+
+  const back = el("button", "btn btn-secondary");
+  back.type = "button";
+  back.style.marginTop = "1rem";
+  back.textContent = "← Back";
+  back.onclick = () => goToStep(1);
+  screen.appendChild(back);
+}
+
+function renderBandGrid2(mode) {
+  const screen = document.getElementById("screen2content");
+  screen.innerHTML = "";
+  window.scrollTo({ top: 0 });
+
+  txt(screen, "div", "screen-title", mode === "headliners" ? "Pick your must-sees" : "Full line-up");
+  const hint = txt(screen, "p", "screen-desc", "Tap any band to mark it as a must-see — it always gets a slot, conflicts included.");
+  hint.style.marginBottom = "1rem";
+
+  const dayTabs = el("div", "day-tabs");
+  dayTabs.style.marginBottom = "1rem";
+  const dayGrid = el("div");
+  dayGrid.id = "step2BandGrid";
+
+  function renderDay(dayIdx) {
+    dayGrid.innerHTML = "";
+    const entries = [];
+    LINEUP[dayIdx].forEach((band) => {
+      if (mode === "headliners" && !HEADLINERS.has(band.name)) return;
+      entries.push({ band, isTopPick: genreRank(band.name) + 1 <= 9 });
+    });
+    entries.sort((a, b) => {
+      if (a.isTopPick && !b.isTopPick) return -1;
+      if (!a.isTopPick && b.isTopPick) return 1;
+      return a.band.s.localeCompare(b.band.s);
+    });
+
+    const grid = el("div", "band-grid");
+    entries.forEach(({ band, isTopPick }) => {
+      const wrap = el("div", "band-card-wrap" + (isTopPick ? " lined-up" : ""));
+
+      const card = el("button", "band-card" + (mustBands.has(band.name) ? " must" : ""));
+      card.type = "button";
+      if (mustBands.has(band.name)) {
+        card.style.borderColor = "rgba(224,90,43,0.6)";
+        card.style.background = "rgba(224,90,43,0.08)";
+      }
+
+      txt(card, "div", "band-name", band.name);
+      txt(card, "div", "band-time", fmtTime(band.s) + " – " + fmtTime(band.e));
+      txt(card, "div", "band-stage", band.stage);
+
+      if (isTopPick) txt(card, "div", "lined-up-label", "★ top pick");
+
+      const badge = txt(card, "div", "band-badge", mustBands.has(band.name) ? "✓" : "");
+
+      card.onclick = () => {
+        if (mustBands.has(band.name)) {
+          mustBands.delete(band.name);
+          card.style.borderColor = "rgba(255,255,255,0.08)";
+          card.style.background = "none";
+          badge.textContent = "";
+        } else {
+          mustBands.add(band.name);
+          card.style.borderColor = "rgba(224,90,43,0.6)";
+          card.style.background = "rgba(224,90,43,0.08)";
+          badge.textContent = "✓";
+        }
+      };
+
+      wrap.appendChild(card);
+      grid.appendChild(wrap);
+    });
+    dayGrid.appendChild(grid);
+  }
+
+  DAY_LABELS.forEach((label, dayIdx) => {
+    const tab = el("button", "day-tab" + (dayIdx === 0 ? " active" : ""));
+    tab.type = "button";
+    tab.textContent = label;
+    tab.onclick = () => {
+      dayTabs.querySelectorAll(".day-tab").forEach((t, i) => t.classList.toggle("active", i === dayIdx));
+      renderDay(dayIdx);
+    };
+    dayTabs.appendChild(tab);
+  });
+
+  screen.appendChild(dayTabs);
+  screen.appendChild(dayGrid);
+  renderDay(0);
+
+  const row = el("div", "btn-row");
+  row.style.marginTop = "1.25rem";
+  const back = el("button", "btn btn-secondary");
+  back.type = "button";
+  back.textContent = "← Back";
+  back.onclick = renderScreen2;
+  const cont = el("button", "btn btn-primary");
+  cont.type = "button";
+  cont.style.touchAction = "manipulation";
+  cont.textContent = "Get my schedule →";
+  cont.onclick = finishStep2;
+  row.appendChild(back);
+  row.appendChild(cont);
+  screen.appendChild(row);
+}
+
+function finishStep2() {
+  document.getElementById("tab3").classList.remove("locked");
+  document.getElementById("tab2").classList.add("done");
+  buildAllSchedules();
+  goToStep(3);
+  showSchedDay(0);
+  saveScheduleToStorage();
+  showSaveConfirmation();
+}
+
+/* ---------- Step 3: schedule building ---------- */
+
+/* Greedy conflict resolution: must-sees and top-3-ranked genres always get
+   a slot, forcing an on-the-spot "choice" when they overlap with something
+   already scheduled. Everything else only gets a slot if there's no clash. */
+function buildSchedule(dayIdx) {
+  const bands = LINEUP[dayIdx].map((b) => ({
+    name: b.name,
+    stage: b.stage,
+    s: b.s,
+    e: b.e,
+    sMin: toMin(b.s),
+    eMin: toMin(b.e),
+    rank: mustBands.has(b.name) ? -1 : genreRank(b.name),
+    isMust: mustBands.has(b.name),
+  }));
+
+  const sorted = [...bands].sort((a, b) => (a.rank !== b.rank ? a.rank - b.rank : a.sMin - b.sMin));
+  const slots = [];
+  const placed = new Set();
+
+  for (const band of sorted) {
+    if (placed.has(band.name)) continue;
+
+    const clashing = slots.filter((slot) => {
+      const times = slot.type === "single" ? [slot.band] : slot.options;
+      return times.some((t) => t.sMin < band.eMin && band.sMin < t.eMin);
+    });
+
+    if (clashing.length === 0) {
+      slots.push({ type: "single", band });
+      placed.add(band.name);
+    } else if (band.isMust || band.rank <= 2) {
+      const target = clashing[0];
+      if (target.type === "single") {
+        slots[slots.indexOf(target)] = { type: "overlap", options: [target.band, band] };
+        placed.add(band.name);
+      } else if (target.type === "overlap") {
+        if (!target.options.find((o) => o.name === band.name)) {
+          target.options.push(band);
+          placed.add(band.name);
+        }
+      }
+    }
+    // otherwise: lower-priority band clashes with something better — skip it
+  }
+
+  return slots.sort((a, b) => {
+    const aStart = a.type === "single" ? a.band.sMin : a.options[0].sMin;
+    const bStart = b.type === "single" ? b.band.sMin : b.options[0].sMin;
+    return aStart - bStart;
+  });
+}
+
+function buildAllSchedules() {
+  schedules = [0, 1, 2, 3].map((d) => buildSchedule(d));
+}
+
+function durLabel(band) {
+  return (band.eMin - band.sMin) + " min";
+}
+
+function renderBandSlotDOM(band) {
+  const wrap = el("div", "sched-single" + (band.isMust ? " must-slot" : ""));
+  const timeCol = el("div", "sched-time-col");
+  txt(timeCol, "div", "sched-time", fmtTime(band.s));
+  txt(timeCol, "div", "sched-end", fmtTime(band.e));
+  wrap.appendChild(timeCol);
+
+  const bandCol = el("div", "sched-band-col");
+  const nameRow = el("div", "sched-band-name");
+  nameRow.textContent = band.name;
+  if (band.isMust) {
+    const badge = el("span", "sched-must-badge");
+    badge.textContent = "must-see";
+    nameRow.appendChild(badge);
+  } else {
+    const rank = genreRank(band.name) + 1;
+    if (rank && rank <= 15) {
+      const badge = el("span", "sched-rank-badge");
+      badge.style.cssText = "color:#f2792b;font-size:13px;margin-left:6px;letter-spacing:1px;background:none;border:none;padding:0;";
+      badge.textContent = starsForRank(rank);
+      nameRow.appendChild(badge);
+    }
+  }
+  bandCol.appendChild(nameRow);
+  txt(bandCol, "div", "sched-band-stage", band.stage);
+  const gLabel = genreLabel(band.name);
+  if (gLabel) txt(bandCol, "div", "sched-band-genre", gLabel);
+  wrap.appendChild(bandCol);
+  return wrap;
+}
+
+function showSchedDay(dayIdx) {
+  document.querySelectorAll(".sched-day-tab").forEach((tab, i) => tab.classList.toggle("active", i === dayIdx));
+  const output = document.getElementById("schedOutput");
+  output.innerHTML = "";
+  const daySchedule = schedules[dayIdx];
+
+  if (!daySchedule || daySchedule.length === 0) {
+    const p = el("p", "empty-state");
+    p.textContent = "No slots for this day — go back and add some must-sees, or rank a few more genres.";
+    output.appendChild(p);
+    return;
+  }
+
+  const list = el("div", "sched-list");
+  daySchedule.forEach((slot) => {
+    if (slot.type === "single") {
+      list.appendChild(renderBandSlotDOM(slot.band));
+    } else {
+      const wrap = el("div", "sched-overlap");
+      const header = el("div", "sched-overlap-header");
+      header.textContent = "⚡ Choose — overlap";
+      wrap.appendChild(header);
+
+      const options = el("div", "sched-overlap-bands");
+      slot.options.forEach((band, i) => {
+        const opt = el("div", "sched-overlap-option");
+        if (i > 0) opt.style.borderLeft = "1px solid rgba(242,121,43,0.15)";
+        txt(opt, "div", "sched-time", fmtTime(band.s));
+        txt(opt, "div", "sched-band-name", band.name);
+        txt(opt, "div", "sched-band-stage", band.stage);
+        const star = txt(opt, "div", "sched-rank-badge", starsForRank(genreRank(band.name) + 1));
+        star.style.color = "#f2792b";
+        options.appendChild(opt);
+      });
+      wrap.appendChild(options);
+      list.appendChild(wrap);
+    }
+  });
+  output.appendChild(list);
+}
+
+/* ---------- Persistence (localStorage) ---------- */
+function saveScheduleToStorage() {
+  try {
+    localStorage.setItem("lufm_alcatraz_schedules", JSON.stringify(schedules));
+    localStorage.setItem("lufm_alcatraz_genreOrder", JSON.stringify(genreOrder));
+    localStorage.setItem("lufm_alcatraz_mustBands", JSON.stringify([...mustBands]));
+    localStorage.setItem("lufm_alcatraz_saved", "true");
+  } catch (e) { /* storage unavailable — schedule still works this session */ }
+}
+function loadScheduleFromStorage() {
+  try {
+    const s = localStorage.getItem("lufm_alcatraz_schedules");
+    const g = localStorage.getItem("lufm_alcatraz_genreOrder");
+    const m = localStorage.getItem("lufm_alcatraz_mustBands");
+    if (!s || !g) return false;
+    schedules = JSON.parse(s);
+    genreOrder = JSON.parse(g);
+    mustBands = new Set(JSON.parse(m || "[]"));
+    return true;
+  } catch (e) { return false; }
+}
+function hasSavedSchedule() {
+  return localStorage.getItem("lufm_alcatraz_saved") === "true";
+}
+function clearSavedSchedule() {
+  ["lufm_alcatraz_schedules", "lufm_alcatraz_genreOrder", "lufm_alcatraz_mustBands", "lufm_alcatraz_saved"].forEach((k) => localStorage.removeItem(k));
+}
+function showSavedSchedule() {
+  if (!loadScheduleFromStorage()) return;
+  [0, 1, 2, 3].forEach((s) => {
+    const tab = document.getElementById("tab" + s);
+    if (tab) tab.classList.remove("locked", "active", "done");
+  });
+  document.getElementById("tab3").classList.add("active");
+  goToStep(3);
+  showSchedDay(0);
+}
+function renderSavedScheduleBtn() {
+  const existing = document.getElementById("savedScheduleBtn");
+  if (existing) existing.remove();
+  if (!hasSavedSchedule()) return;
+  const anchor = document.getElementById("screen0");
+  if (!anchor) return;
+
+  const btn = el("button");
+  btn.type = "button";
+  btn.id = "savedScheduleBtn";
+  btn.style.cssText = "display:flex;align-items:center;gap:12px;width:100%;max-width:400px;margin-bottom:1rem;padding:12px 14px;background:var(--bg2);border:1px solid var(--border);border-radius:10px;cursor:pointer;text-align:left;";
+  btn.innerHTML =
+    "<span style=\"font-size:22px;\">📅</span>" +
+    "<div><div style=\"font-size:15px;font-weight:600;color:#f2792b;\">View my saved schedule</div>" +
+    "<div style=\"font-size:12px;color:#999;margin-top:2px;\">Your Alcatraz 2026 schedule is ready</div></div>";
+  btn.onclick = showSavedSchedule;
+
+  const startBtn = document.getElementById("btnStart");
+  if (startBtn && startBtn.parentNode) startBtn.parentNode.insertBefore(btn, startBtn);
+  else anchor.appendChild(btn);
+}
+function showSaveConfirmation() {
+  if (document.getElementById("saveConfirmation")) return;
+  const box = el("div");
+  box.id = "saveConfirmation";
+  box.style.cssText = "display:flex;align-items:center;gap:10px;background:rgba(76,175,125,0.1);border:1px solid rgba(76,175,125,0.3);border-radius:8px;padding:10px 14px;margin-bottom:1rem;font-size:13px;";
+  const icon = txt(box, "span", null, "✅");
+  icon.style.fontSize = "16px";
+  txt(box, "div", null, "Saved — you can close the tab and come back any time.");
+  const output = document.getElementById("schedOutput");
+  const parent = document.getElementById("screen3");
+  if (output && output.parentNode) output.parentNode.insertBefore(box, output);
+  else if (parent) parent.insertBefore(box, parent.firstChild);
+}
+
+/* ---------- Export ---------- */
+function copyResult() {
+  const dayNames = ["THU 06/08", "FRI 07/08", "SAT 08/08", "SUN 09/08"];
+  const lines = ["MY ALCATRAZ OPEN AIR 2026 SCHEDULE", "lineupforme.net", ""];
+  for (let d = 0; d < 4; d++) {
+    if (!schedules[d] || !schedules[d].length) continue;
+    lines.push("== " + dayNames[d] + " ==");
+    schedules[d].forEach((slot) => {
+      if (slot.type === "single") {
+        const b = slot.band;
+        let line = fmtTime(b.s) + " " + b.name + " (" + b.stage + ")";
+        if (b.isMust) line += " [must-see]";
+        lines.push(line);
+      } else {
+        lines.push("  -- overlap, pick one --");
+        slot.options.forEach((o) => lines.push("  " + fmtTime(o.s) + " " + o.name + " (" + o.stage + ")"));
+      }
+    });
+    lines.push("");
+  }
+  navigator.clipboard.writeText(lines.join("\n")).then(() => {
+    const btn = document.getElementById("btnCopy");
+    if (btn) {
+      btn.textContent = "✓ Copied!";
+      setTimeout(() => { btn.textContent = "📋 Copy text"; }, 2000);
+    }
+  });
+}
+
+function saveScheduleAsImage() {
+  let dayIdx = 0;
+  document.querySelectorAll(".sched-day-tab").forEach((tab, i) => { if (tab.classList.contains("active")) dayIdx = i; });
+  const daySchedule = schedules[dayIdx];
+  if (!daySchedule || !daySchedule.length) return;
+
+  const dayNames = ["Thu 06/08", "Fri 07/08", "Sat 08/08", "Sun 09/08"];
+  const overlay = el("div");
+  overlay.id = "imgExportOverlay";
+  overlay.style.cssText = "position:fixed;inset:0;background:#0a0a0a;z-index:9999;overflow:auto;padding:24px;";
+
+  const header = el("div");
+  header.style.cssText = "display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;";
+  const titleBlock = el("div");
+  txt(titleBlock, "div", null, "LINEUPFORME").style.cssText = "font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.08em;color:#f2792b;";
+  txt(titleBlock, "div", null, "Alcatraz Open Air 2026 — " + dayNames[dayIdx]).style.cssText = "font-size:13px;color:#999;margin-top:2px;";
+  const closeBtn = el("button");
+  closeBtn.type = "button";
+  closeBtn.textContent = "✕";
+  closeBtn.style.cssText = "background:none;border:1px solid rgba(255,255,255,0.15);color:#f0ede8;border-radius:6px;padding:6px 12px;cursor:pointer;";
+  closeBtn.onclick = () => overlay.remove();
+  header.appendChild(titleBlock);
+  header.appendChild(closeBtn);
+  overlay.appendChild(header);
+
+  const hint = txt(overlay, "div", null, "Long-press or screenshot this screen to save it as an image.");
+  hint.style.cssText = "font-size:11px;color:#666;margin-bottom:16px;";
+
+  const list = el("div");
+  list.style.cssText = "display:flex;flex-direction:column;gap:8px;max-width:520px;";
+  daySchedule.forEach((slot) => {
+    if (slot.type === "single") {
+      const b = slot.band;
+      const row = el("div");
+      row.style.cssText = "display:flex;gap:14px;align-items:center;background:" + (b.isMust ? "rgba(224,90,43,0.08)" : "rgba(255,255,255,0.03)") + ";border-left:3px solid " + (b.isMust ? "#e05a2b" : "rgba(255,255,255,0.08)") + ";padding:10px 14px;border-radius:6px;";
+      const time = el("div");
+      time.style.cssText = "font-family:monospace;color:#f2792b;font-size:14px;min-width:52px;";
+      time.textContent = fmtTime(b.s);
+      const info = el("div");
+      info.style.flex = "1";
+      const name = el("div");
+      name.style.cssText = "font-size:15px;font-weight:600;color:#f0ede8;";
+      name.textContent = b.name;
+      const stage = el("div");
+      stage.style.cssText = "font-size:11px;color:#999;";
+      stage.textContent = b.stage;
+      info.appendChild(name);
+      info.appendChild(stage);
+      const badge = el("div");
+      if (b.isMust) {
+        badge.style.cssText = "font-size:11px;color:#e05a2b;font-weight:600;";
+        badge.textContent = "MUST-SEE";
+      } else {
+        badge.style.cssText = "font-size:13px;color:#f2792b;";
+        badge.textContent = starsForRank(genreRank(b.name) + 1);
+      }
+      row.appendChild(time);
+      row.appendChild(info);
+      row.appendChild(badge);
+      list.appendChild(row);
+    } else {
+      const wrap = el("div");
+      wrap.style.cssText = "background:rgba(242,121,43,0.05);border-radius:6px;overflow:hidden;";
+      const label = el("div");
+      label.style.cssText = "background:rgba(242,121,43,0.1);padding:7px 14px;font-size:11px;font-weight:600;color:#f2792b;letter-spacing:.08em;text-transform:uppercase;";
+      label.textContent = "⚡ Choose — overlap";
+      wrap.appendChild(label);
+      const optionsRow = el("div");
+      optionsRow.style.cssText = "display:flex;";
+      slot.options.forEach((b, i) => {
+        const opt = el("div");
+        opt.style.cssText = "flex:1;padding:10px 14px;" + (i > 0 ? "border-left:1px solid rgba(242,121,43,0.15)" : "");
+        const time = el("div");
+        time.style.cssText = "font-family:monospace;color:#f2792b;font-size:13px;";
+        time.textContent = fmtTime(b.s);
+        const name = el("div");
+        name.style.cssText = "font-size:15px;font-weight:600;color:#f0ede8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;";
+        name.textContent = b.name;
+        const stage = el("div");
+        stage.style.cssText = "font-size:11px;color:#999;";
+        stage.textContent = b.stage;
+        const stars = el("div");
+        stars.style.cssText = "font-size:12px;color:#f2792b;margin-top:2px;";
+        stars.textContent = starsForRank(genreRank(b.name) + 1);
+        opt.appendChild(time);
+        opt.appendChild(name);
+        opt.appendChild(stage);
+        opt.appendChild(stars);
+        optionsRow.appendChild(opt);
+      });
+      wrap.appendChild(optionsRow);
+      list.appendChild(wrap);
+    }
+  });
+  overlay.appendChild(list);
+
+  const footer = el("div");
+  footer.style.cssText = "margin-top:20px;display:flex;justify-content:space-between;";
+  txt(footer, "div", null, "Built with LineUpForMe").style.cssText = "font-size:12px;color:rgba(240,237,232,0.3);";
+  txt(footer, "div", null, "@lineupforme").style.cssText = "font-size:12px;color:rgba(240,237,232,0.2);";
+  overlay.appendChild(footer);
+
+  document.body.appendChild(overlay);
+}
+
+/* ---------- Reset ---------- */
+function resetAll() {
+  genreOrder = GENRES.map((_, i) => i);
+  mustBands = new Set();
+  currentDay = 0;
+  schedules = [];
+  topPicks = [];
+  bottomPicks = [];
+  middleGenres = [];
+  tRounds = [];
+  tRoundIdx = 0;
+  tGroupIdx = 0;
+  tGroupResults = [[]];
+  tCurrentGroupResults = tGroupResults[0];
+
+  [0, 1, 2, 3].forEach((s) => {
+    const tab = document.getElementById("tab" + s);
+    if (tab) {
+      tab.classList.remove("active", "done");
+      if (s > 0) tab.classList.add("locked");
+    }
+  });
+  const grid = document.getElementById("step2BandGrid");
+  if (grid) grid.innerHTML = "";
+  const confirmation = document.getElementById("saveConfirmation");
+  if (confirmation) confirmation.remove();
+  const savedBtn = document.getElementById("savedScheduleBtn");
+  if (savedBtn) savedBtn.remove();
+  clearSavedSchedule();
+  goToStep(0);
+}
+
+/* ---------- In-app browser nudge (Instagram/FB/LinkedIn browsers) ---------- */
+function checkInAppBrowser() {
+  const ua = navigator.userAgent || "";
+  if (!/Instagram|FBAN|FBAV|LinkedInApp|Twitter/i.test(ua)) return;
+  const banner = el("div");
+  banner.style.cssText = "display:flex;align-items:center;gap:10px;background:#1a1a1a;color:#f0ede8;padding:10px 16px;font-size:13px;border-bottom:1px solid rgba(255,255,255,0.1);";
+  const isIOS = /iphone|ipad|ipod/i.test(ua);
+  const msg = el("div");
+  msg.style.cssText = "flex:1;line-height:1.4;";
+  msg.innerHTML = "<strong>For the best experience:</strong> open in " + (isIOS ? "Safari" : "Chrome") + " — tap the menu → Open in browser";
+  const close = el("button");
+  close.type = "button";
+  close.textContent = "✕";
+  close.style.cssText = "background:none;border:none;color:#999;font-size:16px;cursor:pointer;";
+  close.onclick = () => banner.remove();
+  banner.appendChild(msg);
+  banner.appendChild(close);
+  document.body.insertBefore(banner, document.body.firstChild);
+}
+
+/* ---------- Boot ---------- */
+setTimeout(() => {
+  try { checkInAppBrowser(); } catch (e) {}
+  try { renderSavedScheduleBtn(); } catch (e) {}
+}, 50);
 
 </script>
-</body>
 </html>
