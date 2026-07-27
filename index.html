@@ -232,7 +232,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
   color:var(--accent2);
   font-weight:700;
 }
-.band-name{font-size:13px;font-weight:500;padding-right:16px;line-height:1.3;}
+.band-name{font-size:13px;font-weight:500;padding-right:16px;line-height:1.3;color:var(--text)!important;}
 .band-time{font-size:11px;color:var(--accent);margin-top:5px;font-family:'DM Mono',monospace;}
 .band-stage{font-size:10px;color:var(--muted);margin-top:2px;opacity:.8;}
 .band-badge{display:none;}
@@ -251,6 +251,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 /* Single band slot */
 .sched-single{display:flex;align-items:stretch;background:var(--bg2);border:1px solid var(--border);}
 .sched-single.must-slot{border-color:var(--accent2);}
+.sched-single.sched-minor-clash{border-color:rgba(242,121,43,0.35);border-style:dashed;}
 .sched-time-col{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:12px 14px;min-width:74px;border-right:1px solid var(--border);gap:2px;}
 .sched-end{font-family:'DM Mono',monospace;font-size:12px;color:#f0ede8;line-height:1.2;}.sched-time{font-family:'DM Mono',monospace;font-size:12px;color:var(--accent);line-height:1.2;}
 .sched-duration{font-size:10px;color:var(--muted);}
@@ -343,8 +344,8 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 </div>
 
 <div class="screen" id="screen1">
-  <div class="screen-title">What's your metal sound?</div>
-  <p class="screen-desc">Select your favourite metal genres — which speaks to you most?</p>
+  <div class="screen-title">What kind of metalhead are you?</div>
+  <p class="screen-desc">Tell us your taste and we'll build your schedule around it.</p>
   <div class="t-wrap" id="tournamentWrap"></div>
 </div>
 
@@ -802,28 +803,21 @@ function startTournament() {
   const wrap = document.getElementById("tournamentWrap");
   wrap.innerHTML = "";
 
-  const intro = el("div");
-  intro.style.cssText = "background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:1rem;";
-  intro.innerHTML =
-    "<div style=\"font-weight:600;margin-bottom:.4rem;\">How do you want to rank metal genres?</div>" +
-    "<div style=\"font-size:13px;color:var(--muted);\">Pick whichever feels quickest — both give a full ranking of all 18 metal genres.</div>";
-  wrap.appendChild(intro);
-
   const choices = el("div");
   choices.style.cssText = "display:flex;flex-direction:column;gap:10px;";
 
   const custom = el("button", "choice-card");
   custom.type = "button";
   custom.innerHTML =
-    "<div class=\"choice-card-title\">🎯 I'll pick my own metal genres</div>" +
-    "<div class=\"choice-card-desc\">Pick your 5 favourites and 3 least favourites. Then we'll face off the rest head-to-head.</div>";
+    "<div class=\"choice-card-title\">🎯 I know exactly what I like</div>" +
+    "<div class=\"choice-card-desc\">Rank your top and bottom genres (~1 min).</div>";
   custom.onclick = startCustomFlow;
 
   const preset = el("button", "choice-card");
   preset.type = "button";
   preset.innerHTML =
-    "<div class=\"choice-card-title\">⚡ I pick a pre-defined profile</div>" +
-    "<div class=\"choice-card-desc\">One tap and you're done. Choose the profile that suits you.</div>";
+    "<div class=\"choice-card-title\">⚡ Just match me to a type</div>" +
+    "<div class=\"choice-card-desc\">One tap — pick the metalhead type that's you.</div>";
   preset.onclick = showPresets;
 
   choices.appendChild(custom);
@@ -834,7 +828,7 @@ function startTournament() {
 function showPresets() {
   const wrap = document.getElementById("tournamentWrap");
   wrap.innerHTML = "";
-  txt(wrap, "div", null, "Pick the profile that fits you best:").style.cssText = "font-weight:600;margin-bottom:.9rem;";
+  txt(wrap, "div", null, "Which type are you?").style.cssText = "font-weight:600;margin-bottom:.9rem;";
 
   const list = el("div");
   list.style.cssText = "display:flex;flex-direction:column;gap:10px;";
@@ -1245,7 +1239,7 @@ function renderBandGrid2(mode) {
 
     const grid = el("div", "band-grid");
     entries.forEach(({ band, isTopPick }) => {
-      const wrap = el("div", "band-card-wrap" + (isTopPick ? " lined-up" : ""));
+      const wrap = el("div", "band-card-wrap" + (mustBands.has(band.name) ? " lined-up" : ""));
 
       const card = el("button", "band-card" + (mustBands.has(band.name) ? " must" : ""));
       card.type = "button";
@@ -1258,7 +1252,7 @@ function renderBandGrid2(mode) {
       txt(card, "div", "band-time", fmtTime(band.s) + " – " + fmtTime(band.e));
       txt(card, "div", "band-stage", band.stage);
 
-      if (isTopPick) txt(card, "div", "lined-up-label", "★ top pick");
+      if (isTopPick) txt(card, "div", "lined-up-label", "already lined-up");
 
       const badge = txt(card, "div", "band-badge", mustBands.has(band.name) ? "✓" : "");
 
@@ -1268,11 +1262,13 @@ function renderBandGrid2(mode) {
           card.style.borderColor = "rgba(255,255,255,0.08)";
           card.style.background = "none";
           badge.textContent = "";
+          wrap.classList.remove("lined-up");
         } else {
           mustBands.add(band.name);
           card.style.borderColor = "rgba(224,90,43,0.6)";
           card.style.background = "rgba(224,90,43,0.08)";
           badge.textContent = "✓";
+          wrap.classList.add("lined-up");
         }
       };
 
@@ -1329,6 +1325,9 @@ function finishStep2() {
    a slot, forcing an on-the-spot "choice" when they overlap with something
    already scheduled. Everything else only gets a slot if there's no clash. */
 function buildSchedule(dayIdx) {
+  const MIN_OVERLAP = 30; // minutes — smaller crossovers (stage-walk time) aren't a real conflict
+  const overlaps = (a, b) => Math.min(a.eMin, b.eMin) - Math.max(a.sMin, b.sMin) >= MIN_OVERLAP;
+
   const bands = LINEUP[dayIdx].map((b) => ({
     name: b.name,
     stage: b.stage,
@@ -1347,9 +1346,11 @@ function buildSchedule(dayIdx) {
   for (const band of sorted) {
     if (placed.has(band.name)) continue;
 
+    // a slot only truly clashes if the new band overlaps *every* band already in it —
+    // this stops a 10-minute crossover from chaining two unrelated sets together
     const clashing = slots.filter((slot) => {
       const times = slot.type === "single" ? [slot.band] : slot.options;
-      return times.some((t) => t.sMin < band.eMin && band.sMin < t.eMin);
+      return times.every((t) => overlaps(t, band));
     });
 
     if (clashing.length === 0) {
@@ -1385,14 +1386,27 @@ function durLabel(band) {
   return (band.eMin - band.sMin) + " min";
 }
 
-function renderBandSlotDOM(band) {
-  const wrap = el("div", "sched-single" + (band.isMust ? " must-slot" : ""));
+function renderBandSlotDOM(band, overlapNote) {
+  const wrap = el("div", "sched-single" + (band.isMust ? " must-slot" : "") + (overlapNote ? " sched-minor-clash" : ""));
   const timeCol = el("div", "sched-time-col");
   txt(timeCol, "div", "sched-time", fmtTime(band.s));
   txt(timeCol, "div", "sched-end", fmtTime(band.e));
   wrap.appendChild(timeCol);
 
   const bandCol = el("div", "sched-band-col");
+  bandCol.appendChild(buildNameRow(band));
+  txt(bandCol, "div", "sched-band-stage", band.stage);
+  const gLabel = genreLabel(band.name);
+  if (gLabel) txt(bandCol, "div", "sched-band-genre", gLabel);
+  if (overlapNote) {
+    const note = txt(bandCol, "div", "sched-clash-note", overlapNote);
+    note.style.cssText = "font-size:11px;color:#f2792b;margin-top:4px;opacity:.85;";
+  }
+  wrap.appendChild(bandCol);
+  return wrap;
+}
+
+function buildNameRow(band) {
   const nameRow = el("div", "sched-band-name");
   nameRow.textContent = band.name;
   if (band.isMust) {
@@ -1408,12 +1422,7 @@ function renderBandSlotDOM(band) {
       nameRow.appendChild(badge);
     }
   }
-  bandCol.appendChild(nameRow);
-  txt(bandCol, "div", "sched-band-stage", band.stage);
-  const gLabel = genreLabel(band.name);
-  if (gLabel) txt(bandCol, "div", "sched-band-genre", gLabel);
-  wrap.appendChild(bandCol);
-  return wrap;
+  return nameRow;
 }
 
 function showSchedDay(dayIdx) {
@@ -1429,10 +1438,22 @@ function showSchedDay(dayIdx) {
     return;
   }
 
+  // Small overlaps (<30 min) don't force a choice, but they're still worth flagging
+  // so nobody's surprised mid-festival. Map each affected band to a short note.
+  const overlapNotes = new Map();
+  const singles = daySchedule.filter((s) => s.type === "single").map((s) => s.band);
+  for (let i = 0; i < singles.length - 1; i++) {
+    const a = singles[i], b = singles[i + 1];
+    if (a.eMin > b.sMin) {
+      const mins = a.eMin - b.sMin;
+      overlapNotes.set(a.name, "⏱ overlaps start of " + b.name + " by " + mins + " min");
+    }
+  }
+
   const list = el("div", "sched-list");
   daySchedule.forEach((slot) => {
     if (slot.type === "single") {
-      list.appendChild(renderBandSlotDOM(slot.band));
+      list.appendChild(renderBandSlotDOM(slot.band, overlapNotes.get(slot.band.name)));
     } else {
       const wrap = el("div", "sched-overlap");
       const header = el("div", "sched-overlap-header");
@@ -1444,10 +1465,10 @@ function showSchedDay(dayIdx) {
         const opt = el("div", "sched-overlap-option");
         if (i > 0) opt.style.borderLeft = "1px solid rgba(242,121,43,0.15)";
         txt(opt, "div", "sched-time", fmtTime(band.s));
-        txt(opt, "div", "sched-band-name", band.name);
+        opt.appendChild(buildNameRow(band));
         txt(opt, "div", "sched-band-stage", band.stage);
-        const star = txt(opt, "div", "sched-rank-badge", starsForRank(genreRank(band.name) + 1));
-        star.style.color = "#f2792b";
+        const gLabel = genreLabel(band.name);
+        if (gLabel) txt(opt, "div", "sched-band-genre", gLabel);
         options.appendChild(opt);
       });
       wrap.appendChild(options);
