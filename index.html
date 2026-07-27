@@ -1183,8 +1183,8 @@ function renderScreen2() {
   screen.innerHTML = "";
   window.scrollTo({ top: 0 });
 
-  txt(screen, "div", "screen-title", "Mark your must-sees");
-  txt(screen, "p", "screen-desc", "Headliners or icons that belong in your day no matter what.");
+  txt(screen, "div", "screen-title", "Any must-see acts?");
+  txt(screen, "p", "screen-desc", "These always get a slot in your schedule — clashes and all.");
 
   const choices = el("div");
   choices.style.cssText = "display:flex;flex-direction:column;gap:10px;max-width:480px;";
@@ -1197,9 +1197,9 @@ function renderScreen2() {
     return card;
   }
 
-  choices.appendChild(choiceCard("No, generate my schedule directly →", "Skip this step — I trust the genre ranking.", finishStep2));
-  choices.appendChild(choiceCard("Just the headliners", "Only the big names and headliners.", () => renderBandGrid2("headliners")));
-  choices.appendChild(choiceCard("Show me the full line-up", "Every band, every stage, all 4 days.", () => renderBandGrid2("all")));
+  choices.appendChild(choiceCard("🙅 Nah, I trust the ranking", "Skip straight to my schedule.", finishStep2));
+  choices.appendChild(choiceCard("🎤 Let me pick from the headliners", "Just the big names — I'll choose.", () => renderBandGrid2("headliners")));
+  choices.appendChild(choiceCard("📋 Let me pick from everything", "Every band, every stage — I'll choose.", () => renderBandGrid2("all")));
   screen.appendChild(choices);
 
   const back = el("button", "btn btn-secondary");
