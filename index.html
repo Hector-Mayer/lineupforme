@@ -284,6 +284,38 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .legend-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);}
 .legend-dot{width:8px;height:8px;border-radius:50%;}
 .empty-state{color:var(--muted);font-size:14px;padding:2rem 0;}
+
+.grid-wrap{display:flex;align-items:flex-start;margin:0 -2rem;padding:0 2rem;}
+.grid-labels-col{flex-shrink:0;width:118px;box-sizing:border-box;padding-right:8px;}
+.grid-ruler-spacer{height:30px;}
+.grid-scroll{overflow-x:auto;overflow-y:hidden;flex:1;min-width:0;-webkit-overflow-scrolling:touch;}
+.grid-inner{position:relative;padding-bottom:8px;}
+.grid-ruler{position:relative;height:26px;border-bottom:1px solid var(--border);margin-bottom:4px;}
+.grid-hour-mark{position:absolute;top:0;bottom:0;border-left:1px solid rgba(255,255,255,0.08);padding-left:5px;}
+.grid-hour-mark span{font-size:11px;color:var(--accent);font-family:'DM Mono',monospace;}
+.grid-stage-label{height:78px;box-sizing:border-box;display:flex;align-items:center;background:#141414;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.06em;padding:0 8px;text-transform:uppercase;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.grid-stage-row{position:relative;height:76px;border-bottom:1px solid var(--border);margin-bottom:2px;}
+.grid-band-block{position:absolute;top:6px;bottom:6px;border-radius:6px;box-sizing:border-box;padding:6px 9px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);overflow:hidden;}
+.grid-band-name{font-size:12.5px;font-weight:600;color:rgba(240,237,232,0.55);line-height:1.25;white-space:normal;word-break:break-word;}
+.grid-band-genre{font-size:11px;color:rgba(240,237,232,0.35);margin-top:2px;white-space:normal;}
+.grid-band-time{font-size:10px;font-family:'DM Mono',monospace;color:rgba(240,237,232,0.3);margin-top:3px;white-space:nowrap;}
+.grid-band-block.tier4{background:#70828C;border-color:#70828C;}
+.grid-band-block.tier4 .grid-band-name{color:#fff;font-weight:800;}
+.grid-band-block.tier4 .grid-band-genre{color:rgba(255,255,255,0.8);}
+.grid-band-block.tier4 .grid-band-time{color:rgba(255,255,255,0.6);}
+.grid-band-block.tier5{background:#2AA7A1;border-color:#2AA7A1;}
+.grid-band-block.tier5 .grid-band-name{color:#000;font-weight:800;}
+.grid-band-block.tier5 .grid-band-genre{color:rgba(0,0,0,0.75);}
+.grid-band-block.tier5 .grid-band-time{color:rgba(0,0,0,0.55);}
+.grid-band-block.must{background:#7EE787;border-color:#7EE787;}
+.grid-band-block.must .grid-band-name{color:#000;font-weight:800;}
+.grid-band-block.must .grid-band-genre{color:rgba(0,0,0,0.75);}
+.grid-band-block.must .grid-band-time{color:rgba(0,0,0,0.55);}
+.grid-band-block.tier4,.grid-band-block.tier5,.grid-band-block.must{padding-right:46px;}
+.grid-band-tier-badge{position:absolute;top:4px;right:6px;font-size:9px;font-weight:800;letter-spacing:.03em;}
+.grid-band-block.tier4 .grid-band-tier-badge{color:rgba(255,255,255,0.75);}
+.grid-band-block.tier5 .grid-band-tier-badge{color:rgba(0,0,0,0.6);}
+.grid-band-block.must .grid-band-tier-badge{color:rgba(0,0,0,0.6);}
 </style>
 </head>
 
@@ -355,20 +387,18 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 
 <div class="screen" id="screen3">
   <div class="screen-title">Your schedule</div>
-  <p class="screen-desc">Overlapping acts are shown side by side — you choose on the spot.</p>
+  <p class="screen-desc">The full timetable, by stage — your picks lit up in orange.</p>
   <div class="sched-day-tabs" id="schedDayTabs">
     <div class="sched-day-tab active" id="schedTab0" onclick="showSchedDay(0)">Thu 06/08</div>
     <div class="sched-day-tab" id="schedTab1" onclick="showSchedDay(1)">Fri 07/08</div>
     <div class="sched-day-tab" id="schedTab2" onclick="showSchedDay(2)">Sat 08/08</div>
     <div class="sched-day-tab" id="schedTab3" onclick="showSchedDay(3)">Sun 09/08</div>
   </div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:1rem;font-size:11px;color:#999;">
-    <span style="color:#f2792b;">★★★★★</span><span>Top 5</span>
-    <span style="color:#f2792b;">★★★★☆</span><span>Love it</span>
-    <span style="color:#f2792b;">★★★☆☆</span><span>Like it</span>
-    <span style="color:#f2792b;">★★☆☆☆</span><span>OK</span>
-    <span style="color:#f2792b;">★☆☆☆☆</span><span>Less</span>
-    <span style="color:#f2792b;">☆☆☆☆☆</span><span>Low priority</span>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:1rem;font-size:12px;color:#999;align-items:center;">
+    <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:#7EE787;display:inline-block;"></span>Must-see</span>
+    <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:#2AA7A1;display:inline-block;"></span>5★</span>
+    <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:#70828C;display:inline-block;"></span>4★</span>
+    <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:inline-block;"></span>Lower priority</span>
   </div>
   <div id="schedOutput"></div>
   <div class="btn-row" style="margin-top:1.25rem;">
@@ -471,15 +501,15 @@ const LINEUP = [
     { name: "Modder", stage: "La Morgue", s: "15.50", e: "16.35" },
     { name: "Dirkschneider", stage: "Prison", s: "16.25", e: "17.15" },
     { name: "Merauder", stage: "Helldorado", s: "16.35", e: "17.25" },
-    { name: "Soen", stage: "Swamp", s: "17.15", e: "18.05" },
+    { name: "Celeste", stage: "Swamp", s: "17.15", e: "18.05" },
     { name: "Graceless", stage: "La Morgue", s: "17.15", e: "18.05" },
     { name: "Armored Saint", stage: "Prison", s: "17.50", e: "18.50" },
     { name: "Alien Ant Farm", stage: "Helldorado", s: "18.05", e: "19.00" },
-    { name: "Health", stage: "Swamp", s: "18.50", e: "19.45" },
+    { name: "Soen", stage: "Swamp", s: "18.50", e: "19.45" },
     { name: "Witch Club Satan", stage: "La Morgue", s: "18.55", e: "19.45" },
     { name: "Body Count", stage: "Prison", s: "19.30", e: "20.30" },
     { name: "Ill Niño", stage: "Helldorado", s: "19.45", e: "20.40" },
-    { name: "Crowbar", stage: "Swamp", s: "20.30", e: "21.30" },
+    { name: "Health", stage: "Swamp", s: "20.30", e: "21.30" },
     { name: "The Ruins of Beverast", stage: "La Morgue", s: "20.30", e: "21.25" },
     { name: "Savatage", stage: "Prison", s: "21.15", e: "22.20" },
     { name: "Thy Art Is Murder", stage: "Helldorado", s: "21.25", e: "22.25" },
@@ -597,7 +627,7 @@ const BAND_GENRE = {
   "Monolord": [7, "Stoner Metal"],
   "Soen": [17, "Progressive Metal"],
   "Health": [16, "Industrial"],
-  "Crowbar": [6, "Sludge Metal"],
+  "Celeste": [0, "Black/Sludge Metal"],
   "Igorrr": [16, "Experimental"],
   "Amenra": [6, "Post-Metal"],
   "Hope Erodes": [10, "Metalcore"],
@@ -1324,158 +1354,99 @@ function finishStep2() {
 /* Greedy conflict resolution: must-sees and top-3-ranked genres always get
    a slot, forcing an on-the-spot "choice" when they overlap with something
    already scheduled. Everything else only gets a slot if there's no clash. */
-function buildSchedule(dayIdx) {
-  const MIN_OVERLAP = 30; // minutes — smaller crossovers (stage-walk time) aren't a real conflict
-  const overlaps = (a, b) => Math.min(a.eMin, b.eMin) - Math.max(a.sMin, b.sMin) >= MIN_OVERLAP;
+const STAGES = ["Prison", "Swamp", "Helldorado", "La Morgue"];
+const PX_PER_MIN = 4.6; // wide enough that even a 40-min set fits its full name/genre, no truncation
 
-  const bands = LINEUP[dayIdx].map((b) => ({
-    name: b.name,
-    stage: b.stage,
-    s: b.s,
-    e: b.e,
-    sMin: toMin(b.s),
-    eMin: toMin(b.e),
-    rank: mustBands.has(b.name) ? -1 : genreRank(b.name),
-    isMust: mustBands.has(b.name),
-  }));
-
-  const sorted = [...bands].sort((a, b) => (a.rank !== b.rank ? a.rank - b.rank : a.sMin - b.sMin));
-  const slots = [];
-  const placed = new Set();
-
-  for (const band of sorted) {
-    if (placed.has(band.name)) continue;
-
-    // a slot only truly clashes if the new band overlaps *every* band already in it —
-    // this stops a 10-minute crossover from chaining two unrelated sets together
-    const clashing = slots.filter((slot) => {
-      const times = slot.type === "single" ? [slot.band] : slot.options;
-      return times.every((t) => overlaps(t, band));
-    });
-
-    if (clashing.length === 0) {
-      slots.push({ type: "single", band });
-      placed.add(band.name);
-    } else if (band.isMust || band.rank <= 2) {
-      const target = clashing[0];
-      if (target.type === "single") {
-        slots[slots.indexOf(target)] = { type: "overlap", options: [target.band, band] };
-        placed.add(band.name);
-      } else if (target.type === "overlap") {
-        if (!target.options.find((o) => o.name === band.name)) {
-          target.options.push(band);
-          placed.add(band.name);
-        }
-      }
-    }
-    // otherwise: lower-priority band clashes with something better — skip it
-  }
-
-  return slots.sort((a, b) => {
-    const aStart = a.type === "single" ? a.band.sMin : a.options[0].sMin;
-    const bStart = b.type === "single" ? b.band.sMin : b.options[0].sMin;
-    return aStart - bStart;
-  });
+function buildDayGrid(dayIdx) {
+  return LINEUP[dayIdx]
+    .map((b) => {
+      const rank = genreRank(b.name) + 1; // 1-indexed: 1 = your favourite genre
+      const isMust = mustBands.has(b.name);
+      return {
+        name: b.name,
+        stage: b.stage,
+        s: b.s,
+        e: b.e,
+        sMin: toMin(b.s),
+        eMin: toMin(b.e),
+        rank,
+        isMust,
+        highlighted: isMust || rank <= 8, // 4 stars (see starsForRank) or an explicit must-see
+      };
+    })
+    .sort((a, b) => a.sMin - b.sMin);
 }
 
 function buildAllSchedules() {
-  schedules = [0, 1, 2, 3].map((d) => buildSchedule(d));
-}
-
-function durLabel(band) {
-  return (band.eMin - band.sMin) + " min";
-}
-
-function renderBandSlotDOM(band, overlapNote) {
-  const wrap = el("div", "sched-single" + (band.isMust ? " must-slot" : "") + (overlapNote ? " sched-minor-clash" : ""));
-  const timeCol = el("div", "sched-time-col");
-  txt(timeCol, "div", "sched-time", fmtTime(band.s));
-  txt(timeCol, "div", "sched-end", fmtTime(band.e));
-  wrap.appendChild(timeCol);
-
-  const bandCol = el("div", "sched-band-col");
-  bandCol.appendChild(buildNameRow(band));
-  txt(bandCol, "div", "sched-band-stage", band.stage);
-  const gLabel = genreLabel(band.name);
-  if (gLabel) txt(bandCol, "div", "sched-band-genre", gLabel);
-  if (overlapNote) {
-    const note = txt(bandCol, "div", "sched-clash-note", overlapNote);
-    note.style.cssText = "font-size:11px;color:#f2792b;margin-top:4px;opacity:.85;";
-  }
-  wrap.appendChild(bandCol);
-  return wrap;
-}
-
-function buildNameRow(band) {
-  const nameRow = el("div", "sched-band-name");
-  nameRow.textContent = band.name;
-  if (band.isMust) {
-    const badge = el("span", "sched-must-badge");
-    badge.textContent = "must-see";
-    nameRow.appendChild(badge);
-  } else {
-    const rank = genreRank(band.name) + 1;
-    if (rank && rank <= 15) {
-      const badge = el("span", "sched-rank-badge");
-      badge.style.cssText = "color:#f2792b;font-size:13px;margin-left:6px;letter-spacing:1px;background:none;border:none;padding:0;";
-      badge.textContent = starsForRank(rank);
-      nameRow.appendChild(badge);
-    }
-  }
-  return nameRow;
+  schedules = [0, 1, 2, 3].map((d) => buildDayGrid(d));
 }
 
 function showSchedDay(dayIdx) {
   document.querySelectorAll(".sched-day-tab").forEach((tab, i) => tab.classList.toggle("active", i === dayIdx));
   const output = document.getElementById("schedOutput");
   output.innerHTML = "";
-  const daySchedule = schedules[dayIdx];
+  const bands = schedules[dayIdx];
 
-  if (!daySchedule || daySchedule.length === 0) {
+  if (!bands || !bands.length) {
     const p = el("p", "empty-state");
-    p.textContent = "No slots for this day — go back and add some must-sees, or rank a few more genres.";
+    p.textContent = "No bands found for this day.";
     output.appendChild(p);
     return;
   }
 
-  // Small overlaps (<30 min) don't force a choice, but they're still worth flagging
-  // so nobody's surprised mid-festival. Map each affected band to a short note.
-  const overlapNotes = new Map();
-  const singles = daySchedule.filter((s) => s.type === "single").map((s) => s.band);
-  for (let i = 0; i < singles.length - 1; i++) {
-    const a = singles[i], b = singles[i + 1];
-    if (a.eMin > b.sMin) {
-      const mins = a.eMin - b.sMin;
-      overlapNotes.set(a.name, "⏱ overlaps start of " + b.name + " by " + mins + " min");
-    }
+  const minStart = Math.min(...bands.map((b) => b.sMin));
+  const maxEnd = Math.max(...bands.map((b) => b.eMin));
+  const totalWidth = Math.ceil((maxEnd - minStart) * PX_PER_MIN) + 24;
+
+  const wrap = el("div", "grid-wrap");
+
+  const labelsCol = el("div", "grid-labels-col");
+  const rulerSpacer = el("div", "grid-ruler-spacer");
+  labelsCol.appendChild(rulerSpacer);
+
+  const scrollWrap = el("div", "grid-scroll");
+  const inner = el("div", "grid-inner");
+  inner.style.width = totalWidth + "px";
+
+  const ruler = el("div", "grid-ruler");
+  for (let t = Math.ceil(minStart / 60) * 60; t <= maxEnd; t += 60) {
+    const mark = el("div", "grid-hour-mark");
+    mark.style.left = (t - minStart) * PX_PER_MIN + "px";
+    const hh = Math.floor(t / 60) % 24;
+    txt(mark, "span", null, String(hh).padStart(2, "0") + ":00");
+    ruler.appendChild(mark);
   }
+  inner.appendChild(ruler);
 
-  const list = el("div", "sched-list");
-  daySchedule.forEach((slot) => {
-    if (slot.type === "single") {
-      list.appendChild(renderBandSlotDOM(slot.band, overlapNotes.get(slot.band.name)));
-    } else {
-      const wrap = el("div", "sched-overlap");
-      const header = el("div", "sched-overlap-header");
-      header.textContent = "⚡ Choose — overlap";
-      wrap.appendChild(header);
+  STAGES.forEach((stage) => {
+    const stageBands = bands.filter((b) => b.stage === stage);
+    if (!stageBands.length) return;
+    txt(labelsCol, "div", "grid-stage-label", stage.toUpperCase() + " STAGE");
+    const row = el("div", "grid-stage-row");
+    stageBands.forEach((b) => {
+      const tier = b.isMust ? "must" : b.rank <= 5 ? "tier5" : b.rank <= 8 ? "tier4" : "";
+      const block = el("div", "grid-band-block" + (tier ? " " + tier : ""));
+      block.style.left = (b.sMin - minStart) * PX_PER_MIN + "px";
+      block.style.width = (b.eMin - b.sMin) * PX_PER_MIN - 3 + "px";
 
-      const options = el("div", "sched-overlap-bands");
-      slot.options.forEach((band, i) => {
-        const opt = el("div", "sched-overlap-option");
-        if (i > 0) opt.style.borderLeft = "1px solid rgba(242,121,43,0.15)";
-        txt(opt, "div", "sched-time", fmtTime(band.s));
-        opt.appendChild(buildNameRow(band));
-        txt(opt, "div", "sched-band-stage", band.stage);
-        const gLabel = genreLabel(band.name);
-        if (gLabel) txt(opt, "div", "sched-band-genre", gLabel);
-        options.appendChild(opt);
-      });
-      wrap.appendChild(options);
-      list.appendChild(wrap);
-    }
+      txt(block, "div", "grid-band-name", b.name);
+      const gLabel = genreLabel(b.name);
+      if (gLabel) txt(block, "div", "grid-band-genre", gLabel);
+      txt(block, "div", "grid-band-time", fmtTime(b.s) + "–" + fmtTime(b.e));
+      if (tier) {
+        const badgeText = tier === "must" ? "MUST-SEE" : tier === "tier5" ? "5★" : "4★";
+        txt(block, "div", "grid-band-tier-badge", badgeText);
+      }
+
+      row.appendChild(block);
+    });
+    inner.appendChild(row);
   });
-  output.appendChild(list);
+
+  scrollWrap.appendChild(inner);
+  wrap.appendChild(labelsCol);
+  wrap.appendChild(scrollWrap);
+  output.appendChild(wrap);
 }
 
 /* ---------- Persistence (localStorage) ---------- */
@@ -1556,17 +1527,13 @@ function copyResult() {
   const lines = ["MY ALCATRAZ OPEN AIR 2026 SCHEDULE", "lineupforme.net", ""];
   for (let d = 0; d < 4; d++) {
     if (!schedules[d] || !schedules[d].length) continue;
+    const picks = schedules[d].filter((b) => b.highlighted);
+    if (!picks.length) continue;
     lines.push("== " + dayNames[d] + " ==");
-    schedules[d].forEach((slot) => {
-      if (slot.type === "single") {
-        const b = slot.band;
-        let line = fmtTime(b.s) + " " + b.name + " (" + b.stage + ")";
-        if (b.isMust) line += " [must-see]";
-        lines.push(line);
-      } else {
-        lines.push("  -- overlap, pick one --");
-        slot.options.forEach((o) => lines.push("  " + fmtTime(o.s) + " " + o.name + " (" + o.stage + ")"));
-      }
+    picks.forEach((b) => {
+      let line = fmtTime(b.s) + " " + b.name + " (" + b.stage + ")";
+      if (b.isMust) line += " [must-see]";
+      lines.push(line);
     });
     lines.push("");
   }
@@ -1582,8 +1549,8 @@ function copyResult() {
 function saveScheduleAsImage() {
   let dayIdx = 0;
   document.querySelectorAll(".sched-day-tab").forEach((tab, i) => { if (tab.classList.contains("active")) dayIdx = i; });
-  const daySchedule = schedules[dayIdx];
-  if (!daySchedule || !daySchedule.length) return;
+  const picks = (schedules[dayIdx] || []).filter((b) => b.highlighted);
+  if (!picks.length) return;
 
   const dayNames = ["Thu 06/08", "Fri 07/08", "Sat 08/08", "Sun 09/08"];
   const overlay = el("div");
@@ -1609,69 +1576,40 @@ function saveScheduleAsImage() {
 
   const list = el("div");
   list.style.cssText = "display:flex;flex-direction:column;gap:8px;max-width:520px;";
-  daySchedule.forEach((slot) => {
-    if (slot.type === "single") {
-      const b = slot.band;
-      const row = el("div");
-      row.style.cssText = "display:flex;gap:14px;align-items:center;background:" + (b.isMust ? "rgba(224,90,43,0.08)" : "rgba(255,255,255,0.03)") + ";border-left:3px solid " + (b.isMust ? "#e05a2b" : "rgba(255,255,255,0.08)") + ";padding:10px 14px;border-radius:6px;";
-      const time = el("div");
-      time.style.cssText = "font-family:monospace;color:#f2792b;font-size:14px;min-width:52px;";
-      time.textContent = fmtTime(b.s);
-      const info = el("div");
-      info.style.flex = "1";
-      const name = el("div");
-      name.style.cssText = "font-size:15px;font-weight:600;color:#f0ede8;";
-      name.textContent = b.name;
-      const stage = el("div");
-      stage.style.cssText = "font-size:11px;color:#999;";
-      stage.textContent = b.stage;
-      info.appendChild(name);
-      info.appendChild(stage);
-      const badge = el("div");
-      if (b.isMust) {
-        badge.style.cssText = "font-size:11px;color:#e05a2b;font-weight:600;";
-        badge.textContent = "MUST-SEE";
-      } else {
-        badge.style.cssText = "font-size:13px;color:#f2792b;";
-        badge.textContent = starsForRank(genreRank(b.name) + 1);
-      }
-      row.appendChild(time);
-      row.appendChild(info);
-      row.appendChild(badge);
-      list.appendChild(row);
-    } else {
-      const wrap = el("div");
-      wrap.style.cssText = "background:rgba(242,121,43,0.05);border-radius:6px;overflow:hidden;";
-      const label = el("div");
-      label.style.cssText = "background:rgba(242,121,43,0.1);padding:7px 14px;font-size:11px;font-weight:600;color:#f2792b;letter-spacing:.08em;text-transform:uppercase;";
-      label.textContent = "⚡ Choose — overlap";
-      wrap.appendChild(label);
-      const optionsRow = el("div");
-      optionsRow.style.cssText = "display:flex;";
-      slot.options.forEach((b, i) => {
-        const opt = el("div");
-        opt.style.cssText = "flex:1;padding:10px 14px;" + (i > 0 ? "border-left:1px solid rgba(242,121,43,0.15)" : "");
-        const time = el("div");
-        time.style.cssText = "font-family:monospace;color:#f2792b;font-size:13px;";
-        time.textContent = fmtTime(b.s);
-        const name = el("div");
-        name.style.cssText = "font-size:15px;font-weight:600;color:#f0ede8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;";
-        name.textContent = b.name;
-        const stage = el("div");
-        stage.style.cssText = "font-size:11px;color:#999;";
-        stage.textContent = b.stage;
-        const stars = el("div");
-        stars.style.cssText = "font-size:12px;color:#f2792b;margin-top:2px;";
-        stars.textContent = starsForRank(genreRank(b.name) + 1);
-        opt.appendChild(time);
-        opt.appendChild(name);
-        opt.appendChild(stage);
-        opt.appendChild(stars);
-        optionsRow.appendChild(opt);
-      });
-      wrap.appendChild(optionsRow);
-      list.appendChild(wrap);
-    }
+  picks.forEach((b) => {
+    const tier = b.isMust ? "must" : b.rank <= 5 ? "tier5" : "tier4";
+    const colors = {
+      tier4: { bg: "rgba(112,130,140,0.15)", accent: "#70828C", text: "#9fb0b8" },
+      tier5: { bg: "rgba(42,167,161,0.15)", accent: "#2AA7A1", text: "#2AA7A1" },
+      must: { bg: "rgba(126,231,135,0.15)", accent: "#7EE787", text: "#7EE787" },
+    }[tier];
+
+    const row = el("div");
+    row.style.cssText = "display:flex;gap:14px;align-items:center;background:" + colors.bg + ";border-left:3px solid " + colors.accent + ";padding:10px 14px;border-radius:6px;";
+    const time = el("div");
+    time.style.cssText = "font-family:monospace;color:" + colors.accent + ";font-size:14px;min-width:52px;";
+    time.textContent = fmtTime(b.s);
+    const info = el("div");
+    info.style.flex = "1";
+    const name = el("div");
+    name.style.cssText = "font-size:15px;font-weight:600;color:#f0ede8;";
+    name.textContent = b.name;
+    const genre = el("div");
+    genre.style.cssText = "font-size:11px;color:" + colors.text + ";margin-top:1px;";
+    genre.textContent = genreLabel(b.name) || "";
+    const stage = el("div");
+    stage.style.cssText = "font-size:11px;color:#999;margin-top:1px;";
+    stage.textContent = b.stage;
+    info.appendChild(name);
+    info.appendChild(genre);
+    info.appendChild(stage);
+    const badge = el("div");
+    badge.style.cssText = "font-size:11px;color:" + colors.accent + ";font-weight:700;letter-spacing:.04em;";
+    badge.textContent = b.isMust ? "MUST-SEE" : tier === "tier5" ? "5★" : "4★";
+    row.appendChild(time);
+    row.appendChild(info);
+    row.appendChild(badge);
+    list.appendChild(row);
   });
   overlay.appendChild(list);
 
