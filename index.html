@@ -286,8 +286,16 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 .empty-state{color:var(--muted);font-size:14px;padding:2rem 0;}
 
 .grid-wrap{display:flex;align-items:flex-start;margin:0 -2rem;padding:0 2rem;}
-.grid-labels-col{flex-shrink:0;width:118px;box-sizing:border-box;padding-right:8px;}
+.grid-labels-col{flex-shrink:0;width:88px;box-sizing:border-box;padding-right:8px;}
 .grid-ruler-spacer{height:30px;}
+.grid-wrap.grid-compact .grid-labels-col{width:62px;padding-right:5px;}
+.grid-wrap.grid-compact .grid-stage-label{font-size:9.5px;padding:0 5px;height:94px;}
+.grid-wrap.grid-compact .grid-stage-row{height:94px;}
+.grid-wrap.grid-compact .grid-band-name{font-size:11px;}
+.grid-wrap.grid-compact .grid-band-genre{font-size:9.5px;}
+.grid-wrap.grid-compact .grid-band-time{font-size:9px;}
+.grid-wrap.grid-compact .grid-band-block.tier4,.grid-wrap.grid-compact .grid-band-block.tier5,.grid-wrap.grid-compact .grid-band-block.must{padding-right:34px;}
+.grid-wrap.grid-compact .grid-band-tier-badge{font-size:8px;}
 .grid-scroll{overflow-x:auto;overflow-y:hidden;flex:1;min-width:0;-webkit-overflow-scrolling:touch;}
 .grid-inner{position:relative;padding-bottom:8px;}
 .grid-ruler{position:relative;height:26px;border-bottom:1px solid var(--border);margin-bottom:4px;}
@@ -387,7 +395,7 @@ header{border-bottom:1px solid var(--border);padding:1.4rem 2rem;display:flex;al
 
 <div class="screen" id="screen3">
   <div class="screen-title">Your schedule</div>
-  <p class="screen-desc">The full timetable, by stage — your picks lit up in orange.</p>
+  <p class="screen-desc">The full timetable, by stage — your picks lit up in colour.</p>
   <div class="sched-day-tabs" id="schedDayTabs">
     <div class="sched-day-tab active" id="schedTab0" onclick="showSchedDay(0)">Thu 06/08</div>
     <div class="sched-day-tab" id="schedTab1" onclick="showSchedDay(1)">Fri 07/08</div>
@@ -1355,6 +1363,7 @@ function finishStep2() {
    a slot, forcing an on-the-spot "choice" when they overlap with something
    already scheduled. Everything else only gets a slot if there's no clash. */
 const STAGES = ["Prison", "Swamp", "Helldorado", "La Morgue"];
+const STAGE_SHORT = { Prison: "PRISON", Swamp: "SWAMP", Helldorado: "HELLDORADO", "La Morgue": "MORGUE" };
 const PX_PER_MIN = 4.6; // wide enough that even a 40-min set fits its full name/genre, no truncation
 
 function buildDayGrid(dayIdx) {
@@ -1394,11 +1403,14 @@ function showSchedDay(dayIdx) {
     return;
   }
 
+  const isCompact = window.innerWidth < 600;
+  const pxPerMin = isCompact ? 2.7 : PX_PER_MIN;
+
   const minStart = Math.min(...bands.map((b) => b.sMin));
   const maxEnd = Math.max(...bands.map((b) => b.eMin));
-  const totalWidth = Math.ceil((maxEnd - minStart) * PX_PER_MIN) + 24;
+  const totalWidth = Math.ceil((maxEnd - minStart) * pxPerMin) + 24;
 
-  const wrap = el("div", "grid-wrap");
+  const wrap = el("div", "grid-wrap" + (isCompact ? " grid-compact" : ""));
 
   const labelsCol = el("div", "grid-labels-col");
   const rulerSpacer = el("div", "grid-ruler-spacer");
@@ -1411,7 +1423,7 @@ function showSchedDay(dayIdx) {
   const ruler = el("div", "grid-ruler");
   for (let t = Math.ceil(minStart / 60) * 60; t <= maxEnd; t += 60) {
     const mark = el("div", "grid-hour-mark");
-    mark.style.left = (t - minStart) * PX_PER_MIN + "px";
+    mark.style.left = (t - minStart) * pxPerMin + "px";
     const hh = Math.floor(t / 60) % 24;
     txt(mark, "span", null, String(hh).padStart(2, "0") + ":00");
     ruler.appendChild(mark);
@@ -1421,13 +1433,13 @@ function showSchedDay(dayIdx) {
   STAGES.forEach((stage) => {
     const stageBands = bands.filter((b) => b.stage === stage);
     if (!stageBands.length) return;
-    txt(labelsCol, "div", "grid-stage-label", stage.toUpperCase() + " STAGE");
+    txt(labelsCol, "div", "grid-stage-label", STAGE_SHORT[stage]);
     const row = el("div", "grid-stage-row");
     stageBands.forEach((b) => {
       const tier = b.isMust ? "must" : b.rank <= 5 ? "tier5" : b.rank <= 8 ? "tier4" : "";
       const block = el("div", "grid-band-block" + (tier ? " " + tier : ""));
-      block.style.left = (b.sMin - minStart) * PX_PER_MIN + "px";
-      block.style.width = (b.eMin - b.sMin) * PX_PER_MIN - 3 + "px";
+      block.style.left = (b.sMin - minStart) * pxPerMin + "px";
+      block.style.width = (b.eMin - b.sMin) * pxPerMin - 3 + "px";
 
       txt(block, "div", "grid-band-name", b.name);
       const gLabel = genreLabel(b.name);
